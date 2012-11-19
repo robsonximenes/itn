@@ -29,6 +29,26 @@
 		398A6B9A1657A6A60065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
 		398A6BA21657A6A60065A58A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BA01657A6A60065A58A /* InfoPlist.strings */; };
 		398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */; };
+		398A6BB01657B6E00065A58A /* GroundStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BAF1657B6E00065A58A /* GroundStroke.m */; };
+		398A6BBA1657C8760065A58A /* groundstroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BB91657C8760065A58A /* groundstroke.png */; };
+		398A6BC616581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
+		398A6BC716581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
+		398A6BCA1658215C0065A58A /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC91658215C0065A58A /* VolleyDephViewController.m */; };
+		398A6BCB1658215C0065A58A /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC91658215C0065A58A /* VolleyDephViewController.m */; };
+		398A6BDD16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
+		398A6BDE16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
+		398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
+		398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
+		398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
+		398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
+		398A6BF1165915330065A58A /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF0165915330065A58A /* Stroke.m */; };
+		398A6BF2165915330065A58A /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF0165915330065A58A /* Stroke.m */; };
+		398A6BF516598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
+		398A6BF616598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
+		398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
+		398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
+		398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
+		398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +91,26 @@
 		398A6BA11657A6A60065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		398A6BA31657A6A60065A58A /* International_Tennis_NumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = International_Tennis_NumberTests.h; sourceTree = "<group>"; };
 		398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = International_Tennis_NumberTests.m; sourceTree = "<group>"; };
+		398A6BAE1657B6E00065A58A /* GroundStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundStroke.h; sourceTree = "<group>"; };
+		398A6BAF1657B6E00065A58A /* GroundStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundStroke.m; sourceTree = "<group>"; };
+		398A6BB91657C8760065A58A /* groundstroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groundstroke.png; sourceTree = "<group>"; };
+		398A6BC416581EA50065A58A /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
+		398A6BC516581EA50065A58A /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
+		398A6BC81658215C0065A58A /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
+		398A6BC91658215C0065A58A /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
+		398A6BDC16590B890065A58A /* StrokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeCell.xib; sourceTree = "<group>"; };
+		398A6BE316590F4F0065A58A /* StrokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeCell.h; sourceTree = "<group>"; };
+		398A6BE416590F4F0065A58A /* StrokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeCell.m; sourceTree = "<group>"; };
+		398A6BE71659101D0065A58A /* GSAccuracyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAccuracyViewController.h; sourceTree = "<group>"; };
+		398A6BE81659101D0065A58A /* GSAccuracyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAccuracyViewController.m; sourceTree = "<group>"; };
+		398A6BEF165915330065A58A /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		398A6BF0165915330065A58A /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+		398A6BF316598B160065A58A /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
+		398A6BF416598B160065A58A /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
+		398A6BF7165992AD0065A58A /* MobilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilityViewController.h; sourceTree = "<group>"; };
+		398A6BF8165992AD0065A58A /* MobilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilityViewController.m; sourceTree = "<group>"; };
+		398A6BFB1659B3670065A58A /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		398A6BFC1659B3670065A58A /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +170,8 @@
 		398A6B6B1657A6A50065A58A /* International Tennis Number */ = {
 			isa = PBXGroup;
 			children = (
+				398A6BC116581E560065A58A /* source */,
+				398A6BBF16581E4C0065A58A /* images */,
 				398A6B741657A6A50065A58A /* AppDelegate.h */,
 				398A6B751657A6A50065A58A /* AppDelegate.m */,
 				398A6B7D1657A6A50065A58A /* MainStoryboard_iPhone.storyboard */,
@@ -178,6 +220,56 @@
 				398A6BA01657A6A60065A58A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		398A6BBF16581E4C0065A58A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				398A6BB91657C8760065A58A /* groundstroke.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		398A6BC116581E560065A58A /* source */ = {
+			isa = PBXGroup;
+			children = (
+				398A6BC316581E650065A58A /* model */,
+				398A6BC216581E5F0065A58A /* view */,
+				398A6BEF165915330065A58A /* Stroke.h */,
+				398A6BF0165915330065A58A /* Stroke.m */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		398A6BC216581E5F0065A58A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				398A6BAE1657B6E00065A58A /* GroundStroke.h */,
+				398A6BAF1657B6E00065A58A /* GroundStroke.m */,
+				398A6BC81658215C0065A58A /* VolleyDephViewController.h */,
+				398A6BC91658215C0065A58A /* VolleyDephViewController.m */,
+				398A6BDC16590B890065A58A /* StrokeCell.xib */,
+				398A6BE316590F4F0065A58A /* StrokeCell.h */,
+				398A6BE416590F4F0065A58A /* StrokeCell.m */,
+				398A6BE71659101D0065A58A /* GSAccuracyViewController.h */,
+				398A6BE81659101D0065A58A /* GSAccuracyViewController.m */,
+				398A6BF316598B160065A58A /* ServerViewController.h */,
+				398A6BF416598B160065A58A /* ServerViewController.m */,
+				398A6BF7165992AD0065A58A /* MobilityViewController.h */,
+				398A6BF8165992AD0065A58A /* MobilityViewController.m */,
+				398A6BFB1659B3670065A58A /* ScoreViewController.h */,
+				398A6BFC1659B3670065A58A /* ScoreViewController.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		398A6BC316581E650065A58A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				398A6BC416581EA50065A58A /* Assessment.h */,
+				398A6BC516581EA50065A58A /* Assessment.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +353,8 @@
 				398A6B891657A6A50065A58A /* first@2x.png in Resources */,
 				398A6B8E1657A6A50065A58A /* second.png in Resources */,
 				398A6B901657A6A50065A58A /* second@2x.png in Resources */,
+				398A6BBA1657C8760065A58A /* groundstroke.png in Resources */,
+				398A6BDD16590B890065A58A /* StrokeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398A6BA21657A6A60065A58A /* InfoPlist.strings in Resources */,
+				398A6BDE16590B890065A58A /* StrokeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +394,15 @@
 				398A6B761657A6A50065A58A /* AppDelegate.m in Sources */,
 				398A6B851657A6A50065A58A /* FirstViewController.m in Sources */,
 				398A6B8C1657A6A50065A58A /* SecondViewController.m in Sources */,
+				398A6BB01657B6E00065A58A /* GroundStroke.m in Sources */,
+				398A6BC616581EA50065A58A /* Assessment.m in Sources */,
+				398A6BCA1658215C0065A58A /* VolleyDephViewController.m in Sources */,
+				398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */,
+				398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */,
+				398A6BF1165915330065A58A /* Stroke.m in Sources */,
+				398A6BF516598B170065A58A /* ServerViewController.m in Sources */,
+				398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */,
+				398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */,
+				398A6BC716581EA50065A58A /* Assessment.m in Sources */,
+				398A6BCB1658215C0065A58A /* VolleyDephViewController.m in Sources */,
+				398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */,
+				398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */,
+				398A6BF2165915330065A58A /* Stroke.m in Sources */,
+				398A6BF616598B170065A58A /* ServerViewController.m in Sources */,
+				398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */,
+				398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +477,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -380,6 +493,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,6 +509,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -402,6 +518,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -483,6 +601,7 @@
 				398A6BAA1657A6A60065A58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		398A6BAB1657A6A60065A58A /* Build configuration list for PBXNativeTarget "International Tennis NumberTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +610,7 @@
 				398A6BAD1657A6A60065A58A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
