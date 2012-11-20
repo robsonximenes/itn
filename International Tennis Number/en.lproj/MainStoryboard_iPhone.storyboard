@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="1201" y="938"/>
         </scene>
-        <!--Table View Controller - Profile-->
+        <!--Profile View Controller - Profile-->
         <scene sceneID="E4C-4T-Ljs">
             <objects>
-                <tableViewController id="MTG-3M-FvK" sceneMemberID="viewController">
+                <tableViewController id="MTG-3M-FvK" customClass="ProfileViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wQW-Z8-zJ0">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="MTG-3M-FvK" id="lOd-5a-VHc"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -128,6 +131,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="MTG-3M-FvK" id="kpz-ah-xAZ"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -194,6 +200,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="MTG-3M-FvK" id="tKy-Z6-3Ev"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -224,6 +233,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="MTG-3M-FvK" id="Dkd-6A-6BS"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -254,6 +266,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="MTG-3M-FvK" id="Pjp-4N-1e6"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -283,6 +298,14 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="assessortextField" destination="ue6-OL-QhT" id="cFT-XB-vhr"/>
+                        <outlet property="dateBirthTextField" destination="xx3-zH-fCj" id="BYR-c8-Llj"/>
+                        <outlet property="dateTextField" destination="KPC-yx-Vc2" id="WHc-MY-3Rm"/>
+                        <outlet property="nameTextField" destination="Ex4-hB-3S2" id="cgM-IN-bQN"/>
+                        <outlet property="sexSegmentField" destination="YG0-gO-AWP" id="jIP-7Y-6hF"/>
+                        <outlet property="venueTextField" destination="S1a-X2-hwr" id="n2h-Co-Ita"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRk-Jy-534" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1078,6 +1101,17 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProfileViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="assessortextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateBirthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="sexSegmentField" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="venueTextField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="ScoreViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ScoreViewController.h"/>

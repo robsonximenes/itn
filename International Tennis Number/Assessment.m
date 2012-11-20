@@ -139,8 +139,9 @@ static Assessment *instance = NULL;
 }
 - (int) getMobilityPoints{
     int points = 0;
-    
-    if(mobilityTime<15){
+    if(mobilityTime==0){
+        points = 0;
+    }else if(mobilityTime<15){
         points = [((NSNumber*)[MOBILITY_SCORE objectAtIndex:25]) intValue];
     }else if(mobilityTime>40){
         points = [((NSNumber*)[MOBILITY_SCORE objectAtIndex:0]) intValue];
