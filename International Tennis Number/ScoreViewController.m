@@ -9,6 +9,8 @@
 #import "ScoreViewController.h"
 #import "Assessment.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface ScoreViewController ()
 @property Assessment *assessment;
 @end
@@ -52,6 +54,18 @@
     
     self.total.text = [NSString stringWithFormat:@"%d",[assessment getTotalPoints]];
     
+    [self setupView:self.gsAccuracyView];
+    [self setupView:self.gsDephView];
+    [self setupView:self.serverView];
+    [self setupView:self.volleyDephView];
+    [self setupView:self.mobilityView];
+    [self setupView:self.itnView];
+    
+}
+
+-(void)setupView: (UIView *)view{
+    view.layer.cornerRadius = 5;
+    view.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,4 +74,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)save:(id)sender {
+    
+    for (UIViewController *view in [self.navigationController viewControllers]) {
+        [view dismissViewControllerAnimated:false completion:nil];
+    }
+}
 @end

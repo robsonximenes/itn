@@ -244,20 +244,25 @@ static Assessment *instance = NULL;
     return strokesForServer;
 }
 
+
+//GS Deph   : 0,1,2,3,4,5,6,8
+//VO Deph   : 0,1,2,3,4,5,6,8
+//GS Accu   : 0,1,2,3,4,6
+//Service   : 0,1,2,3,4,5,8
 +(NSArray *) getPointsForGSAccuracy{
-    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", nil];
+    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", @"4", @"6", nil];
 }
 
 +(NSArray *) getPointsForGSDeph{
-    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", nil];
+    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", @"4", @"5", @"6", @"8", nil];
 }
 
 +(NSArray *) getPointsForVolleyDeph{
-    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", nil];
+    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", @"4", @"5", @"6", @"8", nil];
 }
 
 +(NSArray *) getPointsForServer{
-    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", nil];
+    return [NSArray arrayWithObjects: @"0",@"1", @"2", @"3", @"4", @"5", @"8", nil];
 }
 
 

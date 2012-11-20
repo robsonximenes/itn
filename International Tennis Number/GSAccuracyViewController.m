@@ -11,8 +11,6 @@
 #import "Stroke.h"
 #import "Assessment.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface GSAccuracyViewController ()
     @property Assessment *assetment;
 @end
@@ -36,9 +34,6 @@
     [super viewDidLoad];
     self.assetment = [Assessment current];
     [self calculateScore];
-    
-    resultContentView.layer.cornerRadius = 5;
-    resultContentView.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +77,6 @@
     }
     
     for (int i =0; i<[values count]; i++) {
-        NSLog(@"%@ - %@", [values objectAtIndex:i],value);
         if([[values objectAtIndex:i] isEqualToString:value]){
             [segControl setSelectedSegmentIndex:i];
             break;

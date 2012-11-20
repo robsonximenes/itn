@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *volleyDephConsistency;
 @property (weak, nonatomic) IBOutlet UILabel *volleyDephTotal;
 
+- (IBAction)save:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIView *gsAccuracyView;
 @property (weak, nonatomic) IBOutlet UILabel *gsAccuracySubtotal;
 @property (weak, nonatomic) IBOutlet UILabel *gsAccuracyConsistency;
