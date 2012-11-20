@@ -316,7 +316,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Robson Ximenes";
 			};
-			buildConfigurationList = 398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "International Tennis Number" */;
+			buildConfigurationList = 398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "What's your number?" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -581,7 +581,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "International Tennis Number" */ = {
+		398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "What's your number?" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				398A6BA61657A6A60065A58A /* Debug */,
