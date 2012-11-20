@@ -66,7 +66,6 @@
     NSString *timeString=[dateFormatter stringFromDate:timerDate];
     timeLabel.text = timeString;
     time = [timeString intValue];
-    NSLog(@"Tempo marcado: %d", time);
     [self calculateScore];
 
 }

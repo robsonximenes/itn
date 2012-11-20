@@ -219,8 +219,8 @@
 				396BB3DD165BAA1E002D525B /* icone.png */,
 				396BB3E9165BAC88002D525B /* icone_ipad.png */,
 				396BB3EA165BAC88002D525B /* icone_ipad@2x.png */,
-				396BB3E7165BAAA5002D525B /* Default@2x.png */,
 				396BB3E5165BAA92002D525B /* Default.png */,
+				396BB3E7165BAAA5002D525B /* Default@2x.png */,
 				398A6BB91657C8760065A58A /* groundstroke.png */,
 			);
 			name = images;
