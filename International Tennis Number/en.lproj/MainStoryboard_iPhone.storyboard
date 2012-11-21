@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item-->
+        <!--Home View Controller - Item-->
         <scene sceneID="Ien-Cl-RS6">
             <objects>
-                <viewController id="mDZ-ud-Y4S" sceneMemberID="viewController">
+                <viewController id="mDZ-ud-Y4S" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xJy-3u-7VB">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -23,29 +23,40 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Aqui vou listar os resultados da galera" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="158" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-xi-zNF">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="9Mv-j2-b4j"/>
-                                    <constraint firstAttribute="height" constant="128" id="WPm-Fc-auK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qAg-K8-Is4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mDZ-ud-Y4S" id="x4V-R3-nEp"/>
+                                    <outlet property="delegate" destination="mDZ-ud-Y4S" id="g1m-xi-amF"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzx-jj-zj5">
+                                <items>
+                                    <navigationItem title="What's your number?" id="4yx-IN-qZ5"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cBh-Zx-o1X" firstAttribute="bottom" secondItem="xJy-3u-7VB" secondAttribute="bottom" type="default" id="89B-zW-I07"/>
+                            <constraint firstItem="nzx-jj-zj5" firstAttribute="trailing" secondItem="xJy-3u-7VB" secondAttribute="trailing" type="default" id="9Il-0Z-NIJ"/>
                             <constraint firstItem="cBh-Zx-o1X" firstAttribute="trailing" secondItem="xJy-3u-7VB" secondAttribute="trailing" type="default" id="KND-Vl-L6k"/>
+                            <constraint firstItem="qAg-K8-Is4" firstAttribute="bottom" secondItem="xJy-3u-7VB" secondAttribute="bottom" type="default" id="Ldv-oK-6LM"/>
+                            <constraint firstItem="qAg-K8-Is4" firstAttribute="trailing" secondItem="xJy-3u-7VB" secondAttribute="trailing" type="default" id="Mdc-rw-cyz"/>
                             <constraint firstItem="cBh-Zx-o1X" firstAttribute="leading" secondItem="xJy-3u-7VB" secondAttribute="leading" type="default" id="Nd7-Uo-yb3"/>
-                            <constraint firstItem="MDx-xi-zNF" firstAttribute="leading" secondItem="xJy-3u-7VB" secondAttribute="leading" constant="88" id="b7f-1z-piJ"/>
-                            <constraint firstItem="MDx-xi-zNF" firstAttribute="top" secondItem="xJy-3u-7VB" secondAttribute="top" constant="93" id="ov2-WC-rmT"/>
+                            <constraint firstItem="qAg-K8-Is4" firstAttribute="leading" secondItem="xJy-3u-7VB" secondAttribute="leading" type="default" id="QJq-3F-etD"/>
+                            <constraint firstItem="qAg-K8-Is4" firstAttribute="top" secondItem="cBh-Zx-o1X" secondAttribute="bottom" type="default" id="eHe-So-m22"/>
+                            <constraint firstItem="cBh-Zx-o1X" firstAttribute="top" secondItem="nzx-jj-zj5" secondAttribute="bottom" type="default" id="gs2-cR-RRj"/>
+                            <constraint firstItem="nzx-jj-zj5" firstAttribute="leading" secondItem="xJy-3u-7VB" secondAttribute="leading" type="default" id="n07-xb-e6c"/>
+                            <constraint firstItem="nzx-jj-zj5" firstAttribute="top" secondItem="xJy-3u-7VB" secondAttribute="top" type="default" id="y9q-Vm-O5N"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="1TU-HN-xPz"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="qAg-K8-Is4" id="jLS-N1-FYZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZG6-8N-my9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1086,6 +1097,12 @@
                 <relationship kind="outlet" name="subtotal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="total" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="MobilityViewController" superclassName="UIViewController">
