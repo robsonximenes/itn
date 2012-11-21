@@ -1,22 +1,15 @@
 //
 //  VolleyDephViewController.m
-//  International Tennis Number
+//  What's your number?
 //
-//  Created by Robson Ximenes on 17/11/12.
+//  Created by Robson Saraiva Ximenes on 21/11/12.
 //  Copyright (c) 2012 Robson Ximenes. All rights reserved.
 //
 
 #import "VolleyDephViewController.h"
+#import "StrokeCell.h"
+#import "Stroke.h"
 #import "Assessment.h"
-
-#define TAG_STROKE1 101
-#define TAG_STROKE2 102
-#define TAG_STROKE3 103
-#define TAG_STROKE4 104
-#define TAG_STROKE5 105
-#define TAG_STROKE6 106
-#define TAG_STROKE7 107
-#define TAG_STROKE8 108
 
 @interface VolleyDephViewController ()
 @property Assessment *assetment;
@@ -24,96 +17,110 @@
 
 @implementation VolleyDephViewController
 
-@synthesize stroke1,stroke2,stroke3,stroke4,stroke5,stroke6,stroke7,stroke8;
-@synthesize subtotal, consistency, total;
 @synthesize assetment;
+@synthesize total,subtotal,consistency,table;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    assetment = [[Assessment alloc] init];
-    
-    [stroke1 setTag:TAG_STROKE1];
-    [stroke2 setTag:TAG_STROKE2];
-    [stroke3 setTag:TAG_STROKE3];
-    [stroke4 setTag:TAG_STROKE4];
-    [stroke5 setTag:TAG_STROKE5];
-    [stroke6 setTag:TAG_STROKE6];
-    [stroke7 setTag:TAG_STROKE7];
-    [stroke8 setTag:TAG_STROKE8];
-    
+    self.assetment = [Assessment current];
+    [self calculateScore];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+
+# pragma mark TableView Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [[self.assetment getStrokesForVolleyDeph] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *CellIdentifier = @"StrokeCell";
+    StrokeCell *cell = (StrokeCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell){
+        NSArray *topObjects = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:nil options:nil];
+        for(id currentObject in topObjects){
+            if([currentObject isKindOfClass:[StrokeCell class]]){
+                cell = (StrokeCell *)currentObject;
+                break;
+            }
+        }
+    }
+    
+    Stroke *stroke = [self getStrokeAtIndex:indexPath.row];
+    cell.number.text=stroke.number;
+    cell.strokeName.text=stroke.strokeName;
+    [self setupSegment:cell.score withSelectedValue:stroke.score];
+    return cell;
+    
+}
+
+-(NSMutableArray *) getStrokes{
+    return [self.assetment getStrokesForVolleyDeph];
+}
+
+-(Stroke *) getStrokeAtIndex: (int) index{
+    return [[self getStrokes] objectAtIndex:index];
+}
+
+
+-(void) setupSegment: (UISegmentedControl *)segControl withSelectedValue:(NSString *)value{
+    NSArray *values = [Assessment getPointsForVolleyDeph];
+    [segControl removeAllSegments];
+    for (int i =0; i<[values count]; i++) {
+        [segControl insertSegmentWithTitle:[values objectAtIndex:i] atIndex:i animated:false];
+    }
+    
+    for (int i =0; i<[values count]; i++) {
+        if([[values objectAtIndex:i] isEqualToString:value]){
+            [segControl setSelectedSegmentIndex:i];
+            break;
+        }
+    }
+    
+    [segControl addTarget:self action:@selector(segmentSelected:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)segmentSelected:(id)sender {
+    UISegmentedControl *segment = (UISegmentedControl *)sender;
+    NSIndexPath *indexPath = [self.table indexPathForCell:(StrokeCell *)[[sender superview] superview]];
+    NSUInteger row = indexPath.row;
+    
+    NSString *value = [segment titleForSegmentAtIndex:[segment selectedSegmentIndex]];
+    
+    Stroke *stroke = [self getStrokeAtIndex:row];
+    stroke.score = value;
+    
+    [[self getStrokes] replaceObjectAtIndex:row withObject:stroke];
+    
+    [self calculateScore];
 }
 
 - (void) calculateScore{
+    NSMutableArray *strokes = [self getStrokes];
+    for (int i =0; i<[strokes count]; i++) {
+        Stroke *stroke = [strokes objectAtIndex:i];
+        [assetment.volleyDeph setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
+    }
     
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke1.text intValue]] atIndexedSubscript:0];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke2.text intValue]] atIndexedSubscript:1];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke3.text intValue]] atIndexedSubscript:2];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke4.text intValue]] atIndexedSubscript:3];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke5.text intValue]] atIndexedSubscript:4];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke6.text intValue]] atIndexedSubscript:5];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke7.text intValue]] atIndexedSubscript:6];
-    [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke8.text intValue]] atIndexedSubscript:7];
-    
-    
-    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokePoints]]];
+    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getVolleyDephConssistencyPoints]]];
     [consistency setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeConssistencyPoints]]];
-    [total setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeTotalPoints]]];
+    [total setText:[NSString stringWithFormat:@"%i", [assetment getVolleyDephTotalPoints]]];
 }
 
-# pragma mark UITextFieldDelegate
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    return true;
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    switch (textField.tag) {
-        case TAG_STROKE1:
-            [stroke2 becomeFirstResponder];
-            break;
-        case TAG_STROKE2:
-            [stroke3 becomeFirstResponder];
-            break;
-        case TAG_STROKE3:
-            [stroke4 becomeFirstResponder];
-            break;
-        case TAG_STROKE4:
-            [stroke5 becomeFirstResponder];
-            break;
-        case TAG_STROKE5:
-            [stroke6 becomeFirstResponder];
-            break;
-        case TAG_STROKE6:
-            [stroke7 becomeFirstResponder];
-            break;
-        case TAG_STROKE7:
-            [stroke8 becomeFirstResponder];
-            break;
-        default:
-            [textField resignFirstResponder];
-            break;
-    }
-    
-    [self calculateScore];
-    
-    return YES;
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    if (textField == stroke8) {
-        textField.returnKeyType = UIReturnKeyDone;
-    } else {
-        textField.returnKeyType = UIReturnKeyNext;
-    }
-}
 
 @end
-

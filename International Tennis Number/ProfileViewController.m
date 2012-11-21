@@ -37,6 +37,19 @@
 	// Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSString *sex = [sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]];
+    
+    Assessment *a = [Assessment current];
+    [a setName:nameTextField.text];
+    [a setSex:sex];
+    [a setAssessor:assessortextField.text];
+    [a setLocal:venueTextField.text];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -60,6 +73,9 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
+
 
 #pragma mark DatePickers
 -(void) createDateBirthPicker{
@@ -128,7 +144,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
     
-    NSLog(@"%@",[formatter stringFromDate:[assessment birthday]]);
+    NSLog(@"%@",[formatter stringFromDate:[assessment date]]);
     
     [dateTextField setText:[formatter stringFromDate:[assessment date]]];
     
@@ -138,7 +154,7 @@
 
 -(void) dateBirthSelected{
     
-    NSLog(@"Selecionou a data...");
+    NSLog(@"Selecionou a data birthday...");
     
     Assessment *assessment = [Assessment current];
     

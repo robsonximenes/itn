@@ -18,6 +18,7 @@
 		396BB407165CDA87002D525B /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB406165CDA87002D525B /* HomeCell.m */; };
 		396BB409165CDAA2002D525B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB408165CDAA2002D525B /* HomeCell.xib */; };
 		396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40B165CFCD0002D525B /* GSDephViewController.m */; };
+		396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40E165D3B98002D525B /* VolleyDephViewController.m */; };
 		398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B651657A6A50065A58A /* UIKit.framework */; };
 		398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
 		398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B691657A6A50065A58A /* CoreGraphics.framework */; };
@@ -25,8 +26,6 @@
 		398A6B721657A6A50065A58A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6B711657A6A50065A58A /* main.m */; };
 		398A6B761657A6A50065A58A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6B751657A6A50065A58A /* AppDelegate.m */; };
 		398A6B781657A6A50065A58A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B771657A6A50065A58A /* Default.png */; };
-		398A6B7A1657A6A50065A58A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B791657A6A50065A58A /* Default@2x.png */; };
-		398A6B7C1657A6A50065A58A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B7B1657A6A50065A58A /* Default-568h@2x.png */; };
 		398A6B7F1657A6A50065A58A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B7D1657A6A50065A58A /* MainStoryboard_iPhone.storyboard */; };
 		398A6B821657A6A50065A58A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B801657A6A50065A58A /* MainStoryboard_iPad.storyboard */; };
 		398A6B981657A6A60065A58A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B971657A6A60065A58A /* SenTestingKit.framework */; };
@@ -80,6 +79,8 @@
 		396BB408165CDAA2002D525B /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		396BB40A165CFCCF002D525B /* GSDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDephViewController.h; sourceTree = "<group>"; };
 		396BB40B165CFCD0002D525B /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
+		396BB40D165D3B97002D525B /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
+		396BB40E165D3B98002D525B /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
 		398A6B611657A6A50065A58A /* International Tennis Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "International Tennis Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398A6B651657A6A50065A58A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		398A6B671657A6A50065A58A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -277,6 +278,8 @@
 				396BB402165CD7E2002D525B /* HomeViewController.m */,
 				396BB40A165CFCCF002D525B /* GSDephViewController.h */,
 				396BB40B165CFCD0002D525B /* GSDephViewController.m */,
+				396BB40D165D3B97002D525B /* VolleyDephViewController.h */,
+				396BB40E165D3B98002D525B /* VolleyDephViewController.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -363,8 +366,6 @@
 			files = (
 				398A6B701657A6A50065A58A /* InfoPlist.strings in Resources */,
 				398A6B781657A6A50065A58A /* Default.png in Resources */,
-				398A6B7A1657A6A50065A58A /* Default@2x.png in Resources */,
-				398A6B7C1657A6A50065A58A /* Default-568h@2x.png in Resources */,
 				398A6B7F1657A6A50065A58A /* MainStoryboard_iPhone.storyboard in Resources */,
 				398A6B821657A6A50065A58A /* MainStoryboard_iPad.storyboard in Resources */,
 				398A6BBA1657C8760065A58A /* groundstroke.png in Resources */,
@@ -424,6 +425,7 @@
 				396BB403165CD7E2002D525B /* HomeViewController.m in Sources */,
 				396BB407165CDA87002D525B /* HomeCell.m in Sources */,
 				396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */,
+				396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -96,7 +96,6 @@
 }
 
 - (void)segmentSelected:(id)sender {
-    NSLog(@"segment...");
     UISegmentedControl *segment = (UISegmentedControl *)sender;
     NSIndexPath *indexPath = [self.table indexPathForCell:(StrokeCell *)[[sender superview] superview]];
     NSUInteger row = indexPath.row;
@@ -117,7 +116,6 @@
         Stroke *stroke = [strokes objectAtIndex:i];
         [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
     }
-    
     
     [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokePoints]]];
     [consistency setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeConssistencyPoints]]];

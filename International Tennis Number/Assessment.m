@@ -202,31 +202,37 @@ static Assessment *instance = NULL;
 }
 
 -(NSMutableArray *) getStrokesForGSDeph{
-    NSMutableArray *strokes = [[NSMutableArray alloc] init];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"1" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"2" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"3" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"4" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"5" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"6" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"7" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"8" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"9" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"10" strokName:@"Backhand" score:@"0" ]];
-    return strokes;
+    if(!strokesForGSDeph){
+        NSMutableArray *strokes = [[NSMutableArray alloc] init];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"1" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"2" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"3" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"4" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"5" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"6" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"7" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"8" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"9" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"10" strokName:@"Backhand" score:@"0" ]];
+        strokesForGSDeph = strokes;
+    }
+    return strokesForGSDeph;
 }
 
 -(NSMutableArray *) getStrokesForVolleyDeph{
-    NSMutableArray *strokes = [[NSMutableArray alloc] init];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"1" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"2" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"3" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"4" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"5" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"6" strokName:@"Backhand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"7" strokName:@"Forehand" score:@"0" ]];
-    [strokes addObject:[[Stroke alloc] initWithNumber:@"8" strokName:@"Backhand" score:@"0" ]];
-    return strokes;
+    if(!strokesForVolleyDeph){
+        NSMutableArray *strokes = [[NSMutableArray alloc] init];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"1" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"2" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"3" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"4" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"5" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"6" strokName:@"Backhand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"7" strokName:@"Forehand" score:@"0" ]];
+        [strokes addObject:[[Stroke alloc] initWithNumber:@"8" strokName:@"Backhand" score:@"0" ]];
+        strokesForVolleyDeph = strokes;
+    }
+    return strokesForVolleyDeph;
 }
 
 -(NSMutableArray *) getStrokesForServer{
