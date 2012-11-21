@@ -64,5 +64,6 @@
 +(NSArray *) getPointsForServer;
 
 + (Assessment *)current;
++ (void) clearInstance;
 
 @end

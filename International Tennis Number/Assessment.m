@@ -32,6 +32,10 @@ static Assessment *instance = NULL;
     return(instance);
 }
 
++ (void) clearInstance{
+    instance = nil;
+}
+
 
 -(id)init
 {

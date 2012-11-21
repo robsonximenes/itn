@@ -50,7 +50,7 @@
         return NO;
     }
     if(textField == self.dateTextField){
-        [self createDateBirthPicker];
+        [self createDatePicker];
         return NO;
     }
     return YES;
@@ -76,39 +76,87 @@
     [toolBar sizeToFit];
     
     UIBarButtonItem *spaceButton = [[UIBarButtonItem alloc]initWithTitle:nil style:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonSystemItemDone target:self action:@selector(dateSelected)];
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonSystemItemDone target:self action:@selector(dateBirthSelected)];
     UIBarButtonItem *cancalButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonSystemItemDone target:self action:@selector(dateCancelled)];
     
     [toolBar setItems:[NSArray arrayWithObjects:spaceButton,selectButton,cancalButton, nil] animated:NO];
     
     [dateBirthSheet addSubview:toolBar];
-    
     [dateBirthSheet showInView:self.view];
-    
     [dateBirthSheet setBounds:CGRectMake(0, 0, 320, 485)];
+    
+}
+
+-(void) createDatePicker{
+    dateSheet = [[UIActionSheet alloc]initWithTitle:nil delegate:nil cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    [dateSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    
+    datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0,44,0,0)];
+    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    
+    [dateSheet addSubview:datePicker];
+    
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,0,dateBirthSheet.bounds.size.width,44)];
+    [toolBar setBarStyle:UIBarStyleBlack];
+    [toolBar sizeToFit];
+    
+    UIBarButtonItem *spaceButton = [[UIBarButtonItem alloc]initWithTitle:nil style:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonSystemItemDone target:self action:@selector(dateSelected)];
+    UIBarButtonItem *cancalButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonSystemItemDone target:self action:@selector(dateCancelled)];
+    
+    [toolBar setItems:[NSArray arrayWithObjects:spaceButton,selectButton,cancalButton, nil] animated:NO];
+    
+    [dateSheet addSubview:toolBar];
+    [dateSheet showInView:self.view];
+    [dateSheet setBounds:CGRectMake(0, 0, 320, 485)];
     
 }
 
 -(void) dateSelected{
     
-    NSArray *listOfview = [dateBirthPicker subviews];
+    NSLog(@"Selecionou a data...");
+    
+    Assessment *assessment = [Assessment current];
+    
+    NSArray *listOfview = [dateSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
-            [[Assessment current] setBirthday:[(UIDatePicker *)subview date]];
+            [assessment setDate:[(UIDatePicker *)subview date]];
         }
     }
-    listOfview = [datePicker subviews];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    
+    NSLog(@"%@",[formatter stringFromDate:[assessment birthday]]);
+    
+    [dateTextField setText:[formatter stringFromDate:[assessment date]]];
+    
+    [self dateCancelled];
+    
+}
+
+-(void) dateBirthSelected{
+    
+    NSLog(@"Selecionou a data...");
+    
+    Assessment *assessment = [Assessment current];
+    
+    NSArray *listOfview = [dateBirthSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
-            [[Assessment current] setDate:[(UIDatePicker *)subview date]];
+            [assessment setBirthday:[(UIDatePicker *)subview date]];
         }
     }
 
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MM/dd/yyyy"];
     
-    [dateBirthTextField setText:[formatter stringFromDate:[[Assessment current] birthday]]];
-    [dateTextField setText:[formatter stringFromDate:[[Assessment current] date]]];
+    NSLog(@"%@",[formatter stringFromDate:[assessment birthday]]);
+    
+    [dateBirthTextField setText:[formatter stringFromDate:[assessment birthday]]];
+    
+    [self dateCancelled];
     
 }
 

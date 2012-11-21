@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeCell.h"
+#import "Assessment.h"
 
 @interface HomeViewController ()
 
@@ -27,7 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [Assessment clearInstance];
+	
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [Assessment clearInstance];
 }
 
 - (void)didReceiveMemoryWarning

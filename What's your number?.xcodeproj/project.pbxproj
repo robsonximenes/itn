@@ -17,6 +17,7 @@
 		396BB403165CD7E2002D525B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB402165CD7E2002D525B /* HomeViewController.m */; };
 		396BB407165CDA87002D525B /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB406165CDA87002D525B /* HomeCell.m */; };
 		396BB409165CDAA2002D525B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB408165CDAA2002D525B /* HomeCell.xib */; };
+		396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40B165CFCD0002D525B /* GSDephViewController.m */; };
 		398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B651657A6A50065A58A /* UIKit.framework */; };
 		398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
 		398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B691657A6A50065A58A /* CoreGraphics.framework */; };
@@ -33,12 +34,9 @@
 		398A6B9A1657A6A60065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
 		398A6BA21657A6A60065A58A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BA01657A6A60065A58A /* InfoPlist.strings */; };
 		398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */; };
-		398A6BB01657B6E00065A58A /* GroundStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BAF1657B6E00065A58A /* GroundStroke.m */; };
 		398A6BBA1657C8760065A58A /* groundstroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BB91657C8760065A58A /* groundstroke.png */; };
 		398A6BC616581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
 		398A6BC716581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
-		398A6BCA1658215C0065A58A /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC91658215C0065A58A /* VolleyDephViewController.m */; };
-		398A6BCB1658215C0065A58A /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC91658215C0065A58A /* VolleyDephViewController.m */; };
 		398A6BDD16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
 		398A6BDE16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
 		398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
@@ -80,6 +78,8 @@
 		396BB405165CDA87002D525B /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
 		396BB406165CDA87002D525B /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		396BB408165CDAA2002D525B /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		396BB40A165CFCCF002D525B /* GSDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDephViewController.h; sourceTree = "<group>"; };
+		396BB40B165CFCD0002D525B /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
 		398A6B611657A6A50065A58A /* International Tennis Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "International Tennis Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398A6B651657A6A50065A58A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		398A6B671657A6A50065A58A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,13 +101,9 @@
 		398A6BA11657A6A60065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		398A6BA31657A6A60065A58A /* International_Tennis_NumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = International_Tennis_NumberTests.h; sourceTree = "<group>"; };
 		398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = International_Tennis_NumberTests.m; sourceTree = "<group>"; };
-		398A6BAE1657B6E00065A58A /* GroundStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundStroke.h; sourceTree = "<group>"; };
-		398A6BAF1657B6E00065A58A /* GroundStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundStroke.m; sourceTree = "<group>"; };
 		398A6BB91657C8760065A58A /* groundstroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groundstroke.png; sourceTree = "<group>"; };
 		398A6BC416581EA50065A58A /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
 		398A6BC516581EA50065A58A /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
-		398A6BC81658215C0065A58A /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
-		398A6BC91658215C0065A58A /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
 		398A6BDC16590B890065A58A /* StrokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeCell.xib; sourceTree = "<group>"; };
 		398A6BE316590F4F0065A58A /* StrokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeCell.h; sourceTree = "<group>"; };
 		398A6BE416590F4F0065A58A /* StrokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeCell.m; sourceTree = "<group>"; };
@@ -267,10 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				396BB404165CDA29002D525B /* TableCellView */,
-				398A6BAE1657B6E00065A58A /* GroundStroke.h */,
-				398A6BAF1657B6E00065A58A /* GroundStroke.m */,
-				398A6BC81658215C0065A58A /* VolleyDephViewController.h */,
-				398A6BC91658215C0065A58A /* VolleyDephViewController.m */,
 				398A6BE71659101D0065A58A /* GSAccuracyViewController.h */,
 				398A6BE81659101D0065A58A /* GSAccuracyViewController.m */,
 				398A6BF316598B160065A58A /* ServerViewController.h */,
@@ -283,6 +275,8 @@
 				396BB3FC165BE628002D525B /* ProfileViewController.m */,
 				396BB401165CD7E2002D525B /* HomeViewController.h */,
 				396BB402165CD7E2002D525B /* HomeViewController.m */,
+				396BB40A165CFCCF002D525B /* GSDephViewController.h */,
+				396BB40B165CFCD0002D525B /* GSDephViewController.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -419,9 +413,7 @@
 			files = (
 				398A6B721657A6A50065A58A /* main.m in Sources */,
 				398A6B761657A6A50065A58A /* AppDelegate.m in Sources */,
-				398A6BB01657B6E00065A58A /* GroundStroke.m in Sources */,
 				398A6BC616581EA50065A58A /* Assessment.m in Sources */,
-				398A6BCA1658215C0065A58A /* VolleyDephViewController.m in Sources */,
 				398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */,
 				398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */,
 				398A6BF1165915330065A58A /* Stroke.m in Sources */,
@@ -431,6 +423,7 @@
 				396BB3FD165BE628002D525B /* ProfileViewController.m in Sources */,
 				396BB403165CD7E2002D525B /* HomeViewController.m in Sources */,
 				396BB407165CDA87002D525B /* HomeCell.m in Sources */,
+				396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +433,6 @@
 			files = (
 				398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */,
 				398A6BC716581EA50065A58A /* Assessment.m in Sources */,
-				398A6BCB1658215C0065A58A /* VolleyDephViewController.m in Sources */,
 				398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */,
 				398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */,
 				398A6BF2165915330065A58A /* Stroke.m in Sources */,
