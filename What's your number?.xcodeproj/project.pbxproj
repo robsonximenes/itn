@@ -52,6 +52,9 @@
 		398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
 		398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
 		398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
+		39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD70165EC685001B15AB /* GuideViewController.m */; };
+		39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A9FD72165ECBB0001B15AB /* CoreData.framework */; };
+		39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,10 @@
 		398A6BF8165992AD0065A58A /* MobilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilityViewController.m; sourceTree = "<group>"; };
 		398A6BFB1659B3670065A58A /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		398A6BFC1659B3670065A58A /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		39A9FD6F165EC685001B15AB /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		39A9FD70165EC685001B15AB /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		39A9FD72165ECBB0001B15AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */,
 				398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */,
 				398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */,
 				398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */,
@@ -187,6 +195,7 @@
 		398A6B641657A6A50065A58A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39A9FD72165ECBB0001B15AB /* CoreData.framework */,
 				398A6B651657A6A50065A58A /* UIKit.framework */,
 				398A6B671657A6A50065A58A /* Foundation.framework */,
 				398A6B691657A6A50065A58A /* CoreGraphics.framework */,
@@ -198,6 +207,7 @@
 		398A6B6B1657A6A50065A58A /* International Tennis Number */ = {
 			isa = PBXGroup;
 			children = (
+				39A9FD74165ECBCB001B15AB /* model */,
 				398A6BC116581E560065A58A /* source */,
 				398A6BBF16581E4C0065A58A /* images */,
 				398A6B741657A6A50065A58A /* AppDelegate.h */,
@@ -271,7 +281,40 @@
 		398A6BC216581E5F0065A58A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				39A9FD6E165EC656001B15AB /* Assessment */,
+				39A9FD6C165EC64D001B15AB /* Guide */,
 				396BB404165CDA29002D525B /* TableCellView */,
+				396BB401165CD7E2002D525B /* HomeViewController.h */,
+				396BB402165CD7E2002D525B /* HomeViewController.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		398A6BC316581E650065A58A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				398A6BC416581EA50065A58A /* Assessment.h */,
+				398A6BC516581EA50065A58A /* Assessment.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		39A9FD6C165EC64D001B15AB /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				39A9FD6F165EC685001B15AB /* GuideViewController.h */,
+				39A9FD70165EC685001B15AB /* GuideViewController.m */,
+			);
+			name = Guide;
+			sourceTree = "<group>";
+		};
+		39A9FD6E165EC656001B15AB /* Assessment */ = {
+			isa = PBXGroup;
+			children = (
+				396BB40A165CFCCF002D525B /* GSDephViewController.h */,
+				396BB40B165CFCD0002D525B /* GSDephViewController.m */,
+				396BB40D165D3B97002D525B /* VolleyDephViewController.h */,
+				396BB40E165D3B98002D525B /* VolleyDephViewController.m */,
 				398A6BE71659101D0065A58A /* GSAccuracyViewController.h */,
 				398A6BE81659101D0065A58A /* GSAccuracyViewController.m */,
 				398A6BF316598B160065A58A /* ServerViewController.h */,
@@ -282,21 +325,14 @@
 				398A6BFC1659B3670065A58A /* ScoreViewController.m */,
 				396BB3FB165BE628002D525B /* ProfileViewController.h */,
 				396BB3FC165BE628002D525B /* ProfileViewController.m */,
-				396BB401165CD7E2002D525B /* HomeViewController.h */,
-				396BB402165CD7E2002D525B /* HomeViewController.m */,
-				396BB40A165CFCCF002D525B /* GSDephViewController.h */,
-				396BB40B165CFCD0002D525B /* GSDephViewController.m */,
-				396BB40D165D3B97002D525B /* VolleyDephViewController.h */,
-				396BB40E165D3B98002D525B /* VolleyDephViewController.m */,
 			);
-			name = view;
+			name = Assessment;
 			sourceTree = "<group>";
 		};
-		398A6BC316581E650065A58A /* model */ = {
+		39A9FD74165ECBCB001B15AB /* model */ = {
 			isa = PBXGroup;
 			children = (
-				398A6BC416581EA50065A58A /* Assessment.h */,
-				398A6BC516581EA50065A58A /* Assessment.m */,
+				39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -436,6 +472,8 @@
 				396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */,
 				396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */,
 				396BB414165E36AB002D525B /* ScoreCell.m in Sources */,
+				39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */,
+				39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +683,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */,
+			);
+			currentVersion = 39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 398A6B581657A6A50065A58A /* Project object */;
 }
