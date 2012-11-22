@@ -123,5 +123,10 @@
 }
 
 
+- (IBAction)exit:(id)sender {
+    for (UIViewController *view in [self.navigationController viewControllers]) {
+        [view dismissViewControllerAnimated:false completion:nil];
+    }
+}
 @end
 

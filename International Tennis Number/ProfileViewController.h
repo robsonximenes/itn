@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *assessortextField;
 @property (weak, nonatomic) IBOutlet UITextField *dateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *venueTextField;
+- (IBAction)exit:(id)sender;
+
 
 @end

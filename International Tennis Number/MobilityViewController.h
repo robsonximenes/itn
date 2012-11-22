@@ -16,4 +16,5 @@
 - (IBAction)stop:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *total;
+- (IBAction)exit:(id)sender;
 @end

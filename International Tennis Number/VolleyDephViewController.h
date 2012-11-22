@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *total;
 @property (weak, nonatomic) IBOutlet UILabel *subtotal;
 @property (weak, nonatomic) IBOutlet UILabel *consistency;
+- (IBAction)exit:(id)sender;
 
 @end

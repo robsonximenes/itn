@@ -14,7 +14,7 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="cBh-Zx-o1X">
                                 <items>
-                                    <barButtonItem title="Assessment Guide" id="3OR-TT-Rir"/>
+                                    <barButtonItem title="Guide" id="3OR-TT-Rir"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="VzX-ub-9HZ"/>
                                     <barButtonItem title="Start Assessment" id="KoC-XG-qWm">
                                         <connections>
@@ -301,7 +301,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Profile" id="cLE-dY-1Ud">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="n8N-if-vCU"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="n8N-if-vCU">
+                            <connections>
+                                <action selector="exit:" destination="MTG-3M-FvK" id="vmV-fJ-uiK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Start" id="jh1-zK-adb">
                             <connections>
                                 <segue destination="0oB-ze-1Pm" kind="push" id="XtM-0W-dhl"/>
@@ -419,7 +423,11 @@
                                 <items>
                                     <barButtonItem title="Guide" id="daB-8k-OO8"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ojW-Su-XX3"/>
-                                    <barButtonItem title="Exit" id="M7U-nq-ECj"/>
+                                    <barButtonItem title="Exit" id="M7U-nq-ECj">
+                                        <connections>
+                                            <action selector="exit:" destination="0oB-ze-1Pm" id="Wb8-4E-QNY"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -555,7 +563,11 @@
                                 <items>
                                     <barButtonItem title="Guide" id="qV1-sv-SNa"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="49Y-CR-hEp"/>
-                                    <barButtonItem title="Exit" id="09R-5y-oxY"/>
+                                    <barButtonItem title="Exit" id="09R-5y-oxY">
+                                        <connections>
+                                            <action selector="exit:" destination="WGz-Yg-4AO" id="eVZ-ai-bqM"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -686,7 +698,11 @@
                                 <items>
                                     <barButtonItem title="Guide" id="T9i-R0-4Oq"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Z3y-5Z-WUz"/>
-                                    <barButtonItem title="Exit" id="jAI-rV-9Jf"/>
+                                    <barButtonItem title="Exit" id="jAI-rV-9Jf">
+                                        <connections>
+                                            <action selector="exit:" destination="K9B-Qw-D5h" id="bVX-Sn-kRB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -818,7 +834,11 @@
                                 <items>
                                     <barButtonItem title="Guide" id="AEh-gd-zyI"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="X36-RH-ta8"/>
-                                    <barButtonItem title="Exit" id="GNL-Uu-1df"/>
+                                    <barButtonItem title="Exit" id="GNL-Uu-1df">
+                                        <connections>
+                                            <action selector="exit:" destination="Dwn-qI-5sR" id="6aq-Yt-fPj"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -919,7 +939,11 @@
                                 <items>
                                     <barButtonItem title="Guide" id="K19-Mo-lQf"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="spz-JT-0Ly"/>
-                                    <barButtonItem title="Exit" id="IqQ-kh-bZp"/>
+                                    <barButtonItem title="Exit" id="IqQ-kh-bZp">
+                                        <connections>
+                                            <action selector="exit:" destination="hxH-z4-cvD" id="fok-zC-7Gs"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -1010,6 +1034,7 @@
         <class className="GSAccuracyViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GSAccuracyViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="outlet" name="consistency" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="resultContentView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="subtotal" candidateClass="UILabel"/>
@@ -1020,6 +1045,7 @@
         <class className="GSDephViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GSDephViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="outlet" name="consistency" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="subtotal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
@@ -1035,6 +1061,7 @@
         <class className="MobilityViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MobilityViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="action" name="start:"/>
                 <relationship kind="action" name="stop:"/>
                 <relationship kind="outlet" name="startButton" candidateClass="UIButton"/>
@@ -1049,6 +1076,7 @@
         <class className="ProfileViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="outlet" name="assessortextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="dateBirthTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
@@ -1066,6 +1094,7 @@
         <class className="ServerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="outlet" name="consistency" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="resultView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="subtotal" candidateClass="UILabel"/>
@@ -1076,6 +1105,7 @@
         <class className="VolleyDephViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VolleyDephViewController.h"/>
             <relationships>
+                <relationship kind="action" name="exit:"/>
                 <relationship kind="outlet" name="consistency" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="subtotal" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>

@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *total;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
+- (IBAction)exit:(id)sender;
 
 @end

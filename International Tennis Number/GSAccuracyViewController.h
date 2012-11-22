@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *consistency;
 @property (weak, nonatomic) IBOutlet UILabel *total;
 @property (weak, nonatomic) IBOutlet UIView *resultContentView;
+- (IBAction)exit:(id)sender;
 
 @end
