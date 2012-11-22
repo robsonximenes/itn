@@ -170,7 +170,6 @@ static Assessment *instance = NULL;
     }
     for (int i =0; i<[points count]; i++) {
         int max = [((NSNumber*)[points objectAtIndex:i]) intValue];
-        NSLog(@"Max (%d) - Score(%d)",max,score);
         if(score<= max){
             itn = 11-i;
             break;

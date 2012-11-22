@@ -19,6 +19,8 @@
 		396BB409165CDAA2002D525B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB408165CDAA2002D525B /* HomeCell.xib */; };
 		396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40B165CFCD0002D525B /* GSDephViewController.m */; };
 		396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40E165D3B98002D525B /* VolleyDephViewController.m */; };
+		396BB411165E34E2002D525B /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB410165E34E2002D525B /* ScoreCell.xib */; };
+		396BB414165E36AB002D525B /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB413165E36AB002D525B /* ScoreCell.m */; };
 		398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B651657A6A50065A58A /* UIKit.framework */; };
 		398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
 		398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B691657A6A50065A58A /* CoreGraphics.framework */; };
@@ -81,6 +83,9 @@
 		396BB40B165CFCD0002D525B /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
 		396BB40D165D3B97002D525B /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
 		396BB40E165D3B98002D525B /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
+		396BB410165E34E2002D525B /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		396BB412165E36AB002D525B /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
+		396BB413165E36AB002D525B /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
 		398A6B611657A6A50065A58A /* International Tennis Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "International Tennis Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398A6B651657A6A50065A58A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		398A6B671657A6A50065A58A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +158,9 @@
 				396BB405165CDA87002D525B /* HomeCell.h */,
 				396BB406165CDA87002D525B /* HomeCell.m */,
 				396BB408165CDAA2002D525B /* HomeCell.xib */,
+				396BB410165E34E2002D525B /* ScoreCell.xib */,
+				396BB412165E36AB002D525B /* ScoreCell.h */,
+				396BB413165E36AB002D525B /* ScoreCell.m */,
 			);
 			name = TableCellView;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 				396BB3FE165CD4E9002D525B /* Default@2x.png in Resources */,
 				396BB400165CD5FB002D525B /* Default-568h@2x.png in Resources */,
 				396BB409165CDAA2002D525B /* HomeCell.xib in Resources */,
+				396BB411165E34E2002D525B /* ScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +435,7 @@
 				396BB407165CDA87002D525B /* HomeCell.m in Sources */,
 				396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */,
 				396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */,
+				396BB414165E36AB002D525B /* ScoreCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

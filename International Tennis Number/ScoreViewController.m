@@ -8,6 +8,7 @@
 
 #import "ScoreViewController.h"
 #import "Assessment.h"
+#import "ScoreCell.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -33,34 +34,6 @@
     [super viewDidLoad];
 	self.assessment = [Assessment current];
     
-    self.gsAccuracyConsistency.text = [NSString stringWithFormat:@"%d",[assessment getGSAccuracyConssistencyPoints] ];
-    self.gsAccuracySubtotal.text = [NSString stringWithFormat:@"%d",[assessment getGSAccuracyPoints]];
-    self.gsAccuracyTotal.text = [NSString stringWithFormat:@"%d",[assessment getGSAccuracyTotalPoints]];
-    
-    self.volleyDephConsistency.text = [NSString stringWithFormat:@"%d",[assessment getVolleyDephConssistencyPoints] ];
-    self.volleyDephSubtotal.text = [NSString stringWithFormat:@"%d",[assessment getVolleyDephPoints]];
-    self.volleyDephTotal.text = [NSString stringWithFormat:@"%d",[assessment getVolleyDephTotalPoints]];
-    
-    self.gsDephConsistency.text = [NSString stringWithFormat:@"%d",[assessment getGroundStrokeConssistencyPoints] ];
-    self.gsDephSubtotal.text = [NSString stringWithFormat:@"%d",[assessment getGroundStrokePoints]];
-    self.gsDephTotal.text = [NSString stringWithFormat:@"%d",[assessment getGroundStrokeTotalPoints]];
-    
-    self.serverConsistency.text = [NSString stringWithFormat:@"%d",[assessment getServerConssistencyPoints] ];
-    self.serverSubtotal.text = [NSString stringWithFormat:@"%d",[assessment getServerPoints]];
-    self.serverTotal.text = [NSString stringWithFormat:@"%d",[assessment getServerTotalPoints]];
-    
-    self.mobilityTotal.text = [NSString stringWithFormat:@"%d",[assessment getMobilityPoints] ];
-    self.itnTotal.text = [NSString stringWithFormat:@"%d",[assessment calculateITN]];
-    
-    self.total.text = [NSString stringWithFormat:@"%d",[assessment getTotalPoints]];
-    
-    [self setupView:self.gsAccuracyView];
-    [self setupView:self.gsDephView];
-    [self setupView:self.serverView];
-    [self setupView:self.volleyDephView];
-    [self setupView:self.mobilityView];
-    [self setupView:self.itnView];
-    
 }
 
 -(void)setupView: (UIView *)view{
@@ -80,4 +53,72 @@
         [view dismissViewControllerAnimated:false completion:nil];
     }
 }
+
+# pragma mark TableView Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(section==0){
+        return 1;
+    }else{
+        return 5;
+    }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 52;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *CellIdentifier = @"ScoreCell";
+    ScoreCell *cell = (ScoreCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell){
+        NSArray *topObjects = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:nil options:nil];
+        for(id currentObject in topObjects){
+            if([currentObject isKindOfClass:[ScoreCell class]]){
+                cell = (ScoreCell *)currentObject;
+                break;
+            }
+        }
+    }
+    
+    
+    if(indexPath.section == 1){
+        NSString *text = @"Subtotal: %i, Consistency: %i";
+    if(indexPath.row == 0){
+        [cell.name setText:@"Ground Stroke Deph"];
+        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getGroundStrokePoints],[assessment getGroundStrokeConssistencyPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getGroundStrokeTotalPoints]]];
+    }else if(indexPath.row == 1){
+        [cell.name setText:@"Volley Deph"];
+        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getVolleyDephPoints],[assessment getVolleyDephConssistencyPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getVolleyDephTotalPoints]]];
+    }else if(indexPath.row == 2){
+        [cell.name setText:@"Ground Stroke Accuracy"];
+        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getGSAccuracyPoints],[assessment getGSAccuracyConssistencyPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getGSAccuracyTotalPoints]]];
+    }else if(indexPath.row == 3){
+        [cell.name setText:@"Server"];
+        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getServerPoints],[assessment getServerConssistencyPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getServerTotalPoints]]];
+    }else if(indexPath.row == 4){
+        [cell.name setText:@"Mobility"];
+        [cell.abstrct setText:[NSString stringWithFormat:@"Time :%is", [assessment mobilityTime]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getMobilityPoints]]];
+    }
+        
+    }else{
+        [cell.name setText:@"Internationl Tennis Number"];
+        [cell.abstrct setText:[NSString stringWithFormat:@"Strokes:%i Mobility:%i Total:%i", [assessment getStrokePoints],[assessment getMobilityPoints],[assessment getTotalPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment calculateITN]]];
+    }
+    
+    return cell;
+    
+}
+
+
 @end
