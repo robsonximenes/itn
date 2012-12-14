@@ -49,6 +49,8 @@
 
 - (IBAction)save:(id)sender {
     
+    [[Assessment current]save];
+    
     for (UIViewController *view in [self.navigationController viewControllers]) {
         [view dismissViewControllerAnimated:false completion:nil];
     }

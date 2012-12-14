@@ -8,6 +8,7 @@
 
 #import "Assessment.h"
 #import "Stroke.h"
+#import "AppDelegate.h"
 
 #define MOBILITY_SCORE [NSArray arrayWithObjects: [NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5],[NSNumber numberWithInt:6],[NSNumber numberWithInt:7],[NSNumber numberWithInt:8],[NSNumber numberWithInt:9],[NSNumber numberWithInt:10],[NSNumber numberWithInt:11],[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:14],[NSNumber numberWithInt:15],[NSNumber numberWithInt:16],[NSNumber numberWithInt:18],[NSNumber numberWithInt:19],[NSNumber numberWithInt:21],[NSNumber numberWithInt:26],[NSNumber numberWithInt:32],[NSNumber numberWithInt:39],[NSNumber numberWithInt:45],[NSNumber numberWithInt:52],[NSNumber numberWithInt:61],[NSNumber numberWithInt:75],nil]
 
@@ -22,6 +23,8 @@
 
 @synthesize strokesForGSAccuracy,strokesForGSDeph,strokesForServer,strokesForVolleyDeph;
 
+
+@synthesize itn,gsDephPoints,gsAccuracyPoints,serverPoints,volleyDephPoints,mobilityPoints;
 
 static Assessment *instance = NULL;
 
@@ -160,7 +163,7 @@ static Assessment *instance = NULL;
 }
 
 - (int) calculateITN{
-    int itn = 10;
+    int theItn = 10;
     int score = [self getTotalPoints];
     NSArray *points = NULL;
     if([sex isEqualToString:@"F"]){
@@ -171,12 +174,12 @@ static Assessment *instance = NULL;
     for (int i =0; i<[points count]; i++) {
         int max = [((NSNumber*)[points objectAtIndex:i]) intValue];
         if(score<= max){
-            itn = 11-i;
+            theItn = 11-i;
             break;
         }
     }
     
-    return itn;
+    return theItn;
 }
 
 
@@ -276,6 +279,110 @@ static Assessment *instance = NULL;
 }
 
 
+#pragma mark Persistencia
 
+-(NSManagedObject *) fetch{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] initWithEntityName:@"Assessment"];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"(name = %@)", self.name];
+    
+    [fetch setPredicate:pred];
+    
+    NSError *error;
+    NSArray *objects = [contexto executeFetchRequest:fetch error:&error];
+    NSManagedObject *object;
+    
+    if([objects count]==0){
+        object = nil;
+    }else{
+        object = [objects objectAtIndex:0];
+    }
+
+    return object;
+}
+
+-(void) save{
+    
+    NSManagedObject *object = [self fetch];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
+    
+    if(!object){
+        object = [NSEntityDescription
+                    insertNewObjectForEntityForName:@"Assessment"
+                    inManagedObjectContext:contexto];
+    }
+    
+    [object setValue:self.name forKey:@"name"];
+    [object setValue:self.birthday forKey:@"birthday"];
+    [object setValue:self.sex forKey:@"sex"];
+    [object setValue:self.assessor forKey:@"assessor"];
+    [object setValue:self.date forKey:@"date"];
+    [object setValue:self.local forKey:@"venue"];
+    
+    [object setValue: [NSNumber numberWithInt:[self getGroundStrokeTotalPoints]] forKey:@"gsDephPoints"];
+    [object setValue: [NSNumber numberWithInt:[self getGSAccuracyTotalPoints]] forKey:@"gsAccuracyPoints"];
+    [object setValue: [NSNumber numberWithInt:[self getVolleyDephTotalPoints]] forKey:@"volleyDephPoints"];
+    [object setValue: [NSNumber numberWithInt:[self getServerPoints]] forKey:@"serverPoints"];
+    [object setValue: [NSNumber numberWithInt:[self getMobilityPoints]] forKey:@"mobility"];
+    [object setValue: [NSNumber numberWithInt:[self calculateITN]] forKey:@"itn"];
+    
+    
+    
+    NSError *error;
+    [contexto save:&error];
+    
+    if(error){
+        NSLog(@"Erro ao salvar: %@",error);
+    }
+
+
+}
+
+-(NSArray *)findAll{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
+    NSFetchRequest *fetch = [[NSFetchRequest alloc] initWithEntityName:@"Assessment"];
+    
+    NSError *error;
+    NSArray *objects = [contexto executeFetchRequest:fetch error:&error];
+    
+    NSMutableArray *assessments = [NSMutableArray array];
+    for (NSManagedObject *object in objects) {
+        Assessment *a = [[Assessment alloc]init];
+        [a setAssessor:[object valueForKey:@"assessor"]];
+        [a setBirthday:[object valueForKey:@"birthday"]];
+        [a setDate:[object valueForKey:@"date"]];
+        [a setLocal:[object valueForKey:@"venue"]];
+        [a setName:[object valueForKey:@"name"]];
+        [a setSex:[object valueForKey:@"sex"]];
+        
+        
+        NSNumber *gsDephP = [object valueForKey:@"gsDephPoints"];
+        NSNumber *gsAccuracyP = [object valueForKey:@"gsAccuracyPoints"];
+        NSNumber *volleyDephP = [object valueForKey:@"volleyDephPoints"];
+        NSNumber *serverP = [object valueForKey:@"serverPoints"];
+        NSNumber *mobilityP = [object valueForKey:@"mobility"];
+        NSNumber *itnP = [object valueForKey:@"itn"];
+        
+        
+        
+        [a setGsDephPoints:[gsDephP integerValue]];
+        [a setGsAccuracyPoints: [gsAccuracyP integerValue]];
+        [a setVolleyDephPoints: [volleyDephP integerValue]];
+        [a setServerPoints:[serverP integerValue]];
+        [a setMobilityPoints:[mobilityP integerValue]];
+        [a setItn:[itnP integerValue]];
+        
+        
+        [assessments addObject:a];
+    }
+    
+    return assessments;
+}
 
 @end

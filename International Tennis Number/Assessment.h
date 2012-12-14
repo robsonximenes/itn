@@ -16,6 +16,13 @@
 @property NSString *assessor;
 @property NSDate *date;
 @property NSString *local;
+@property int itn;
+@property int gsDephPoints;
+@property int gsAccuracyPoints;
+@property int serverPoints;
+@property int volleyDephPoints;
+@property int mobilityPoints;
+
 
 
 @property NSMutableArray *groundStrokeDeph;
@@ -65,5 +72,9 @@
 
 + (Assessment *)current;
 + (void) clearInstance;
+
+-(void)save;
+-(NSManagedObject *)fetch;
+-(NSArray *)findAll;
 
 @end

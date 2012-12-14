@@ -74,7 +74,36 @@
     return YES;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    Assessment * a = [Assessment current];
+    a.name = nameTextField.text;
+    a.birthday = dateBirthPicker.date;
+    a.sex = [sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]];
+    
+    a.assessor = assessortextField.text;
+    a.date = datePicker.date;
+    a.local = venueTextField.text;
+}
 
+-(BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    BOOL isOk = true;
+    
+    NSMutableString *sb = [NSMutableString stringWithString:@""];
+    
+    if(nameTextField.text.length<5){
+        isOk = false;
+        [sb appendString:@"The names is required.\n "];
+    }
+    
+    if(!isOk){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Profile validation" message:sb delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        
+        [alert show];
+    }
+    
+    return isOk;
+}
 
 
 #pragma mark DatePickers
