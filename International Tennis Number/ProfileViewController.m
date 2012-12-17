@@ -39,12 +39,10 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    NSString *sex = [sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]];
-    
+
     Assessment *a = [Assessment current];
     [a setName:nameTextField.text];
-    [a setSex:sex];
+    [a setSex:[sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]]];
     [a setAssessor:assessortextField.text];
     [a setLocal:venueTextField.text];
     
@@ -91,7 +89,7 @@
     
     NSMutableString *sb = [NSMutableString stringWithString:@""];
     
-    if(nameTextField.text.length<5){
+    if(nameTextField.text.length<1){
         isOk = false;
         [sb appendString:@"The names is required.\n "];
     }
@@ -117,18 +115,21 @@
     [dateBirthSheet addSubview:dateBirthPicker];
     
     UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,0,dateBirthSheet.bounds.size.width,44)];
-    [toolBar setBarStyle:UIBarStyleBlack];
+    [toolBar setBarStyle:UIBarStyleBlackTranslucent];
     [toolBar sizeToFit];
     
-    UIBarButtonItem *spaceButton = [[UIBarButtonItem alloc]initWithTitle:nil style:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonSystemItemDone target:self action:@selector(dateBirthSelected)];
-    UIBarButtonItem *cancalButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonSystemItemDone target:self action:@selector(dateCancelled)];
     
-    [toolBar setItems:[NSArray arrayWithObjects:spaceButton,selectButton,cancalButton, nil] animated:NO];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonItemStyleBordered target:self action:@selector(dateBirthSelected)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
+    
+    [toolBar setItems:[NSArray arrayWithObjects:space,selectButton,cancelButton, nil] animated:YES];
+    
     
     [dateBirthSheet addSubview:toolBar];
     [dateBirthSheet showInView:self.view];
-    [dateBirthSheet setBounds:CGRectMake(0, 0, 320, 485)];
+    [dateBirthSheet setBounds:CGRectMake(0, 0, 320, 490)];
     
 }
 
@@ -138,18 +139,20 @@
     
     datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0,44,0,0)];
     [datePicker setDatePickerMode:UIDatePickerModeDate];
+    [datePicker setDate:[NSDate date] animated:YES];
     
     [dateSheet addSubview:datePicker];
     
     UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,0,dateBirthSheet.bounds.size.width,44)];
-    [toolBar setBarStyle:UIBarStyleBlack];
+    [toolBar setBarStyle:UIBarStyleBlackTranslucent];
     [toolBar sizeToFit];
     
-    UIBarButtonItem *spaceButton = [[UIBarButtonItem alloc]initWithTitle:nil style:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonSystemItemDone target:self action:@selector(dateSelected)];
-    UIBarButtonItem *cancalButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonSystemItemDone target:self action:@selector(dateCancelled)];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    [toolBar setItems:[NSArray arrayWithObjects:spaceButton,selectButton,cancalButton, nil] animated:NO];
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonItemStyleBordered target:self action:@selector(dateSelected)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
+    
+    [toolBar setItems:[NSArray arrayWithObjects:space,selectButton,cancelButton, nil] animated:NO];
     
     [dateSheet addSubview:toolBar];
     [dateSheet showInView:self.view];
