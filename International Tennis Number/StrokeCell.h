@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface StrokeCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *number;
 @property (weak, nonatomic) IBOutlet UILabel *strokeName;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *score;
+@property (retain) AVAudioPlayer *player;
 
+- (IBAction)scoreValueChanged:(UISegmentedControl *)sender;
 @end

@@ -48,7 +48,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70.0;
+    return STROKES_ROW_HEIGHT;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -106,6 +106,8 @@
     
     NSString *value = [segment titleForSegmentAtIndex:[segment selectedSegmentIndex]];
     
+    [self.table setContentOffset:CGPointMake(0, indexPath.row * STROKES_ROW_HEIGHT) animated:YES];
+    
     Stroke *stroke = [self getStrokeAtIndex:row];
     stroke.score = value;
     
@@ -120,17 +122,27 @@
         Stroke *stroke = [strokes objectAtIndex:i];
         [assetment.server setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
     }
-    
-    
     [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getServerPoints]]];
     [consistency setText:[NSString stringWithFormat:@"%i", [assetment getServerConssistencyPoints]]];
     [total setText:[NSString stringWithFormat:@"%i", [assetment getServerTotalPoints]]];
 }
 
 
+#pragma mark Quit the assessment
 - (IBAction)exit:(id)sender {
-    for (UIViewController *view in [self.navigationController viewControllers]) {
-        [view dismissViewControllerAnimated:false completion:nil];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Caution" message:@"If you quit now the data will be lost. Continue?" delegate:self cancelButtonTitle:@"Noooo!" otherButtonTitles:@"Ok, quit!", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0){
+		// Yes, do something
+	}else if (buttonIndex == 1){
+		for (UIViewController *view in [self.navigationController viewControllers]) {
+            [view dismissViewControllerAnimated:false completion:nil];
+        }
     }
 }
 
