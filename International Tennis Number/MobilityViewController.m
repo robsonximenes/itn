@@ -37,6 +37,10 @@
     self.assessment = [Assessment current];
     [self calculateScore];
     
+    [startButton setTitle:@"Start" forState:UIControlStateNormal];
+    [startButton setTitle:@"Stop" forState:UIControlStateHighlighted];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +71,6 @@
     timeLabel.text = timeString;
     time = [timeString intValue];
     [self calculateScore];
-
 }
 
 
@@ -82,6 +85,7 @@
     [startButton setEnabled:true];
     [stopButton setEnabled:false];
     if(stopWatchTimer){
+        [self calculateScore];
         [stopWatchTimer invalidate];
         stopWatchTimer = nil;
     }

@@ -83,9 +83,13 @@
     [cell.venue setText:a.local];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
+    [formatter setDateFormat:@"MM/dd/yyyy HH:mm"];
     
-    [cell.date setText:[formatter stringFromDate:a.date]];
+        
+    [cell.date setText:[NSDateFormatter localizedStringFromDate:a.date
+                                                      dateStyle:NSDateFormatterMediumStyle
+                                                      timeStyle:NSDateFormatterShortStyle]
+];
     
     [cell.itnNumber setText:[NSString stringWithFormat:@"%d",a.itn]];
 

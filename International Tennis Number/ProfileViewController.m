@@ -35,6 +35,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    dateTextField.text = [self stringFormatedForDateTime:[[NSDate alloc] init]];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -138,12 +141,12 @@
     [dateSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     
     datePicker = [[UIDatePicker alloc]initWithFrame:CGRectMake(0,44,0,0)];
-    [datePicker setDatePickerMode:UIDatePickerModeDate];
+    [datePicker setDatePickerMode:UIDatePickerModeDateAndTime];
     [datePicker setDate:[NSDate date] animated:YES];
     
     [dateSheet addSubview:datePicker];
     
-    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,0,dateBirthSheet.bounds.size.width,44)];
+    UIToolbar *toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0,0,dateSheet.bounds.size.width,44)];
     [toolBar setBarStyle:UIBarStyleBlackTranslucent];
     [toolBar sizeToFit];
     
@@ -160,52 +163,50 @@
     
 }
 
+-(NSString *) stringFormatedForDate: (NSDate *)date{
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateFormat:@"MM/dd/yyyy"];
+//    return [formatter stringFromDate:date];
+    
+    return [NSDateFormatter localizedStringFromDate:date
+                                          dateStyle:NSDateFormatterMediumStyle
+                                          timeStyle:NSDateFormatterNoStyle];
+
+    
+}
+
+-(NSString *) stringFormatedForDateTime: (NSDate *)date{
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+//    [formatter setDateFormat:@"MM/dd/yyyy HH:mm"];
+//    return [formatter stringFromDate:date];
+    return [NSDateFormatter localizedStringFromDate:date
+                                          dateStyle:NSDateFormatterMediumStyle
+                                          timeStyle:NSDateFormatterShortStyle];
+
+}
+
 -(void) dateSelected{
-    
-    NSLog(@"Selecionou a data...");
-    
     Assessment *assessment = [Assessment current];
-    
     NSArray *listOfview = [dateSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
             [assessment setDate:[(UIDatePicker *)subview date]];
         }
     }
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
-    
-    NSLog(@"%@",[formatter stringFromDate:[assessment date]]);
-    
-    [dateTextField setText:[formatter stringFromDate:[assessment date]]];
-    
+    [dateTextField setText:[self stringFormatedForDateTime:[assessment date]]];
     [self dateCancelled];
-    
 }
 
 -(void) dateBirthSelected{
-    
-    NSLog(@"Selecionou a data birthday...");
-    
     Assessment *assessment = [Assessment current];
-    
     NSArray *listOfview = [dateBirthSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
             [assessment setBirthday:[(UIDatePicker *)subview date]];
         }
     }
-
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"MM/dd/yyyy"];
-    
-    NSLog(@"%@",[formatter stringFromDate:[assessment birthday]]);
-    
-    [dateBirthTextField setText:[formatter stringFromDate:[assessment birthday]]];
-    
+    [dateBirthTextField setText:[self stringFormatedForDate:[assessment birthday]]];
     [self dateCancelled];
-    
 }
 
 -(void) dateCancelled{

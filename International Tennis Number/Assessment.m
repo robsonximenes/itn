@@ -316,6 +316,10 @@ static Assessment *instance = NULL;
                     inManagedObjectContext:contexto];
     }
     
+    if(!self.date){
+        self.date = [[NSDate alloc]init];
+    }
+    
     [object setValue:self.name forKey:@"name"];
     [object setValue:self.birthday forKey:@"birthday"];
     [object setValue:self.sex forKey:@"sex"];
@@ -347,6 +351,10 @@ static Assessment *instance = NULL;
     
     NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
     NSFetchRequest *fetch = [[NSFetchRequest alloc] initWithEntityName:@"Assessment"];
+    NSSortDescriptor *dateOrder = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    NSSortDescriptor *nomeOrder = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    
+    fetch.sortDescriptors = [NSArray arrayWithObjects:dateOrder,nomeOrder, nil];
     
     NSError *error;
     NSArray *objects = [contexto executeFetchRequest:fetch error:&error];

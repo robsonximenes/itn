@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GSDephViewController : UIViewController
+@interface GSDephViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @property (weak, nonatomic) IBOutlet UILabel *total;
