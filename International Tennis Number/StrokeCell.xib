@@ -88,10 +88,9 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">NN</string>
-								<object class="NSColor" key="IBUITextColor" id="326298519">
+								<object class="NSColor" key="IBUITextColor" id="297995668">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MCAwIDAAA</bytes>
-									<string key="IBUIColorCocoaTouchKeyPath">darkTextColor</string>
+									<bytes key="NSRGB">MSAxIDEAA</bytes>
 								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">0</int>
@@ -121,7 +120,7 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">STROKE</string>
-								<reference key="IBUITextColor" ref="326298519"/>
+								<reference key="IBUITextColor" ref="297995668"/>
 								<nil key="IBUIHighlightedColor"/>
 								<float key="IBUIMinimumScaleFactor">0.5</float>
 								<int key="IBUILineBreakMode">0</int>
@@ -150,7 +149,13 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="723831316"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
+				<object class="NSColor" key="IBUIBackgroundColor">
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MCAwIDAAA</bytes>
+				</object>
+				<bool key="IBUIClipsSubviews">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<int key="IBUISelectionStyle">0</int>
 				<reference key="IBUIContentView" ref="723831316"/>
 				<string key="IBUIReuseIdentifier">StrokeCell</string>
 				<real value="70" key="IBUIRowHeight"/>

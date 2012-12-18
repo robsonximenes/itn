@@ -10,5 +10,6 @@
 #define What_s_your_number__Constants_h
 
 #define STROKES_ROW_HEIGHT 80
+#define HOME_ROW_HEIGHT 80
 
 #endif

@@ -54,6 +54,8 @@
 		398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
 		398B25FA16808F3700A0830E /* tennisball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 398B25F916808F3700A0830E /* tennisball.wav */; };
 		398B25FC16808F9400A0830E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398B25FB16808F9400A0830E /* AVFoundation.framework */; };
+		398B26031680E6AE00A0830E /* itnLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B26021680E6AE00A0830E /* itnLogo.png */; };
+		398B26051680E6C200A0830E /* itnLogoMenor.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B26041680E6C200A0830E /* itnLogoMenor.png */; };
 		39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD70165EC685001B15AB /* GuideViewController.m */; };
 		39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A9FD72165ECBB0001B15AB /* CoreData.framework */; };
 		39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */; };
@@ -131,6 +133,8 @@
 		398B25F916808F3700A0830E /* tennisball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennisball.wav; sourceTree = "<group>"; };
 		398B25FB16808F9400A0830E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		398B25FD1680970100A0830E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		398B26021680E6AE00A0830E /* itnLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itnLogo.png; sourceTree = "<group>"; };
+		398B26041680E6C200A0830E /* itnLogoMenor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itnLogoMenor.png; sourceTree = "<group>"; };
 		39A9FD6F165EC685001B15AB /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		39A9FD70165EC685001B15AB /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		39A9FD72165ECBB0001B15AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -182,6 +186,8 @@
 		398A6B561657A6A50065A58A = {
 			isa = PBXGroup;
 			children = (
+				398B26041680E6C200A0830E /* itnLogoMenor.png */,
+				398B26021680E6AE00A0830E /* itnLogo.png */,
 				398B25FB16808F9400A0830E /* AVFoundation.framework */,
 				398A6B6B1657A6A50065A58A /* International Tennis Number */,
 				398A6B9D1657A6A60065A58A /* International Tennis NumberTests */,
@@ -440,6 +446,8 @@
 				396BB409165CDAA2002D525B /* HomeCell.xib in Resources */,
 				396BB411165E34E2002D525B /* ScoreCell.xib in Resources */,
 				398B25FA16808F3700A0830E /* tennisball.wav in Resources */,
+				398B26031680E6AE00A0830E /* itnLogo.png in Resources */,
+				398B26051680E6C200A0830E /* itnLogoMenor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
