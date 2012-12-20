@@ -10,6 +10,8 @@
 #import "HomeCell.h"
 #import "Assessment.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface HomeViewController ()
 
 @property NSArray *results;
@@ -32,17 +34,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"OLD_USER: %@", [defaults valueForKey:DEFAULTS_OLD_USER]);
+    bool OLD_USER = [defaults valueForKey:DEFAULTS_OLD_USER];
+    if(!OLD_USER){
+        NSLog(@"First time on app loading sample assessment...");
+        [Assessment configureSampleAssessment];
+        [defaults setValue:NO forKey:DEFAULTS_OLD_USER];
+    }
+    
     [Assessment clearInstance];
     
 	
 }
 
 -(void) viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:animated];
     [Assessment clearInstance];
     results = [[Assessment current]findAll];
     [table reloadData];
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {

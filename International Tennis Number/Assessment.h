@@ -70,6 +70,8 @@
 +(NSArray *) getPointsForVolleyDeph;
 +(NSArray *) getPointsForServer;
 
+
++ (void) configureSampleAssessment;
 + (Assessment *)current;
 + (void) clearInstance;
 

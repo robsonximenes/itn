@@ -351,7 +351,7 @@ static Assessment *instance = NULL;
     
     NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
     NSFetchRequest *fetch = [[NSFetchRequest alloc] initWithEntityName:@"Assessment"];
-    NSSortDescriptor *dateOrder = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
+    NSSortDescriptor *dateOrder = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
     NSSortDescriptor *nomeOrder = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
     
     fetch.sortDescriptors = [NSArray arrayWithObjects:dateOrder,nomeOrder, nil];
@@ -391,6 +391,44 @@ static Assessment *instance = NULL;
     }
     
     return assessments;
+}
+
++(void) configureSampleAssessment{
+    
+    Assessment *sample = [[Assessment alloc]init];
+    [sample setName:@"Robson Ximenes"];
+    [sample setBirthday:[[NSDate alloc] init]];
+    [sample setSex:@"M"];
+    [sample setAssessor:@"Ary Godoy"];
+    [sample setDate:[[NSDate alloc] init]];
+    [sample setLocal:@"Winner Tennis"];
+    
+    [sample setMobilityTime:18];
+    
+    NSNumber *gsDephsPoint = [NSNumber numberWithInt:[(NSString *)[[Assessment getPointsForGSDeph] lastObject] intValue]];
+    NSNumber * gsAccuracyPoint = [NSNumber numberWithInt:[(NSString *)[[Assessment getPointsForGSAccuracy] lastObject] intValue]];
+    NSNumber * serverPoint = [NSNumber numberWithInt:[(NSString *)[[Assessment getPointsForServer] lastObject] intValue]];
+    NSNumber * volleyPoint = [NSNumber numberWithInt:[(NSString *)[[Assessment getPointsForVolleyDeph] lastObject] intValue]];
+    
+    int i = 0;
+    for ( Stroke *s in [sample getStrokesForGSDeph]) {
+        [sample.groundStrokeDeph setObject:gsDephsPoint atIndexedSubscript:i++];
+    }
+    i = 0;
+    for ( Stroke *s in [sample getStrokesForGSAccuracy]) {
+        [sample.groundStrokePrecision setObject:gsAccuracyPoint atIndexedSubscript:i++];
+    }
+    i = 0;
+    for ( Stroke *s in [sample getStrokesForServer]) {
+        [sample.server setObject:serverPoint atIndexedSubscript:i++];
+    }
+    i = 0;
+    for ( Stroke *s in [sample getStrokesForVolleyDeph]) {
+        [sample.volleyDeph setObject:volleyPoint atIndexedSubscript:i++];
+    }
+    
+    [sample save];
+    
 }
 
 @end

@@ -44,8 +44,6 @@
 		398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
 		398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
 		398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
-		398A6BF1165915330065A58A /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF0165915330065A58A /* Stroke.m */; };
-		398A6BF2165915330065A58A /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF0165915330065A58A /* Stroke.m */; };
 		398A6BF516598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
 		398A6BF616598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
 		398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
@@ -56,6 +54,9 @@
 		398B25FC16808F9400A0830E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398B25FB16808F9400A0830E /* AVFoundation.framework */; };
 		398B26031680E6AE00A0830E /* itnLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B26021680E6AE00A0830E /* itnLogo.png */; };
 		398B26051680E6C200A0830E /* itnLogoMenor.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B26041680E6C200A0830E /* itnLogoMenor.png */; };
+		398B260B1681E91E00A0830E /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B260A1681E91E00A0830E /* score.png */; };
+		398B261D168361A100A0830E /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398B261C168361A100A0830E /* AlertView.xib */; };
+		398B26201683669200A0830E /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B261F1683669200A0830E /* Stroke.m */; };
 		39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD70165EC685001B15AB /* GuideViewController.m */; };
 		39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A9FD72165ECBB0001B15AB /* CoreData.framework */; };
 		39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */; };
@@ -122,8 +123,6 @@
 		398A6BE416590F4F0065A58A /* StrokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeCell.m; sourceTree = "<group>"; };
 		398A6BE71659101D0065A58A /* GSAccuracyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAccuracyViewController.h; sourceTree = "<group>"; };
 		398A6BE81659101D0065A58A /* GSAccuracyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAccuracyViewController.m; sourceTree = "<group>"; };
-		398A6BEF165915330065A58A /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
-		398A6BF0165915330065A58A /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
 		398A6BF316598B160065A58A /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
 		398A6BF416598B160065A58A /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
 		398A6BF7165992AD0065A58A /* MobilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilityViewController.h; sourceTree = "<group>"; };
@@ -133,8 +132,12 @@
 		398B25F916808F3700A0830E /* tennisball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennisball.wav; sourceTree = "<group>"; };
 		398B25FB16808F9400A0830E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		398B25FD1680970100A0830E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		398B26021680E6AE00A0830E /* itnLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itnLogo.png; sourceTree = "<group>"; };
-		398B26041680E6C200A0830E /* itnLogoMenor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itnLogoMenor.png; sourceTree = "<group>"; };
+		398B26021680E6AE00A0830E /* itnLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itnLogo.png; path = ../itnLogo.png; sourceTree = "<group>"; };
+		398B26041680E6C200A0830E /* itnLogoMenor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itnLogoMenor.png; path = ../itnLogoMenor.png; sourceTree = "<group>"; };
+		398B260A1681E91E00A0830E /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
+		398B261C168361A100A0830E /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		398B261E1683669200A0830E /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		398B261F1683669200A0830E /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
 		39A9FD6F165EC685001B15AB /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		39A9FD70165EC685001B15AB /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		39A9FD72165ECBB0001B15AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -186,8 +189,6 @@
 		398A6B561657A6A50065A58A = {
 			isa = PBXGroup;
 			children = (
-				398B26041680E6C200A0830E /* itnLogoMenor.png */,
-				398B26021680E6AE00A0830E /* itnLogo.png */,
 				398B25FB16808F9400A0830E /* AVFoundation.framework */,
 				398A6B6B1657A6A50065A58A /* International Tennis Number */,
 				398A6B9D1657A6A60065A58A /* International Tennis NumberTests */,
@@ -269,6 +270,9 @@
 		398A6BBF16581E4C0065A58A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				398B26041680E6C200A0830E /* itnLogoMenor.png */,
+				398B26021680E6AE00A0830E /* itnLogo.png */,
+				398B260A1681E91E00A0830E /* score.png */,
 				396BB3FF165CD5FB002D525B /* Default-568h@2x.png */,
 				396BB3DF165BAA25002D525B /* icone1.png */,
 				396BB3DD165BAA1E002D525B /* icone.png */,
@@ -286,8 +290,6 @@
 			children = (
 				398A6BC316581E650065A58A /* model */,
 				398A6BC216581E5F0065A58A /* view */,
-				398A6BEF165915330065A58A /* Stroke.h */,
-				398A6BF0165915330065A58A /* Stroke.m */,
 				398B25FD1680970100A0830E /* Constants.h */,
 			);
 			name = source;
@@ -301,6 +303,7 @@
 				396BB404165CDA29002D525B /* TableCellView */,
 				396BB401165CD7E2002D525B /* HomeViewController.h */,
 				396BB402165CD7E2002D525B /* HomeViewController.m */,
+				398B261C168361A100A0830E /* AlertView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -308,6 +311,8 @@
 		398A6BC316581E650065A58A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				398B261E1683669200A0830E /* Stroke.h */,
+				398B261F1683669200A0830E /* Stroke.m */,
 				398A6BC416581EA50065A58A /* Assessment.h */,
 				398A6BC516581EA50065A58A /* Assessment.m */,
 			);
@@ -448,6 +453,8 @@
 				398B25FA16808F3700A0830E /* tennisball.wav in Resources */,
 				398B26031680E6AE00A0830E /* itnLogo.png in Resources */,
 				398B26051680E6C200A0830E /* itnLogoMenor.png in Resources */,
+				398B260B1681E91E00A0830E /* score.png in Resources */,
+				398B261D168361A100A0830E /* AlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +495,6 @@
 				398A6BC616581EA50065A58A /* Assessment.m in Sources */,
 				398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */,
 				398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */,
-				398A6BF1165915330065A58A /* Stroke.m in Sources */,
 				398A6BF516598B170065A58A /* ServerViewController.m in Sources */,
 				398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */,
 				398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */,
@@ -500,6 +506,7 @@
 				396BB414165E36AB002D525B /* ScoreCell.m in Sources */,
 				39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */,
 				39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */,
+				398B26201683669200A0830E /* Stroke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +518,6 @@
 				398A6BC716581EA50065A58A /* Assessment.m in Sources */,
 				398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */,
 				398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */,
-				398A6BF2165915330065A58A /* Stroke.m in Sources */,
 				398A6BF616598B170065A58A /* ServerViewController.m in Sources */,
 				398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */,
 				398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */,

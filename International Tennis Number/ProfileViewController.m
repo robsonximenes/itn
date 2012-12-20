@@ -36,7 +36,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    nameTextField.text = @"Nome default";
+    dateBirthTextField.text = [self stringFormatedForDate:[[NSDate alloc] init]];
     dateTextField.text = [self stringFormatedForDateTime:[[NSDate alloc] init]];
+    assessortextField.text=@"Avaliador default";
+    venueTextField.text=@"Academia default";
+    
     
 }
 

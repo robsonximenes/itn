@@ -9,7 +9,10 @@
 #ifndef What_s_your_number__Constants_h
 #define What_s_your_number__Constants_h
 
+
+#define DEFAULTS_OLD_USER @"DEFAULTS_OLD_USER"
+
 #define STROKES_ROW_HEIGHT 80
-#define HOME_ROW_HEIGHT 80
+#define HOME_ROW_HEIGHT 70
 
 #endif
