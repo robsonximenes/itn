@@ -123,7 +123,7 @@
         [assetment.volleyDeph setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
     }
     
-    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getVolleyDephConssistencyPoints]]];
+    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getVolleyDephPoints]]];
     [consistency setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeConssistencyPoints]]];
     [total setText:[NSString stringWithFormat:@"%i", [assetment getVolleyDephTotalPoints]]];
 }
