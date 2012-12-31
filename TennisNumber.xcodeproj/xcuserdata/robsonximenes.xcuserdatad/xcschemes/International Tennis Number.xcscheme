@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "398A6B601657A6A50065A58A"
                BuildableName = "International Tennis Number.app"
-               BlueprintName = "International Tennis Number"
+               BlueprintName = "Tennis Number"
                ReferencedContainer = "container:TennisNumber.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "398A6B951657A6A50065A58A"
                BuildableName = "International Tennis NumberTests.octest"
-               BlueprintName = "International Tennis NumberTests"
+               BlueprintName = "Tennis NumberTests"
                ReferencedContainer = "container:TennisNumber.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
-            BlueprintName = "International Tennis Number"
+            BlueprintName = "Tennis Number"
             ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
-            BlueprintName = "International Tennis Number"
+            BlueprintName = "Tennis Number"
             ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
-            BlueprintName = "International Tennis Number"
+            BlueprintName = "Tennis Number"
             ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,7 +90,8 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Distribution"
+      customArchiveName = "TennisNumber"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
