@@ -36,12 +36,13 @@
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //NSLog(@"OLD_USER: %@", [defaults valueForKey:DEFAULTS_OLD_USER]);
-    bool OLD_USER = [defaults valueForKey:DEFAULTS_OLD_USER];
+    
+    bool OLD_USER = [defaults boolForKey:DEFAULTS_OLD_USER];
     if(!OLD_USER){
         NSLog(@"First time on app loading sample assessment...");
         [Assessment configureSampleAssessment];
-        [defaults setValue:NO forKey:DEFAULTS_OLD_USER];
+        [defaults setBool:YES forKey:DEFAULTS_OLD_USER];
+        [defaults synchronize];
     }
     
     [Assessment clearInstance];
