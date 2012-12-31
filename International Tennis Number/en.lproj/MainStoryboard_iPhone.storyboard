@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mDZ-ud-Y4S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mDZ-ud-Y4S">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Guide View Controller - Assessment Guide-->
@@ -12,31 +12,34 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="fON-KD-xFw">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GuideCell" textLabel="TgF-cB-69J" style="IBUITableViewCellStyleDefault" id="LMY-BZ-JrU">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Introduction " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgF-cB-69J">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="nJx-iR-sCT" id="jI1-Li-cBl"/>
-                                    <outlet property="delegate" destination="nJx-iR-sCT" id="0gd-AR-jfN"/>
-                                </connections>
-                            </tableView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The ITN (International Tennis Number) was created by the ITF (http://www.itftenis.com). " translatesAutoresizingMaskIntoConstraints="NO" id="5AN-ZX-PF2">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="3vp-w1-Q3L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text=" The ITN 1-10 rating system is very simple and easy for tennis players worldwide to understand." translatesAutoresizingMaskIntoConstraints="NO" id="Lo6-Cf-thB">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="KWa-Ud-Nc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icj-UK-6xg">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="nvX-LJ-gyd"/>
+                                </constraints>
+                                <string key="text">To learn how to set-up the court and apply the exercises please visit the official web site at http://www.internationaltennisnumber.com</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPj-ED-fsK">
                                 <items>
                                     <barButtonItem title="Quit" id="gUo-tY-N8G">
@@ -49,13 +52,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fON-KD-xFw" firstAttribute="leading" secondItem="rZA-ct-vnr" secondAttribute="leading" type="default" id="3xI-tk-6lA"/>
-                            <constraint firstItem="fON-KD-xFw" firstAttribute="bottom" secondItem="YPj-ED-fsK" secondAttribute="top" type="default" id="Ce9-8a-dRA"/>
+                            <constraint firstItem="Lo6-Cf-thB" firstAttribute="top" secondItem="5AN-ZX-PF2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7QL-fP-t87"/>
+                            <constraint firstItem="Lo6-Cf-thB" firstAttribute="leading" secondItem="rZA-ct-vnr" secondAttribute="leading" type="default" id="9Mk-VD-lTM"/>
+                            <constraint firstItem="5AN-ZX-PF2" firstAttribute="trailing" secondItem="rZA-ct-vnr" secondAttribute="trailing" type="default" id="Hl7-co-jCS"/>
                             <constraint firstItem="YPj-ED-fsK" firstAttribute="trailing" secondItem="rZA-ct-vnr" secondAttribute="trailing" type="default" id="Pp2-3V-meC"/>
                             <constraint firstItem="YPj-ED-fsK" firstAttribute="leading" secondItem="rZA-ct-vnr" secondAttribute="leading" type="default" id="Qpc-Bb-JrE"/>
                             <constraint firstItem="YPj-ED-fsK" firstAttribute="bottom" secondItem="rZA-ct-vnr" secondAttribute="bottom" type="default" id="VWQ-8X-z5G"/>
-                            <constraint firstItem="fON-KD-xFw" firstAttribute="top" secondItem="rZA-ct-vnr" secondAttribute="top" type="default" id="VgB-bd-Dqq"/>
-                            <constraint firstItem="fON-KD-xFw" firstAttribute="trailing" secondItem="rZA-ct-vnr" secondAttribute="trailing" type="default" id="l0U-mG-FjV"/>
+                            <constraint firstItem="Icj-UK-6xg" firstAttribute="trailing" secondItem="rZA-ct-vnr" secondAttribute="trailing" type="default" id="aoL-2l-CL2"/>
+                            <constraint firstItem="5AN-ZX-PF2" firstAttribute="leading" secondItem="rZA-ct-vnr" secondAttribute="leading" type="default" id="h4y-ra-6gv"/>
+                            <constraint firstItem="Icj-UK-6xg" firstAttribute="leading" secondItem="rZA-ct-vnr" secondAttribute="leading" type="default" id="qVI-dc-QCY"/>
+                            <constraint firstItem="5AN-ZX-PF2" firstAttribute="top" secondItem="rZA-ct-vnr" secondAttribute="top" type="default" id="yAj-Cv-gdc"/>
+                            <constraint firstItem="Lo6-Cf-thB" firstAttribute="trailing" secondItem="rZA-ct-vnr" secondAttribute="trailing" type="default" id="yoE-ao-ykw"/>
+                            <constraint firstItem="Icj-UK-6xg" firstAttribute="top" secondItem="Lo6-Cf-thB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zdN-A6-gMi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Assessment Guide" id="g4b-0v-SLb">
@@ -504,7 +512,6 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4W-4g-Rhs">
                                 <items>
-                                    <barButtonItem title="Guide" id="daB-8k-OO8"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ojW-Su-XX3"/>
                                     <barButtonItem title="Exit" id="M7U-nq-ECj">
                                         <connections>
@@ -645,7 +652,6 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfO-ay-nfS">
                                 <items>
-                                    <barButtonItem title="Guide" id="qV1-sv-SNa"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="49Y-CR-hEp"/>
                                     <barButtonItem title="Exit" id="09R-5y-oxY">
                                         <connections>
@@ -781,7 +787,6 @@
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSH-DF-hDq">
                                 <items>
-                                    <barButtonItem title="Guide" id="T9i-R0-4Oq"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Z3y-5Z-WUz"/>
                                     <barButtonItem title="Exit" id="jAI-rV-9Jf">
                                         <connections>
@@ -834,7 +839,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="WTW-xf-9V2">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="318" id="vnc-aB-uAa"/>
+                                    <constraint firstAttribute="height" constant="320" id="tgb-JG-nZV"/>
                                 </constraints>
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <sections/>
@@ -918,7 +923,6 @@
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6c8-9C-R6B">
                                 <items>
-                                    <barButtonItem title="Guide" id="AEh-gd-zyI"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="X36-RH-ta8"/>
                                     <barButtonItem title="Exit" id="GNL-Uu-1df">
                                         <connections>
@@ -1020,7 +1024,6 @@
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb3-cG-cbB">
                                 <items>
-                                    <barButtonItem title="Guide" id="K19-Mo-lQf"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="spz-JT-0Ly"/>
                                     <barButtonItem title="Exit" id="IqQ-kh-bZp">
                                         <connections>

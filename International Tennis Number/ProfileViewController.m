@@ -36,12 +36,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    nameTextField.text = @"Nome default";
-    dateBirthTextField.text = [self stringFormatedForDate:[[NSDate alloc] init]];
     dateTextField.text = [self stringFormatedForDateTime:[[NSDate alloc] init]];
-    assessortextField.text=@"Avaliador default";
-    venueTextField.text=@"Academia default";
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    assessortextField.text= [defaults valueForKey:@"assessor"];
+    venueTextField.text= [defaults valueForKey:@"vennue"];
     
 }
 
@@ -90,6 +89,12 @@
     a.assessor = assessortextField.text;
     a.date = datePicker.date;
     a.local = venueTextField.text;
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setValue:a.local forKey:@"vennue"];
+    [defaults setValue:a.assessor forKey:@"assessor"];
+    [defaults synchronize];
+    
 }
 
 -(BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
@@ -229,4 +234,29 @@
         [view dismissViewControllerAnimated:false completion:nil];
     }
 }
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    NSString *sectionTitle = [self tableView:tableView titleForHeaderInSection:section];
+    if (sectionTitle == nil) {
+        return nil;
+    }
+    
+    // Create label with section title
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 300, 30)];
+    //If you add a bit to x and decrease y, it will be more in line with the tableView cell (that is in iPad and landscape)
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.shadowColor = [UIColor whiteColor];
+    label.shadowOffset = CGSizeMake(0.5, 0.5);
+    label.font = [UIFont boldSystemFontOfSize:18];
+    label.text = sectionTitle;
+    
+    // Create header view and add label as a subview
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320,30)];
+    [view addSubview:label];
+    
+    return view;
+}
+
 @end

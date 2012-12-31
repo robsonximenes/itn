@@ -17,7 +17,7 @@
                BlueprintIdentifier = "398A6B601657A6A50065A58A"
                BuildableName = "International Tennis Number.app"
                BlueprintName = "International Tennis Number"
-               ReferencedContainer = "container:What&apos;s your number?.xcodeproj">
+               ReferencedContainer = "container:TennisNumber.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "398A6B951657A6A50065A58A"
                BuildableName = "International Tennis NumberTests.octest"
                BlueprintName = "International Tennis NumberTests"
-               ReferencedContainer = "container:What&apos;s your number?.xcodeproj">
+               ReferencedContainer = "container:TennisNumber.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
             BlueprintName = "International Tennis Number"
-            ReferencedContainer = "container:What&apos;s your number?.xcodeproj">
+            ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
             BlueprintName = "International Tennis Number"
-            ReferencedContainer = "container:What&apos;s your number?.xcodeproj">
+            ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "398A6B601657A6A50065A58A"
             BuildableName = "International Tennis Number.app"
             BlueprintName = "International Tennis Number"
-            ReferencedContainer = "container:What&apos;s your number?.xcodeproj">
+            ReferencedContainer = "container:TennisNumber.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

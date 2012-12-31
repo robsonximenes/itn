@@ -8,18 +8,21 @@
 
 #import "MobilityViewController.h"
 #import "Assessment.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MobilityViewController ()
 @property Assessment *assessment;
 @property NSTimer *stopWatchTimer; // Store the timer that fires after a certain time
 @property NSDate *startDate;
 @property int time;
+@property AVAudioPlayer *player;
 @end
 
 @implementation MobilityViewController
 
 @synthesize timeLabel,total,startButton,stopButton, assessment;
 @synthesize startDate,stopWatchTimer,time;
+@synthesize player;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +37,8 @@
 {
     [super viewDidLoad];
 	
+    [self initSound];
+    
     self.assessment = [Assessment current];
     [self calculateScore];
     
@@ -42,6 +47,16 @@
     
     
 }
+
+-(void) initSound{
+    NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/apito.mp3", [[NSBundle mainBundle] resourcePath]]];
+	
+	NSError *error;
+	player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    [player setVolume:0.5];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,6 +67,9 @@
 - (IBAction)start:(id)sender {
     [startButton setEnabled:false];
     [stopButton setEnabled:true];
+    
+    [player play];
+    
     if(stopWatchTimer){
         [stopWatchTimer invalidate];
         stopWatchTimer = nil;
@@ -72,6 +90,7 @@
     time = [timeString intValue];
     [self calculateScore];
 }
+
 
 
 -(void) calculateScore{

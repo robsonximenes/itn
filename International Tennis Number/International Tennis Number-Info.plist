@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Tennis number</string>
+	<string>TennisNumber</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
@@ -14,10 +14,11 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>itnLogo.png</string>
-				<string>itnLogoMenor.png</string>
+				<string>icone114.png</string>
+				<string>icone57.png</string>
 				<string>icone_ipad.png</string>
-				<string>icone_ipad@2x.png</string>
+				<string>icone144.png</string>
+				<string>icone72.png</string>
 			</array>
 		</dict>
 	</dict>
@@ -40,7 +41,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>MainStoryboard_iPad</string>
+	<string>MainStoryboard_iPhone</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

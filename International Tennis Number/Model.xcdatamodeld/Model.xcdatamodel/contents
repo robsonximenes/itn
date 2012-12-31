@@ -13,22 +13,14 @@
         <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="volleyDephPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="gsAccuracyStrokes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Strokes" inverseName="gsAccuracy" inverseEntity="Strokes" syncable="YES"/>
-        <relationship name="gsDephStrokes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Strokes" inverseName="gsDeph" inverseEntity="Strokes" syncable="YES"/>
-        <relationship name="serverStrokes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Strokes" inverseName="server" inverseEntity="Strokes" syncable="YES"/>
-        <relationship name="volleyDephStrokes" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Strokes" inverseName="volleyDeph" inverseEntity="Strokes" syncable="YES"/>
     </entity>
     <entity name="Strokes" syncable="YES">
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="gsAccuracy" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assessment" inverseName="gsAccuracyStrokes" inverseEntity="Assessment" syncable="YES"/>
-        <relationship name="gsDeph" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Assessment" inverseName="gsDephStrokes" inverseEntity="Assessment" syncable="YES"/>
-        <relationship name="server" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assessment" inverseName="serverStrokes" inverseEntity="Assessment" syncable="YES"/>
-        <relationship name="volleyDeph" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Assessment" inverseName="volleyDephStrokes" inverseEntity="Assessment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assessment" positionX="-1703" positionY="-279" width="128" height="283"/>
-        <element name="Strokes" positionX="-1451" positionY="-252" width="128" height="148"/>
+        <element name="Assessment" positionX="-1703" positionY="-279" width="128" height="223"/>
+        <element name="Strokes" positionX="-1451" positionY="-252" width="128" height="88"/>
     </elements>
 </model>

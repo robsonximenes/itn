@@ -101,7 +101,7 @@
     
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
     
-    NSLog(@"Criando banco em: %@",storeURL);
+    //NSLog(@"Criando banco em: %@",storeURL);
     
     //[[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     

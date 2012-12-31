@@ -36,7 +36,7 @@
     [super viewDidLoad];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"OLD_USER: %@", [defaults valueForKey:DEFAULTS_OLD_USER]);
+    //NSLog(@"OLD_USER: %@", [defaults valueForKey:DEFAULTS_OLD_USER]);
     bool OLD_USER = [defaults valueForKey:DEFAULTS_OLD_USER];
     if(!OLD_USER){
         NSLog(@"First time on app loading sample assessment...");
