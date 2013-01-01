@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>International Tennis Number.xcscheme</key>
+		<key>TennisNumber.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>398A6B601657A6A50065A58A</key>
+		<key>397ACA1416930D610099FEB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>398A6B951657A6A50065A58A</key>
+		<key>397ACA3B16930D610099FEB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,359 +7,359 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		396BB3FD165BE628002D525B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB3FC165BE628002D525B /* ProfileViewController.m */; };
-		396BB3FE165CD4E9002D525B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396BB3E7165BAAA5002D525B /* Default@2x.png */; };
-		396BB400165CD5FB002D525B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396BB3FF165CD5FB002D525B /* Default-568h@2x.png */; };
-		396BB403165CD7E2002D525B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB402165CD7E2002D525B /* HomeViewController.m */; };
-		396BB407165CDA87002D525B /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB406165CDA87002D525B /* HomeCell.m */; };
-		396BB409165CDAA2002D525B /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB408165CDAA2002D525B /* HomeCell.xib */; };
-		396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40B165CFCD0002D525B /* GSDephViewController.m */; };
-		396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB40E165D3B98002D525B /* VolleyDephViewController.m */; };
-		396BB411165E34E2002D525B /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 396BB410165E34E2002D525B /* ScoreCell.xib */; };
-		396BB414165E36AB002D525B /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 396BB413165E36AB002D525B /* ScoreCell.m */; };
-		398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B651657A6A50065A58A /* UIKit.framework */; };
-		398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
-		398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B691657A6A50065A58A /* CoreGraphics.framework */; };
-		398A6B701657A6A50065A58A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B6E1657A6A50065A58A /* InfoPlist.strings */; };
-		398A6B721657A6A50065A58A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6B711657A6A50065A58A /* main.m */; };
-		398A6B761657A6A50065A58A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6B751657A6A50065A58A /* AppDelegate.m */; };
-		398A6B781657A6A50065A58A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B771657A6A50065A58A /* Default.png */; };
-		398A6B7F1657A6A50065A58A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B7D1657A6A50065A58A /* MainStoryboard_iPhone.storyboard */; };
-		398A6B821657A6A50065A58A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 398A6B801657A6A50065A58A /* MainStoryboard_iPad.storyboard */; };
-		398A6B981657A6A60065A58A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B971657A6A60065A58A /* SenTestingKit.framework */; };
-		398A6B991657A6A60065A58A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B651657A6A50065A58A /* UIKit.framework */; };
-		398A6B9A1657A6A60065A58A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398A6B671657A6A50065A58A /* Foundation.framework */; };
-		398A6BA21657A6A60065A58A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BA01657A6A60065A58A /* InfoPlist.strings */; };
-		398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */; };
-		398A6BBA1657C8760065A58A /* groundstroke.png in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BB91657C8760065A58A /* groundstroke.png */; };
-		398A6BC616581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
-		398A6BC716581EA50065A58A /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BC516581EA50065A58A /* Assessment.m */; };
-		398A6BDD16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
-		398A6BDE16590B890065A58A /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398A6BDC16590B890065A58A /* StrokeCell.xib */; };
-		398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
-		398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE416590F4F0065A58A /* StrokeCell.m */; };
-		398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
-		398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BE81659101D0065A58A /* GSAccuracyViewController.m */; };
-		398A6BF516598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
-		398A6BF616598B170065A58A /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF416598B160065A58A /* ServerViewController.m */; };
-		398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
-		398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BF8165992AD0065A58A /* MobilityViewController.m */; };
-		398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
-		398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 398A6BFC1659B3670065A58A /* ScoreViewController.m */; };
-		398ABBAC1691B3E800CF921F /* apito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 398ABBAB1691B3E800CF921F /* apito.mp3 */; };
-		398ABBAF1691BC8A00CF921F /* icone57.png in Resources */ = {isa = PBXBuildFile; fileRef = 398ABBAE1691BC8A00CF921F /* icone57.png */; };
-		398ABBB11691BCE300CF921F /* icone114.png in Resources */ = {isa = PBXBuildFile; fileRef = 398ABBB01691BCE300CF921F /* icone114.png */; };
-		398ABBB31691BF5800CF921F /* icone144.png in Resources */ = {isa = PBXBuildFile; fileRef = 398ABBB21691BF5800CF921F /* icone144.png */; };
-		398ABBB51691BF6400CF921F /* icone72.png in Resources */ = {isa = PBXBuildFile; fileRef = 398ABBB41691BF6400CF921F /* icone72.png */; };
-		398B25FA16808F3700A0830E /* tennisball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 398B25F916808F3700A0830E /* tennisball.wav */; };
-		398B25FC16808F9400A0830E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 398B25FB16808F9400A0830E /* AVFoundation.framework */; };
-		398B260B1681E91E00A0830E /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 398B260A1681E91E00A0830E /* score.png */; };
-		398B261D168361A100A0830E /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 398B261C168361A100A0830E /* AlertView.xib */; };
-		398B26201683669200A0830E /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 398B261F1683669200A0830E /* Stroke.m */; };
-		39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD70165EC685001B15AB /* GuideViewController.m */; };
-		39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A9FD72165ECBB0001B15AB /* CoreData.framework */; };
-		39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */; };
+		397ACA1A16930D610099FEB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1916930D610099FEB2 /* UIKit.framework */; };
+		397ACA1C16930D610099FEB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1B16930D610099FEB2 /* Foundation.framework */; };
+		397ACA1E16930D610099FEB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1D16930D610099FEB2 /* CoreGraphics.framework */; };
+		397ACA2416930D610099FEB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA2216930D610099FEB2 /* InfoPlist.strings */; };
+		397ACA2616930D610099FEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA2516930D610099FEB2 /* main.m */; };
+		397ACA3E16930D610099FEB2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA3D16930D610099FEB2 /* SenTestingKit.framework */; };
+		397ACA3F16930D610099FEB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1916930D610099FEB2 /* UIKit.framework */; };
+		397ACA4016930D610099FEB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1B16930D610099FEB2 /* Foundation.framework */; };
+		397ACA4816930D610099FEB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA4616930D610099FEB2 /* InfoPlist.strings */; };
+		397ACA4B16930D610099FEB2 /* TennisNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA4A16930D610099FEB2 /* TennisNumberTests.m */; };
+		397ACA5A16930DE50099FEB2 /* apito.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA5816930DE50099FEB2 /* apito.mp3 */; };
+		397ACA5B16930DE50099FEB2 /* tennisball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA5916930DE50099FEB2 /* tennisball.wav */; };
+		397ACA6516930EDA0099FEB2 /* icone57.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA6416930EDA0099FEB2 /* icone57.png */; };
+		397ACA6716930F010099FEB2 /* icone114.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA6616930F010099FEB2 /* icone114.png */; };
+		397ACA7616930FAC0099FEB2 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7316930FAC0099FEB2 /* Stroke.m */; };
+		397ACA7716930FAC0099FEB2 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* Assessment.m */; };
+		397ACA8616930FC80099FEB2 /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7916930FC80099FEB2 /* GSDephViewController.m */; };
+		397ACA8716930FC80099FEB2 /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7B16930FC80099FEB2 /* VolleyDephViewController.m */; };
+		397ACA8816930FC80099FEB2 /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7D16930FC80099FEB2 /* GSAccuracyViewController.m */; };
+		397ACA8916930FC80099FEB2 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7F16930FC80099FEB2 /* ServerViewController.m */; };
+		397ACA8A16930FC80099FEB2 /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8116930FC80099FEB2 /* MobilityViewController.m */; };
+		397ACA8B16930FC80099FEB2 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8316930FC80099FEB2 /* ScoreViewController.m */; };
+		397ACA8C16930FC80099FEB2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8516930FC80099FEB2 /* ProfileViewController.m */; };
+		397ACA8F16930FD70099FEB2 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8E16930FD70099FEB2 /* GuideViewController.m */; };
+		397ACA9A16930FFE0099FEB2 /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9116930FFE0099FEB2 /* StrokeCell.xib */; };
+		397ACA9B16930FFE0099FEB2 /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9316930FFE0099FEB2 /* StrokeCell.m */; };
+		397ACA9C16930FFE0099FEB2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9516930FFE0099FEB2 /* HomeCell.m */; };
+		397ACA9D16930FFE0099FEB2 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9616930FFE0099FEB2 /* HomeCell.xib */; };
+		397ACA9E16930FFE0099FEB2 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9716930FFE0099FEB2 /* ScoreCell.xib */; };
+		397ACA9F16930FFE0099FEB2 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9916930FFE0099FEB2 /* ScoreCell.m */; };
+		397ACAA3169310260099FEB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA1169310260099FEB2 /* HomeViewController.m */; };
+		397ACAA4169310260099FEB2 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAA2169310260099FEB2 /* AlertView.xib */; };
+		397ACAA9169310510099FEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA7169310510099FEB2 /* AppDelegate.m */; };
+		397ACAAA169310510099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */; };
+		397ACAAC169310830099FEB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACAAB169310830099FEB2 /* CoreData.framework */; };
+		397ACAAE1693108B0099FEB2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACAAD1693108A0099FEB2 /* AVFoundation.framework */; };
+		397ACAB2169310E90099FEB2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAB0169310E90099FEB2 /* Model.xcdatamodeld */; };
+		397ACAB3169311D60099FEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA7169310510099FEB2 /* AppDelegate.m */; };
+		397ACAB4169311F90099FEB2 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7316930FAC0099FEB2 /* Stroke.m */; };
+		397ACAB5169311F90099FEB2 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* Assessment.m */; };
+		397ACAB6169311F90099FEB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA1169310260099FEB2 /* HomeViewController.m */; };
+		397ACAB7169311F90099FEB2 /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9316930FFE0099FEB2 /* StrokeCell.m */; };
+		397ACAB8169311F90099FEB2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9516930FFE0099FEB2 /* HomeCell.m */; };
+		397ACAB9169311F90099FEB2 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9916930FFE0099FEB2 /* ScoreCell.m */; };
+		397ACABA169311F90099FEB2 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8E16930FD70099FEB2 /* GuideViewController.m */; };
+		397ACABB169311F90099FEB2 /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7916930FC80099FEB2 /* GSDephViewController.m */; };
+		397ACABC169311F90099FEB2 /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7B16930FC80099FEB2 /* VolleyDephViewController.m */; };
+		397ACABD169311F90099FEB2 /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7D16930FC80099FEB2 /* GSAccuracyViewController.m */; };
+		397ACABE169311F90099FEB2 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7F16930FC80099FEB2 /* ServerViewController.m */; };
+		397ACABF169311F90099FEB2 /* MobilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8116930FC80099FEB2 /* MobilityViewController.m */; };
+		397ACAC0169311F90099FEB2 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8316930FC80099FEB2 /* ScoreViewController.m */; };
+		397ACAC1169311F90099FEB2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA8516930FC80099FEB2 /* ProfileViewController.m */; };
+		397ACAC3169312540099FEB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAC2169312540099FEB2 /* Default.png */; };
+		397ACAC5169312660099FEB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAC4169312660099FEB2 /* Default@2x.png */; };
+		397ACAC71693126D0099FEB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAC61693126D0099FEB2 /* Default-568h@2x.png */; };
+		397ACAC9169312980099FEB2 /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAC8169312980099FEB2 /* score.png */; };
+		397ACACA1693134A0099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */; };
+		397ACACB1693134A0099FEB2 /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9116930FFE0099FEB2 /* StrokeCell.xib */; };
+		397ACACC1693134A0099FEB2 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9616930FFE0099FEB2 /* HomeCell.xib */; };
+		397ACACD1693134A0099FEB2 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9716930FFE0099FEB2 /* ScoreCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		398A6B9B1657A6A60065A58A /* PBXContainerItemProxy */ = {
+		397ACA4116930D610099FEB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 398A6B581657A6A50065A58A /* Project object */;
+			containerPortal = 397ACA0C16930D610099FEB2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 398A6B601657A6A50065A58A;
-			remoteInfo = "International Tennis Number";
+			remoteGlobalIDString = 397ACA1416930D610099FEB2;
+			remoteInfo = TennisNumber;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		396BB3E5165BAA92002D525B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		396BB3E7165BAAA5002D525B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		396BB3FB165BE628002D525B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		396BB3FC165BE628002D525B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		396BB3FF165CD5FB002D525B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		396BB401165CD7E2002D525B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		396BB402165CD7E2002D525B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		396BB405165CDA87002D525B /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
-		396BB406165CDA87002D525B /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
-		396BB408165CDAA2002D525B /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
-		396BB40A165CFCCF002D525B /* GSDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDephViewController.h; sourceTree = "<group>"; };
-		396BB40B165CFCD0002D525B /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
-		396BB40D165D3B97002D525B /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
-		396BB40E165D3B98002D525B /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
-		396BB410165E34E2002D525B /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
-		396BB412165E36AB002D525B /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
-		396BB413165E36AB002D525B /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
-		398A6B611657A6A50065A58A /* Tennis Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tennis Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		398A6B651657A6A50065A58A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		398A6B671657A6A50065A58A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		398A6B691657A6A50065A58A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		398A6B6D1657A6A50065A58A /* International Tennis Number-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "International Tennis Number-Info.plist"; sourceTree = "<group>"; };
-		398A6B6F1657A6A50065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		398A6B711657A6A50065A58A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		398A6B731657A6A50065A58A /* International Tennis Number-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "International Tennis Number-Prefix.pch"; sourceTree = "<group>"; };
-		398A6B741657A6A50065A58A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		398A6B751657A6A50065A58A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		398A6B771657A6A50065A58A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		398A6B791657A6A50065A58A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		398A6B7B1657A6A50065A58A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		398A6B7E1657A6A50065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		398A6B811657A6A50065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		398A6B961657A6A60065A58A /* International Tennis NumberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "International Tennis NumberTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		398A6B971657A6A60065A58A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		398A6B9F1657A6A60065A58A /* International Tennis NumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "International Tennis NumberTests-Info.plist"; sourceTree = "<group>"; };
-		398A6BA11657A6A60065A58A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		398A6BA31657A6A60065A58A /* International_Tennis_NumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = International_Tennis_NumberTests.h; sourceTree = "<group>"; };
-		398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = International_Tennis_NumberTests.m; sourceTree = "<group>"; };
-		398A6BB91657C8760065A58A /* groundstroke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groundstroke.png; sourceTree = "<group>"; };
-		398A6BC416581EA50065A58A /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
-		398A6BC516581EA50065A58A /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
-		398A6BDC16590B890065A58A /* StrokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeCell.xib; sourceTree = "<group>"; };
-		398A6BE316590F4F0065A58A /* StrokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeCell.h; sourceTree = "<group>"; };
-		398A6BE416590F4F0065A58A /* StrokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeCell.m; sourceTree = "<group>"; };
-		398A6BE71659101D0065A58A /* GSAccuracyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAccuracyViewController.h; sourceTree = "<group>"; };
-		398A6BE81659101D0065A58A /* GSAccuracyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAccuracyViewController.m; sourceTree = "<group>"; };
-		398A6BF316598B160065A58A /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
-		398A6BF416598B160065A58A /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
-		398A6BF7165992AD0065A58A /* MobilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilityViewController.h; sourceTree = "<group>"; };
-		398A6BF8165992AD0065A58A /* MobilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilityViewController.m; sourceTree = "<group>"; };
-		398A6BFB1659B3670065A58A /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
-		398A6BFC1659B3670065A58A /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
-		398ABBAB1691B3E800CF921F /* apito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = apito.mp3; sourceTree = "<group>"; };
-		398ABBAE1691BC8A00CF921F /* icone57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone57.png; path = ../icone57.png; sourceTree = "<group>"; };
-		398ABBB01691BCE300CF921F /* icone114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone114.png; path = ../icone114.png; sourceTree = "<group>"; };
-		398ABBB21691BF5800CF921F /* icone144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone144.png; path = ../icone144.png; sourceTree = "<group>"; };
-		398ABBB41691BF6400CF921F /* icone72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone72.png; path = ../icone72.png; sourceTree = "<group>"; };
-		398B25F916808F3700A0830E /* tennisball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennisball.wav; sourceTree = "<group>"; };
-		398B25FB16808F9400A0830E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		398B25FD1680970100A0830E /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		398B260A1681E91E00A0830E /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
-		398B261C168361A100A0830E /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
-		398B261E1683669200A0830E /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
-		398B261F1683669200A0830E /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
-		39A9FD6F165EC685001B15AB /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
-		39A9FD70165EC685001B15AB /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
-		39A9FD72165ECBB0001B15AB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		397ACA1516930D610099FEB2 /* TennisNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		397ACA1916930D610099FEB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		397ACA1B16930D610099FEB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		397ACA1D16930D610099FEB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		397ACA2116930D610099FEB2 /* TennisNumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TennisNumber-Info.plist"; sourceTree = "<group>"; };
+		397ACA2316930D610099FEB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		397ACA2516930D610099FEB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		397ACA2716930D610099FEB2 /* TennisNumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TennisNumber-Prefix.pch"; sourceTree = "<group>"; };
+		397ACA3C16930D610099FEB2 /* TennisNumberTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TennisNumberTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		397ACA3D16930D610099FEB2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		397ACA4516930D610099FEB2 /* TennisNumberTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TennisNumberTests-Info.plist"; sourceTree = "<group>"; };
+		397ACA4716930D610099FEB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		397ACA4916930D610099FEB2 /* TennisNumberTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TennisNumberTests.h; sourceTree = "<group>"; };
+		397ACA4A16930D610099FEB2 /* TennisNumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TennisNumberTests.m; sourceTree = "<group>"; };
+		397ACA5816930DE50099FEB2 /* apito.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = apito.mp3; sourceTree = "<group>"; };
+		397ACA5916930DE50099FEB2 /* tennisball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennisball.wav; sourceTree = "<group>"; };
+		397ACA6416930EDA0099FEB2 /* icone57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone57.png; path = ../icone57.png; sourceTree = "<group>"; };
+		397ACA6616930F010099FEB2 /* icone114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone114.png; path = ../icone114.png; sourceTree = "<group>"; };
+		397ACA7216930FAC0099FEB2 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		397ACA7316930FAC0099FEB2 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+		397ACA7416930FAC0099FEB2 /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
+		397ACA7516930FAC0099FEB2 /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
+		397ACA7816930FC80099FEB2 /* GSDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDephViewController.h; sourceTree = "<group>"; };
+		397ACA7916930FC80099FEB2 /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
+		397ACA7A16930FC80099FEB2 /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
+		397ACA7B16930FC80099FEB2 /* VolleyDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolleyDephViewController.m; sourceTree = "<group>"; };
+		397ACA7C16930FC80099FEB2 /* GSAccuracyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAccuracyViewController.h; sourceTree = "<group>"; };
+		397ACA7D16930FC80099FEB2 /* GSAccuracyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAccuracyViewController.m; sourceTree = "<group>"; };
+		397ACA7E16930FC80099FEB2 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
+		397ACA7F16930FC80099FEB2 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
+		397ACA8016930FC80099FEB2 /* MobilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobilityViewController.h; sourceTree = "<group>"; };
+		397ACA8116930FC80099FEB2 /* MobilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobilityViewController.m; sourceTree = "<group>"; };
+		397ACA8216930FC80099FEB2 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		397ACA8316930FC80099FEB2 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
+		397ACA8416930FC80099FEB2 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		397ACA8516930FC80099FEB2 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		397ACA8D16930FD70099FEB2 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		397ACA8E16930FD70099FEB2 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		397ACA9116930FFE0099FEB2 /* StrokeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeCell.xib; sourceTree = "<group>"; };
+		397ACA9216930FFE0099FEB2 /* StrokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeCell.h; sourceTree = "<group>"; };
+		397ACA9316930FFE0099FEB2 /* StrokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeCell.m; sourceTree = "<group>"; };
+		397ACA9416930FFE0099FEB2 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		397ACA9516930FFE0099FEB2 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		397ACA9616930FFE0099FEB2 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		397ACA9716930FFE0099FEB2 /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		397ACA9816930FFE0099FEB2 /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
+		397ACA9916930FFE0099FEB2 /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
+		397ACAA0169310260099FEB2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		397ACAA1169310260099FEB2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		397ACAA2169310260099FEB2 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		397ACAA5169310320099FEB2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		397ACAA6169310510099FEB2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		397ACAA7169310510099FEB2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		397ACAAB169310830099FEB2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		397ACAAD1693108A0099FEB2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		397ACAB1169310E90099FEB2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		397ACAC2169312540099FEB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		397ACAC4169312660099FEB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		397ACAC61693126D0099FEB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		397ACAC8169312980099FEB2 /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = score.png; path = "../../../desenvolvimento/iphone/itn/International Tennis Number/score.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		398A6B5E1657A6A50065A58A /* Frameworks */ = {
+		397ACA1216930D610099FEB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398B25FC16808F9400A0830E /* AVFoundation.framework in Frameworks */,
-				39A9FD73165ECBB0001B15AB /* CoreData.framework in Frameworks */,
-				398A6B661657A6A50065A58A /* UIKit.framework in Frameworks */,
-				398A6B681657A6A50065A58A /* Foundation.framework in Frameworks */,
-				398A6B6A1657A6A50065A58A /* CoreGraphics.framework in Frameworks */,
+				397ACAAE1693108B0099FEB2 /* AVFoundation.framework in Frameworks */,
+				397ACAAC169310830099FEB2 /* CoreData.framework in Frameworks */,
+				397ACA1A16930D610099FEB2 /* UIKit.framework in Frameworks */,
+				397ACA1C16930D610099FEB2 /* Foundation.framework in Frameworks */,
+				397ACA1E16930D610099FEB2 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		398A6B921657A6A50065A58A /* Frameworks */ = {
+		397ACA3816930D610099FEB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398A6B981657A6A60065A58A /* SenTestingKit.framework in Frameworks */,
-				398A6B991657A6A60065A58A /* UIKit.framework in Frameworks */,
-				398A6B9A1657A6A60065A58A /* Foundation.framework in Frameworks */,
+				397ACA3E16930D610099FEB2 /* SenTestingKit.framework in Frameworks */,
+				397ACA3F16930D610099FEB2 /* UIKit.framework in Frameworks */,
+				397ACA4016930D610099FEB2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		396BB404165CDA29002D525B /* TableCellView */ = {
+		397ACA0A16930D610099FEB2 = {
 			isa = PBXGroup;
 			children = (
-				398A6BDC16590B890065A58A /* StrokeCell.xib */,
-				398A6BE316590F4F0065A58A /* StrokeCell.h */,
-				398A6BE416590F4F0065A58A /* StrokeCell.m */,
-				396BB405165CDA87002D525B /* HomeCell.h */,
-				396BB406165CDA87002D525B /* HomeCell.m */,
-				396BB408165CDAA2002D525B /* HomeCell.xib */,
-				396BB410165E34E2002D525B /* ScoreCell.xib */,
-				396BB412165E36AB002D525B /* ScoreCell.h */,
-				396BB413165E36AB002D525B /* ScoreCell.m */,
-			);
-			name = TableCellView;
-			sourceTree = "<group>";
-		};
-		398A6B561657A6A50065A58A = {
-			isa = PBXGroup;
-			children = (
-				398A6B6B1657A6A50065A58A /* Tennis Number */,
-				398A6B9D1657A6A60065A58A /* Tennis NumberTests */,
-				398A6B641657A6A50065A58A /* Frameworks */,
-				398A6B621657A6A50065A58A /* Products */,
+				397ACA1F16930D610099FEB2 /* TennisNumber */,
+				397ACA4316930D610099FEB2 /* TennisNumberTests */,
+				397ACA1816930D610099FEB2 /* Frameworks */,
+				397ACA1616930D610099FEB2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		398A6B621657A6A50065A58A /* Products */ = {
+		397ACA1616930D610099FEB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				398A6B611657A6A50065A58A /* Tennis Number.app */,
-				398A6B961657A6A60065A58A /* International Tennis NumberTests.octest */,
+				397ACA1516930D610099FEB2 /* TennisNumber.app */,
+				397ACA3C16930D610099FEB2 /* TennisNumberTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		398A6B641657A6A50065A58A /* Frameworks */ = {
+		397ACA1816930D610099FEB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				398B25FB16808F9400A0830E /* AVFoundation.framework */,
-				39A9FD72165ECBB0001B15AB /* CoreData.framework */,
-				398A6B651657A6A50065A58A /* UIKit.framework */,
-				398A6B671657A6A50065A58A /* Foundation.framework */,
-				398A6B691657A6A50065A58A /* CoreGraphics.framework */,
-				398A6B971657A6A60065A58A /* SenTestingKit.framework */,
+				397ACAAD1693108A0099FEB2 /* AVFoundation.framework */,
+				397ACAAB169310830099FEB2 /* CoreData.framework */,
+				397ACA1916930D610099FEB2 /* UIKit.framework */,
+				397ACA1B16930D610099FEB2 /* Foundation.framework */,
+				397ACA1D16930D610099FEB2 /* CoreGraphics.framework */,
+				397ACA3D16930D610099FEB2 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		398A6B6B1657A6A50065A58A /* Tennis Number */ = {
+		397ACA1F16930D610099FEB2 /* TennisNumber */ = {
 			isa = PBXGroup;
 			children = (
-				398A6BBF16581E4C0065A58A /* images */,
-				398B25F716808EFF00A0830E /* sounds */,
-				39A9FD74165ECBCB001B15AB /* model */,
-				398A6BC116581E560065A58A /* source */,
-				398A6B741657A6A50065A58A /* AppDelegate.h */,
-				398A6B751657A6A50065A58A /* AppDelegate.m */,
-				398A6B7D1657A6A50065A58A /* MainStoryboard_iPhone.storyboard */,
-				398A6B801657A6A50065A58A /* MainStoryboard_iPad.storyboard */,
-				398A6B6C1657A6A50065A58A /* Supporting Files */,
+				397ACA5716930D800099FEB2 /* resources */,
+				397ACA5416930D6B0099FEB2 /* classes */,
+				397ACA2016930D610099FEB2 /* Supporting Files */,
 			);
-			name = "Tennis Number";
-			path = "International Tennis Number";
+			path = TennisNumber;
 			sourceTree = "<group>";
 		};
-		398A6B6C1657A6A50065A58A /* Supporting Files */ = {
+		397ACA2016930D610099FEB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				398A6B6D1657A6A50065A58A /* International Tennis Number-Info.plist */,
-				398A6B6E1657A6A50065A58A /* InfoPlist.strings */,
-				398A6B711657A6A50065A58A /* main.m */,
-				398A6B731657A6A50065A58A /* International Tennis Number-Prefix.pch */,
-				398A6B771657A6A50065A58A /* Default.png */,
-				398A6B791657A6A50065A58A /* Default@2x.png */,
-				398A6B7B1657A6A50065A58A /* Default-568h@2x.png */,
+				397ACA2116930D610099FEB2 /* TennisNumber-Info.plist */,
+				397ACA2216930D610099FEB2 /* InfoPlist.strings */,
+				397ACA2516930D610099FEB2 /* main.m */,
+				397ACA2716930D610099FEB2 /* TennisNumber-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		398A6B9D1657A6A60065A58A /* Tennis NumberTests */ = {
+		397ACA4316930D610099FEB2 /* TennisNumberTests */ = {
 			isa = PBXGroup;
 			children = (
-				398A6BA31657A6A60065A58A /* International_Tennis_NumberTests.h */,
-				398A6BA41657A6A60065A58A /* International_Tennis_NumberTests.m */,
-				398A6B9E1657A6A60065A58A /* Supporting Files */,
+				397ACA4916930D610099FEB2 /* TennisNumberTests.h */,
+				397ACA4A16930D610099FEB2 /* TennisNumberTests.m */,
+				397ACA4416930D610099FEB2 /* Supporting Files */,
 			);
-			name = "Tennis NumberTests";
-			path = "International Tennis NumberTests";
+			path = TennisNumberTests;
 			sourceTree = "<group>";
 		};
-		398A6B9E1657A6A60065A58A /* Supporting Files */ = {
+		397ACA4416930D610099FEB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				398A6B9F1657A6A60065A58A /* International Tennis NumberTests-Info.plist */,
-				398A6BA01657A6A60065A58A /* InfoPlist.strings */,
+				397ACA4516930D610099FEB2 /* TennisNumberTests-Info.plist */,
+				397ACA4616930D610099FEB2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		398A6BBF16581E4C0065A58A /* images */ = {
+		397ACA5416930D6B0099FEB2 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				398ABBB41691BF6400CF921F /* icone72.png */,
-				398ABBB21691BF5800CF921F /* icone144.png */,
-				398ABBB01691BCE300CF921F /* icone114.png */,
-				398ABBAE1691BC8A00CF921F /* icone57.png */,
-				398B260A1681E91E00A0830E /* score.png */,
-				396BB3FF165CD5FB002D525B /* Default-568h@2x.png */,
-				396BB3E5165BAA92002D525B /* Default.png */,
-				396BB3E7165BAAA5002D525B /* Default@2x.png */,
-				398A6BB91657C8760065A58A /* groundstroke.png */,
+				397ACAA6169310510099FEB2 /* AppDelegate.h */,
+				397ACAA7169310510099FEB2 /* AppDelegate.m */,
+				397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */,
+				397ACAA5169310320099FEB2 /* Constants.h */,
+				397ACA6F16930F860099FEB2 /* model */,
+				397ACA6E16930F720099FEB2 /* view */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		397ACA5516930D720099FEB2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				397ACAC8169312980099FEB2 /* score.png */,
+				397ACAC61693126D0099FEB2 /* Default-568h@2x.png */,
+				397ACAC4169312660099FEB2 /* Default@2x.png */,
+				397ACAC2169312540099FEB2 /* Default.png */,
+				397ACA6616930F010099FEB2 /* icone114.png */,
+				397ACA6416930EDA0099FEB2 /* icone57.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
 		};
-		398A6BC116581E560065A58A /* source */ = {
+		397ACA5616930D790099FEB2 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				398A6BC316581E650065A58A /* model */,
-				398A6BC216581E5F0065A58A /* view */,
-				398B25FD1680970100A0830E /* Constants.h */,
-			);
-			name = source;
-			sourceTree = "<group>";
-		};
-		398A6BC216581E5F0065A58A /* view */ = {
-			isa = PBXGroup;
-			children = (
-				39A9FD6E165EC656001B15AB /* Assessment */,
-				39A9FD6C165EC64D001B15AB /* Guide */,
-				396BB404165CDA29002D525B /* TableCellView */,
-				396BB401165CD7E2002D525B /* HomeViewController.h */,
-				396BB402165CD7E2002D525B /* HomeViewController.m */,
-				398B261C168361A100A0830E /* AlertView.xib */,
-			);
-			name = view;
-			sourceTree = "<group>";
-		};
-		398A6BC316581E650065A58A /* model */ = {
-			isa = PBXGroup;
-			children = (
-				398B261E1683669200A0830E /* Stroke.h */,
-				398B261F1683669200A0830E /* Stroke.m */,
-				398A6BC416581EA50065A58A /* Assessment.h */,
-				398A6BC516581EA50065A58A /* Assessment.m */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
-		398B25F716808EFF00A0830E /* sounds */ = {
-			isa = PBXGroup;
-			children = (
-				398ABBAB1691B3E800CF921F /* apito.mp3 */,
-				398B25F916808F3700A0830E /* tennisball.wav */,
+				397ACA5816930DE50099FEB2 /* apito.mp3 */,
+				397ACA5916930DE50099FEB2 /* tennisball.wav */,
 			);
 			name = sounds;
 			sourceTree = "<group>";
 		};
-		39A9FD6C165EC64D001B15AB /* Guide */ = {
+		397ACA5716930D800099FEB2 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				39A9FD6F165EC685001B15AB /* GuideViewController.h */,
-				39A9FD70165EC685001B15AB /* GuideViewController.m */,
+				397ACAAF169310CA0099FEB2 /* model */,
+				397ACA5616930D790099FEB2 /* sounds */,
+				397ACA5516930D720099FEB2 /* images */,
 			);
-			name = Guide;
+			name = resources;
 			sourceTree = "<group>";
 		};
-		39A9FD6E165EC656001B15AB /* Assessment */ = {
+		397ACA6E16930F720099FEB2 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				396BB40A165CFCCF002D525B /* GSDephViewController.h */,
-				396BB40B165CFCD0002D525B /* GSDephViewController.m */,
-				396BB40D165D3B97002D525B /* VolleyDephViewController.h */,
-				396BB40E165D3B98002D525B /* VolleyDephViewController.m */,
-				398A6BE71659101D0065A58A /* GSAccuracyViewController.h */,
-				398A6BE81659101D0065A58A /* GSAccuracyViewController.m */,
-				398A6BF316598B160065A58A /* ServerViewController.h */,
-				398A6BF416598B160065A58A /* ServerViewController.m */,
-				398A6BF7165992AD0065A58A /* MobilityViewController.h */,
-				398A6BF8165992AD0065A58A /* MobilityViewController.m */,
-				398A6BFB1659B3670065A58A /* ScoreViewController.h */,
-				398A6BFC1659B3670065A58A /* ScoreViewController.m */,
-				396BB3FB165BE628002D525B /* ProfileViewController.h */,
-				396BB3FC165BE628002D525B /* ProfileViewController.m */,
+				397ACAA0169310260099FEB2 /* HomeViewController.h */,
+				397ACAA1169310260099FEB2 /* HomeViewController.m */,
+				397ACAA2169310260099FEB2 /* AlertView.xib */,
+				397ACA9016930FEC0099FEB2 /* Cell */,
+				397ACA7116930F940099FEB2 /* Guide */,
+				397ACA7016930F8D0099FEB2 /* Assessment */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		397ACA6F16930F860099FEB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				397ACA7216930FAC0099FEB2 /* Stroke.h */,
+				397ACA7316930FAC0099FEB2 /* Stroke.m */,
+				397ACA7416930FAC0099FEB2 /* Assessment.h */,
+				397ACA7516930FAC0099FEB2 /* Assessment.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		397ACA7016930F8D0099FEB2 /* Assessment */ = {
+			isa = PBXGroup;
+			children = (
+				397ACA7816930FC80099FEB2 /* GSDephViewController.h */,
+				397ACA7916930FC80099FEB2 /* GSDephViewController.m */,
+				397ACA7A16930FC80099FEB2 /* VolleyDephViewController.h */,
+				397ACA7B16930FC80099FEB2 /* VolleyDephViewController.m */,
+				397ACA7C16930FC80099FEB2 /* GSAccuracyViewController.h */,
+				397ACA7D16930FC80099FEB2 /* GSAccuracyViewController.m */,
+				397ACA7E16930FC80099FEB2 /* ServerViewController.h */,
+				397ACA7F16930FC80099FEB2 /* ServerViewController.m */,
+				397ACA8016930FC80099FEB2 /* MobilityViewController.h */,
+				397ACA8116930FC80099FEB2 /* MobilityViewController.m */,
+				397ACA8216930FC80099FEB2 /* ScoreViewController.h */,
+				397ACA8316930FC80099FEB2 /* ScoreViewController.m */,
+				397ACA8416930FC80099FEB2 /* ProfileViewController.h */,
+				397ACA8516930FC80099FEB2 /* ProfileViewController.m */,
 			);
 			name = Assessment;
 			sourceTree = "<group>";
 		};
-		39A9FD74165ECBCB001B15AB /* model */ = {
+		397ACA7116930F940099FEB2 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
-				39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */,
+				397ACA8D16930FD70099FEB2 /* GuideViewController.h */,
+				397ACA8E16930FD70099FEB2 /* GuideViewController.m */,
+			);
+			name = Guide;
+			sourceTree = "<group>";
+		};
+		397ACA9016930FEC0099FEB2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				397ACA9116930FFE0099FEB2 /* StrokeCell.xib */,
+				397ACA9216930FFE0099FEB2 /* StrokeCell.h */,
+				397ACA9316930FFE0099FEB2 /* StrokeCell.m */,
+				397ACA9416930FFE0099FEB2 /* HomeCell.h */,
+				397ACA9516930FFE0099FEB2 /* HomeCell.m */,
+				397ACA9616930FFE0099FEB2 /* HomeCell.xib */,
+				397ACA9716930FFE0099FEB2 /* ScoreCell.xib */,
+				397ACA9816930FFE0099FEB2 /* ScoreCell.h */,
+				397ACA9916930FFE0099FEB2 /* ScoreCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		397ACAAF169310CA0099FEB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				397ACAB0169310E90099FEB2 /* Model.xcdatamodeld */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -367,108 +367,107 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		398A6B601657A6A50065A58A /* Tennis Number */ = {
+		397ACA1416930D610099FEB2 /* TennisNumber */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 398A6BA81657A6A60065A58A /* Build configuration list for PBXNativeTarget "Tennis Number" */;
+			buildConfigurationList = 397ACA4E16930D610099FEB2 /* Build configuration list for PBXNativeTarget "TennisNumber" */;
 			buildPhases = (
-				398A6B5D1657A6A50065A58A /* Sources */,
-				398A6B5E1657A6A50065A58A /* Frameworks */,
-				398A6B5F1657A6A50065A58A /* Resources */,
+				397ACA1116930D610099FEB2 /* Sources */,
+				397ACA1216930D610099FEB2 /* Frameworks */,
+				397ACA1316930D610099FEB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Tennis Number";
-			productName = "International Tennis Number";
-			productReference = 398A6B611657A6A50065A58A /* Tennis Number.app */;
+			name = TennisNumber;
+			productName = TennisNumber;
+			productReference = 397ACA1516930D610099FEB2 /* TennisNumber.app */;
 			productType = "com.apple.product-type.application";
 		};
-		398A6B951657A6A50065A58A /* Tennis NumberTests */ = {
+		397ACA3B16930D610099FEB2 /* TennisNumberTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 398A6BAB1657A6A60065A58A /* Build configuration list for PBXNativeTarget "Tennis NumberTests" */;
+			buildConfigurationList = 397ACA5116930D610099FEB2 /* Build configuration list for PBXNativeTarget "TennisNumberTests" */;
 			buildPhases = (
-				398A6B911657A6A50065A58A /* Sources */,
-				398A6B921657A6A50065A58A /* Frameworks */,
-				398A6B931657A6A50065A58A /* Resources */,
-				398A6B941657A6A50065A58A /* ShellScript */,
+				397ACA3716930D610099FEB2 /* Sources */,
+				397ACA3816930D610099FEB2 /* Frameworks */,
+				397ACA3916930D610099FEB2 /* Resources */,
+				397ACA3A16930D610099FEB2 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				398A6B9C1657A6A60065A58A /* PBXTargetDependency */,
+				397ACA4216930D610099FEB2 /* PBXTargetDependency */,
 			);
-			name = "Tennis NumberTests";
-			productName = "International Tennis NumberTests";
-			productReference = 398A6B961657A6A60065A58A /* International Tennis NumberTests.octest */;
+			name = TennisNumberTests;
+			productName = TennisNumberTests;
+			productReference = 397ACA3C16930D610099FEB2 /* TennisNumberTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		398A6B581657A6A50065A58A /* Project object */ = {
+		397ACA0C16930D610099FEB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "Robson Ximenes";
+				ORGANIZATIONNAME = RSX;
 			};
-			buildConfigurationList = 398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "TennisNumber" */;
+			buildConfigurationList = 397ACA0F16930D610099FEB2 /* Build configuration list for PBXProject "TennisNumber" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 398A6B561657A6A50065A58A;
-			productRefGroup = 398A6B621657A6A50065A58A /* Products */;
+			mainGroup = 397ACA0A16930D610099FEB2;
+			productRefGroup = 397ACA1616930D610099FEB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				398A6B601657A6A50065A58A /* Tennis Number */,
-				398A6B951657A6A50065A58A /* Tennis NumberTests */,
+				397ACA1416930D610099FEB2 /* TennisNumber */,
+				397ACA3B16930D610099FEB2 /* TennisNumberTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		398A6B5F1657A6A50065A58A /* Resources */ = {
+		397ACA1316930D610099FEB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398A6B701657A6A50065A58A /* InfoPlist.strings in Resources */,
-				398A6B781657A6A50065A58A /* Default.png in Resources */,
-				398A6B7F1657A6A50065A58A /* MainStoryboard_iPhone.storyboard in Resources */,
-				398A6B821657A6A50065A58A /* MainStoryboard_iPad.storyboard in Resources */,
-				398A6BBA1657C8760065A58A /* groundstroke.png in Resources */,
-				398A6BDD16590B890065A58A /* StrokeCell.xib in Resources */,
-				396BB3FE165CD4E9002D525B /* Default@2x.png in Resources */,
-				396BB400165CD5FB002D525B /* Default-568h@2x.png in Resources */,
-				396BB409165CDAA2002D525B /* HomeCell.xib in Resources */,
-				396BB411165E34E2002D525B /* ScoreCell.xib in Resources */,
-				398B25FA16808F3700A0830E /* tennisball.wav in Resources */,
-				398B260B1681E91E00A0830E /* score.png in Resources */,
-				398B261D168361A100A0830E /* AlertView.xib in Resources */,
-				398ABBAC1691B3E800CF921F /* apito.mp3 in Resources */,
-				398ABBAF1691BC8A00CF921F /* icone57.png in Resources */,
-				398ABBB11691BCE300CF921F /* icone114.png in Resources */,
-				398ABBB31691BF5800CF921F /* icone144.png in Resources */,
-				398ABBB51691BF6400CF921F /* icone72.png in Resources */,
+				397ACACA1693134A0099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */,
+				397ACACB1693134A0099FEB2 /* StrokeCell.xib in Resources */,
+				397ACACC1693134A0099FEB2 /* HomeCell.xib in Resources */,
+				397ACACD1693134A0099FEB2 /* ScoreCell.xib in Resources */,
+				397ACA2416930D610099FEB2 /* InfoPlist.strings in Resources */,
+				397ACA5A16930DE50099FEB2 /* apito.mp3 in Resources */,
+				397ACA5B16930DE50099FEB2 /* tennisball.wav in Resources */,
+				397ACA6516930EDA0099FEB2 /* icone57.png in Resources */,
+				397ACA6716930F010099FEB2 /* icone114.png in Resources */,
+				397ACAC3169312540099FEB2 /* Default.png in Resources */,
+				397ACAC5169312660099FEB2 /* Default@2x.png in Resources */,
+				397ACAC71693126D0099FEB2 /* Default-568h@2x.png in Resources */,
+				397ACAC9169312980099FEB2 /* score.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		398A6B931657A6A50065A58A /* Resources */ = {
+		397ACA3916930D610099FEB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398A6BA21657A6A60065A58A /* InfoPlist.strings in Resources */,
-				398A6BDE16590B890065A58A /* StrokeCell.xib in Resources */,
+				397ACA4816930D610099FEB2 /* InfoPlist.strings in Resources */,
+				397ACA9A16930FFE0099FEB2 /* StrokeCell.xib in Resources */,
+				397ACA9D16930FFE0099FEB2 /* HomeCell.xib in Resources */,
+				397ACA9E16930FFE0099FEB2 /* ScoreCell.xib in Resources */,
+				397ACAA4169310260099FEB2 /* AlertView.xib in Resources */,
+				397ACAAA169310510099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		398A6B941657A6A50065A58A /* ShellScript */ = {
+		397ACA3A16930D610099FEB2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -484,83 +483,76 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		398A6B5D1657A6A50065A58A /* Sources */ = {
+		397ACA1116930D610099FEB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398A6B721657A6A50065A58A /* main.m in Sources */,
-				398A6B761657A6A50065A58A /* AppDelegate.m in Sources */,
-				398A6BC616581EA50065A58A /* Assessment.m in Sources */,
-				398A6BE516590F4F0065A58A /* StrokeCell.m in Sources */,
-				398A6BE91659101D0065A58A /* GSAccuracyViewController.m in Sources */,
-				398A6BF516598B170065A58A /* ServerViewController.m in Sources */,
-				398A6BF9165992AD0065A58A /* MobilityViewController.m in Sources */,
-				398A6BFD1659B3670065A58A /* ScoreViewController.m in Sources */,
-				396BB3FD165BE628002D525B /* ProfileViewController.m in Sources */,
-				396BB403165CD7E2002D525B /* HomeViewController.m in Sources */,
-				396BB407165CDA87002D525B /* HomeCell.m in Sources */,
-				396BB40C165CFCD0002D525B /* GSDephViewController.m in Sources */,
-				396BB40F165D3B98002D525B /* VolleyDephViewController.m in Sources */,
-				396BB414165E36AB002D525B /* ScoreCell.m in Sources */,
-				39A9FD71165EC685001B15AB /* GuideViewController.m in Sources */,
-				39A9FD77165ECBF4001B15AB /* Model.xcdatamodeld in Sources */,
-				398B26201683669200A0830E /* Stroke.m in Sources */,
+				397ACAB4169311F90099FEB2 /* Stroke.m in Sources */,
+				397ACAB5169311F90099FEB2 /* Assessment.m in Sources */,
+				397ACAB6169311F90099FEB2 /* HomeViewController.m in Sources */,
+				397ACAB7169311F90099FEB2 /* StrokeCell.m in Sources */,
+				397ACAB8169311F90099FEB2 /* HomeCell.m in Sources */,
+				397ACAB9169311F90099FEB2 /* ScoreCell.m in Sources */,
+				397ACABA169311F90099FEB2 /* GuideViewController.m in Sources */,
+				397ACABB169311F90099FEB2 /* GSDephViewController.m in Sources */,
+				397ACABC169311F90099FEB2 /* VolleyDephViewController.m in Sources */,
+				397ACABD169311F90099FEB2 /* GSAccuracyViewController.m in Sources */,
+				397ACABE169311F90099FEB2 /* ServerViewController.m in Sources */,
+				397ACABF169311F90099FEB2 /* MobilityViewController.m in Sources */,
+				397ACAC0169311F90099FEB2 /* ScoreViewController.m in Sources */,
+				397ACAC1169311F90099FEB2 /* ProfileViewController.m in Sources */,
+				397ACAB3169311D60099FEB2 /* AppDelegate.m in Sources */,
+				397ACA2616930D610099FEB2 /* main.m in Sources */,
+				397ACAB2169310E90099FEB2 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		398A6B911657A6A50065A58A /* Sources */ = {
+		397ACA3716930D610099FEB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				398A6BA51657A6A60065A58A /* International_Tennis_NumberTests.m in Sources */,
-				398A6BC716581EA50065A58A /* Assessment.m in Sources */,
-				398A6BE616590F4F0065A58A /* StrokeCell.m in Sources */,
-				398A6BEA1659101D0065A58A /* GSAccuracyViewController.m in Sources */,
-				398A6BF616598B170065A58A /* ServerViewController.m in Sources */,
-				398A6BFA165992AD0065A58A /* MobilityViewController.m in Sources */,
-				398A6BFE1659B3670065A58A /* ScoreViewController.m in Sources */,
+				397ACA4B16930D610099FEB2 /* TennisNumberTests.m in Sources */,
+				397ACA7616930FAC0099FEB2 /* Stroke.m in Sources */,
+				397ACA7716930FAC0099FEB2 /* Assessment.m in Sources */,
+				397ACA8616930FC80099FEB2 /* GSDephViewController.m in Sources */,
+				397ACA8716930FC80099FEB2 /* VolleyDephViewController.m in Sources */,
+				397ACA8816930FC80099FEB2 /* GSAccuracyViewController.m in Sources */,
+				397ACA8916930FC80099FEB2 /* ServerViewController.m in Sources */,
+				397ACA8A16930FC80099FEB2 /* MobilityViewController.m in Sources */,
+				397ACA8B16930FC80099FEB2 /* ScoreViewController.m in Sources */,
+				397ACA8C16930FC80099FEB2 /* ProfileViewController.m in Sources */,
+				397ACA8F16930FD70099FEB2 /* GuideViewController.m in Sources */,
+				397ACA9B16930FFE0099FEB2 /* StrokeCell.m in Sources */,
+				397ACA9C16930FFE0099FEB2 /* HomeCell.m in Sources */,
+				397ACA9F16930FFE0099FEB2 /* ScoreCell.m in Sources */,
+				397ACAA3169310260099FEB2 /* HomeViewController.m in Sources */,
+				397ACAA9169310510099FEB2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		398A6B9C1657A6A60065A58A /* PBXTargetDependency */ = {
+		397ACA4216930D610099FEB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 398A6B601657A6A50065A58A /* Tennis Number */;
-			targetProxy = 398A6B9B1657A6A60065A58A /* PBXContainerItemProxy */;
+			target = 397ACA1416930D610099FEB2 /* TennisNumber */;
+			targetProxy = 397ACA4116930D610099FEB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		398A6B6E1657A6A50065A58A /* InfoPlist.strings */ = {
+		397ACA2216930D610099FEB2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				398A6B6F1657A6A50065A58A /* en */,
+				397ACA2316930D610099FEB2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		398A6B7D1657A6A50065A58A /* MainStoryboard_iPhone.storyboard */ = {
+		397ACA4616930D610099FEB2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				398A6B7E1657A6A50065A58A /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		398A6B801657A6A50065A58A /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				398A6B811657A6A50065A58A /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		398A6BA01657A6A60065A58A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				398A6BA11657A6A60065A58A /* en */,
+				397ACA4716930D610099FEB2 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -568,7 +560,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		398A6BA61657A6A60065A58A /* Debug */ = {
+		397ACA4C16930D610099FEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -577,7 +569,6 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -593,14 +584,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		398A6BA71657A6A60065A58A /* Release */ = {
+		397ACA4D16930D610099FEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -609,8 +597,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -618,176 +605,110 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		398A6BA91657A6A60065A58A /* Debug */ = {
+		397ACA4F16930D610099FEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis Number/International Tennis Number-Info.plist";
+				GCC_PREFIX_HEADER = "TennisNumber/TennisNumber-Prefix.pch";
+				INFOPLIST_FILE = "TennisNumber/TennisNumber-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		398A6BAA1657A6A60065A58A /* Release */ = {
+		397ACA5016930D610099FEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis Number/International Tennis Number-Info.plist";
+				GCC_PREFIX_HEADER = "TennisNumber/TennisNumber-Prefix.pch";
+				INFOPLIST_FILE = "TennisNumber/TennisNumber-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		398A6BAC1657A6A60065A58A /* Debug */ = {
+		397ACA5216930D610099FEB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/International Tennis Number.app/International Tennis Number";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TennisNumber.app/TennisNumber";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis NumberTests/International Tennis NumberTests-Info.plist";
+				GCC_PREFIX_HEADER = "TennisNumber/TennisNumber-Prefix.pch";
+				INFOPLIST_FILE = "TennisNumberTests/TennisNumberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		398A6BAD1657A6A60065A58A /* Release */ = {
+		397ACA5316930D610099FEB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/International Tennis Number.app/International Tennis Number";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TennisNumber.app/TennisNumber";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis NumberTests/International Tennis NumberTests-Info.plist";
+				GCC_PREFIX_HEADER = "TennisNumber/TennisNumber-Prefix.pch";
+				INFOPLIST_FILE = "TennisNumberTests/TennisNumberTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
-		};
-		398ABBB61691CBA600CF921F /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Robson Ximenes";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Robson Ximenes";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robson Ximenes";
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "C7140131-9A97-4857-AC00-7D74A82DD10F";
-				"PROVISIONING_PROFILE[sdk=*]" = "C7140131-9A97-4857-AC00-7D74A82DD10F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C7140131-9A97-4857-AC00-7D74A82DD10F";
-				SDKROOT = iphoneos6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Distribution;
-		};
-		398ABBB71691CBA600CF921F /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis Number/International Tennis Number-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Distribution;
-		};
-		398ABBB81691CBA600CF921F /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/International Tennis Number.app/International Tennis Number";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "International Tennis Number/International Tennis Number-Prefix.pch";
-				INFOPLIST_FILE = "International Tennis NumberTests/International Tennis NumberTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		398A6B5B1657A6A50065A58A /* Build configuration list for PBXProject "TennisNumber" */ = {
+		397ACA0F16930D610099FEB2 /* Build configuration list for PBXProject "TennisNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				398A6BA61657A6A60065A58A /* Debug */,
-				398A6BA71657A6A60065A58A /* Release */,
-				398ABBB61691CBA600CF921F /* Distribution */,
+				397ACA4C16930D610099FEB2 /* Debug */,
+				397ACA4D16930D610099FEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		398A6BA81657A6A60065A58A /* Build configuration list for PBXNativeTarget "Tennis Number" */ = {
+		397ACA4E16930D610099FEB2 /* Build configuration list for PBXNativeTarget "TennisNumber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				398A6BA91657A6A60065A58A /* Debug */,
-				398A6BAA1657A6A60065A58A /* Release */,
-				398ABBB71691CBA600CF921F /* Distribution */,
+				397ACA4F16930D610099FEB2 /* Debug */,
+				397ACA5016930D610099FEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		398A6BAB1657A6A60065A58A /* Build configuration list for PBXNativeTarget "Tennis NumberTests" */ = {
+		397ACA5116930D610099FEB2 /* Build configuration list for PBXNativeTarget "TennisNumberTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				398A6BAC1657A6A60065A58A /* Debug */,
-				398A6BAD1657A6A60065A58A /* Release */,
-				398ABBB81691CBA600CF921F /* Distribution */,
+				397ACA5216930D610099FEB2 /* Debug */,
+				397ACA5316930D610099FEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		39A9FD75165ECBF4001B15AB /* Model.xcdatamodeld */ = {
+		397ACAB0169310E90099FEB2 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */,
+				397ACAB1169310E90099FEB2 /* Model.xcdatamodel */,
 			);
-			currentVersion = 39A9FD76165ECBF4001B15AB /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = 397ACAB1169310E90099FEB2 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = "../../../desenvolvimento/iphone/itn/International Tennis Number/Model.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 398A6B581657A6A50065A58A /* Project object */;
+	rootObject = 397ACA0C16930D610099FEB2 /* Project object */;
 }
