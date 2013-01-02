@@ -19,7 +19,9 @@
 @implementation Assessment
 
 
-@synthesize name,birthday,sex,assessor,date,local,groundStrokeDeph,volleyDeph,groundStrokePrecision,server,mobilityTime;
+@synthesize name,birthday,sex,assessor,local,groundStrokeDeph,volleyDeph,groundStrokePrecision,server,mobilityTime;
+
+@synthesize date;
 
 @synthesize strokesForGSAccuracy,strokesForGSDeph,strokesForServer,strokesForVolleyDeph;
 
@@ -37,6 +39,13 @@ static Assessment *instance = NULL;
 
 + (void) clearInstance{
     instance = nil;
+}
+
+- (NSDate *) date{
+    if(!date){
+        date = [[NSDate alloc] init];
+    }
+    return date;
 }
 
 

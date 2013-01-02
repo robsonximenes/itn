@@ -35,8 +35,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    Assessment *a = [Assessment current];
+    [a setDate:[[NSDate alloc] init]];
     
-    dateTextField.text = [self stringFormatedForDateTime:[[NSDate alloc] init]];
+    dateTextField.text = [self stringFormatedForDateTime:[a date]];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     assessortextField.text= [defaults valueForKey:@"assessor"];
@@ -83,11 +85,15 @@
     
     Assessment * a = [Assessment current];
     a.name = nameTextField.text;
-    a.birthday = dateBirthPicker.date;
+    if(dateBirthPicker){
+        a.birthday = dateBirthPicker.date;
+    }
     a.sex = [sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]];
     
     a.assessor = assessortextField.text;
-    a.date = datePicker.date;
+    if(datePicker){
+        a.date = datePicker.date;
+    }
     a.local = venueTextField.text;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -100,11 +106,18 @@
 -(BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     BOOL isOk = true;
     
+    Assessment *a = [Assessment current];
+    
     NSMutableString *sb = [NSMutableString stringWithString:@""];
     
     if(nameTextField.text.length<1){
         isOk = false;
         [sb appendString:@"The names is required.\n "];
+    }
+    
+    if(!a.birthday){
+        isOk = false;
+        [sb appendString:@"The birthday is required.\n "];
     }
     
     if(!isOk){
@@ -174,10 +187,7 @@
 }
 
 -(NSString *) stringFormatedForDate: (NSDate *)date{
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//    [formatter setDateFormat:@"MM/dd/yyyy"];
-//    return [formatter stringFromDate:date];
-    
+
     return [NSDateFormatter localizedStringFromDate:date
                                           dateStyle:NSDateFormatterMediumStyle
                                           timeStyle:NSDateFormatterNoStyle];
@@ -186,9 +196,6 @@
 }
 
 -(NSString *) stringFormatedForDateTime: (NSDate *)date{
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-//    [formatter setDateFormat:@"MM/dd/yyyy HH:mm"];
-//    return [formatter stringFromDate:date];
     return [NSDateFormatter localizedStringFromDate:date
                                           dateStyle:NSDateFormatterMediumStyle
                                           timeStyle:NSDateFormatterShortStyle];

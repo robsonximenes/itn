@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
 	self.assessment = [Assessment current];
+    [self.assessment save];
     
 }
 
@@ -119,6 +120,57 @@
     }
     
     return cell;
+    
+}
+
+#pragma mark Email
+
+- (IBAction)send:(id)sender{
+    if ([MFMailComposeViewController canSendMail]) {
+        
+        NSString *birthday = [NSDateFormatter localizedStringFromDate:[assessment birthday]
+                                                          dateStyle:NSDateFormatterMediumStyle
+                                                        timeStyle:NSDateFormatterNoStyle];
+        
+        NSString *linha1 = [NSString stringWithFormat:
+                                @"<tr><td>Name</td><td>%@</td><td>Date of Birth</td><td>%@</td><td>Sex</td><td>%@</td></tr>" ,[assessment name], birthday, [assessment sex]];
+        
+        NSLog(@"%@", [assessment date]);
+    
+        NSString *date = [NSDateFormatter localizedStringFromDate:[assessment date]
+                                              dateStyle:NSDateFormatterMediumStyle
+                                              timeStyle:NSDateFormatterShortStyle];
+        
+        
+        NSString *linha2 = [NSString stringWithFormat:
+                            @"<tr><td>Assessor</td><td>%@</td><td>Date</td><td>%@</td><td>Venue</td><td>%@</td></tr>" ,[assessment assessor], date, [assessment local]];
+
+        NSLog(@"%@", date);
+        
+        NSString *resultado1 = [NSString stringWithFormat:
+                            @"<tr><td>Strokes</td><td>Mobility</td><td>Total</td></tr><tr><td>%d</td><td>%d</td><td>%d</td></tr>" ,[assessment getStrokePoints], [assessment getMobilityPoints], [assessment getTotalPoints]];
+        
+        NSString *body = [NSString stringWithFormat:
+                          @"<h3>International Tennis Number On Court Assessment</h3> <table>%@ %@</table> <br/> <table> %@ </table> <br/> <h3>ITN %d</h3>" ,
+                          linha1, linha2, resultado1, [assessment calculateITN]];
+        
+    
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"ITN Report"];
+        [mailViewController setMessageBody:body isHTML:YES];
+        
+        [self presentViewController:mailViewController animated:YES completion:nil];
+        
+    }else {
+        NSLog(@"Device is unable to send email in its current state.");
+        
+    }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    [controller dismissViewControllerAnimated:YES completion:nil];
     
 }
 

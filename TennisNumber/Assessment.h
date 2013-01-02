@@ -14,7 +14,7 @@
 @property NSDate *birthday;
 @property NSString *sex;
 @property NSString *assessor;
-@property NSDate *date;
+@property(nonatomic) NSDate *date;
 @property NSString *local;
 @property int itn;
 @property int gsDephPoints;

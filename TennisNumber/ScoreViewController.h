@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+#import <MessageUI/MessageUI.h>
+
+@interface ScoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,MFMailComposeViewControllerDelegate>
 
 
 
 - (IBAction)save:(id)sender;
 
+- (IBAction)send:(id)sender;
 
 @end

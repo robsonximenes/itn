@@ -9,6 +9,7 @@
 #import "MobilityViewController.h"
 #import "Assessment.h"
 #import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface MobilityViewController ()
 @property Assessment *assessment;
@@ -18,7 +19,11 @@
 @property AVAudioPlayer *player;
 @end
 
-@implementation MobilityViewController
+@implementation MobilityViewController{
+    BOOL running;
+    UIImage *startImage;
+    UIImage *stopImage;
+}
 
 @synthesize timeLabel,total,startButton,stopButton, assessment;
 @synthesize startDate,stopWatchTimer,time;
@@ -28,7 +33,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -42,9 +47,15 @@
     self.assessment = [Assessment current];
     [self calculateScore];
     
-    [startButton setTitle:@"Start" forState:UIControlStateNormal];
-    [startButton setTitle:@"Stop" forState:UIControlStateHighlighted];
+    running = false;
     
+    startImage = [[UIImage imageNamed:@"pixelVerde"]
+                  resizableImageWithCapInsets:UIEdgeInsetsMake(-5, 0, 5, 0)];
+    stopImage = [[UIImage imageNamed:@"pixelMarron"]
+                  resizableImageWithCapInsets:UIEdgeInsetsMake(-5, 0, 5, 0)];
+    
+    startButton.layer.cornerRadius = 10;
+    startButton.clipsToBounds = YES;
     
 }
 
@@ -65,17 +76,37 @@
 }
 
 - (IBAction)start:(id)sender {
-    [startButton setEnabled:false];
-    [stopButton setEnabled:true];
+    UIButton *button = sender;
+//    [startButton setEnabled:false];
+//    [stopButton setEnabled:true];
     
-    [player play];
-    
-    if(stopWatchTimer){
-        [stopWatchTimer invalidate];
-        stopWatchTimer = nil;
+    if(running){
+        // STOPPING
+        if(stopWatchTimer){
+            [self calculateScore];
+            [stopWatchTimer invalidate];
+            stopWatchTimer = nil;
+        }
+        running = false;
+        [button setTitle:@"Start" forState:UIControlStateNormal];
+        [button setBackgroundImage:startImage forState:UIControlStateNormal];
+        button.layer.cornerRadius = 10;
+        
+    }else{
+        //STARTING
+        [player play];
+        if(stopWatchTimer){
+            [stopWatchTimer invalidate];
+            stopWatchTimer = nil;
+        }
+        startDate = [NSDate date];
+        stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+        
+        running = true;
+        [button setTitle:@"Stop" forState:UIControlStateNormal];
+        [button setBackgroundImage:stopImage forState:UIControlStateNormal];
     }
-    startDate = [NSDate date];
-    stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
 }
 
 - (void)updateTimer{
