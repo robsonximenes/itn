@@ -440,4 +440,20 @@ static Assessment *instance = NULL;
     
 }
 
+- (void) remove{
+    NSManagedObject *object = [self fetch];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
+    
+    [contexto deleteObject:object];
+    
+    NSError *error;
+    [contexto save:&error];
+    
+    if(error){
+        NSLog(@"Erro ao excluir: %@",error);
+    }
+    
+}
+
 @end

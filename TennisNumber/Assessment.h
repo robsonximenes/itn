@@ -76,6 +76,7 @@
 + (void) clearInstance;
 
 -(void)save;
+-(void)remove;
 -(NSManagedObject *)fetch;
 -(NSArray *)findAll;
 

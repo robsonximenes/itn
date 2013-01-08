@@ -114,4 +114,24 @@
     
 }
 
+-(void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+ 
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        // delete your data item here
+        
+        Assessment * a = [results objectAtIndex:indexPath.row];
+        [a remove];
+        results = [[Assessment current]findAll];
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+
+
+
 @end
