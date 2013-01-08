@@ -405,12 +405,12 @@ static Assessment *instance = NULL;
 +(void) configureSampleAssessment{
     
     Assessment *sample = [[Assessment alloc]init];
-    [sample setName:@"Robson Ximenes"];
+    [sample setName:@"Sample Player"];
     [sample setBirthday:[[NSDate alloc] init]];
     [sample setSex:@"M"];
-    [sample setAssessor:@"Ary Godoy"];
+    [sample setAssessor:@"My Coach"];
     [sample setDate:[[NSDate alloc] init]];
-    [sample setLocal:@"Winner Tennis"];
+    [sample setLocal:@"Sample place"];
     
     [sample setMobilityTime:18];
     

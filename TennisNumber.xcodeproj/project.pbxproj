@@ -72,8 +72,6 @@
 		39D5104F1693590700DD27B3 /* pixelVerde.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D5104E1693590700DD27B3 /* pixelVerde.png */; };
 		39D5105116935AE800DD27B3 /* scoreTransparente.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D5105016935AE800DD27B3 /* scoreTransparente.png */; };
 		39D5105216936CBB00DD27B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAC61693126D0099FEB2 /* Default-568h@2x.png */; };
-		39D510541693A4B000DD27B3 /* pixelMarron.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D510531693A4B000DD27B3 /* pixelMarron.png */; };
-		39D510561693A5B300DD27B3 /* pixelMarron2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D510551693A5B300DD27B3 /* pixelMarron2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,8 +151,6 @@
 		39D5104B1693585400DD27B3 /* textura44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textura44.png; sourceTree = "<group>"; };
 		39D5104E1693590700DD27B3 /* pixelVerde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelVerde.png; sourceTree = "<group>"; };
 		39D5105016935AE800DD27B3 /* scoreTransparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreTransparente.png; sourceTree = "<group>"; };
-		39D510531693A4B000DD27B3 /* pixelMarron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelMarron.png; sourceTree = "<group>"; };
-		39D510551693A5B300DD27B3 /* pixelMarron2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelMarron2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +269,6 @@
 		397ACA5516930D720099FEB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				39D510551693A5B300DD27B3 /* pixelMarron2.png */,
-				39D510531693A4B000DD27B3 /* pixelMarron.png */,
 				39D5105016935AE800DD27B3 /* scoreTransparente.png */,
 				39D5104E1693590700DD27B3 /* pixelVerde.png */,
 				39D5104A1693585400DD27B3 /* textura32.png */,
@@ -474,8 +468,6 @@
 				39D5104F1693590700DD27B3 /* pixelVerde.png in Resources */,
 				39D5105116935AE800DD27B3 /* scoreTransparente.png in Resources */,
 				39D5105216936CBB00DD27B3 /* Default-568h@2x.png in Resources */,
-				39D510541693A4B000DD27B3 /* pixelMarron.png in Resources */,
-				39D510561693A5B300DD27B3 /* pixelMarron2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
