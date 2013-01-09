@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HomeCell.h"
 #import "Assessment.h"
+#import "AppDelegate.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -21,6 +22,7 @@
 @implementation HomeViewController
 
 @synthesize results,table;
+@synthesize addAssessmentButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -131,7 +133,17 @@
     }
 }
 
-
+- (BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if([identifier isEqualToString:@"new"]){
+        if(![AppDelegate isEnabled]){
+            if([results count]>=3){
+                [AppDelegate showMessageForEnablingFeatures];
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
 
 
 @end

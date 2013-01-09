@@ -178,4 +178,31 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+#pragma mark Habilitação Full Features
+
++ (BOOL) isEnabled{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
+}
+
++ (void) enable{
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:DEFAULTS_FULL_FEATURES];
+}
+
+#pragma mark Mensagens full features
++ (void)showMessageForEnablingFeatures {
+    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable all Features!" message:@"This is the simple version of TennisNumber you can enable the full version and have:\n-unlimited assessments\n-detailed information on each assessment\n-send assessement by e-mail." delegate:(AppDelegate *)[UIApplication sharedApplication] cancelButtonTitle:@"Not now..." otherButtonTitles:@"Ok, lets go!", nil];
+    [action show];
+    
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+		// Yes, do something
+	}else if (buttonIndex == 1){
+		[alertView resignFirstResponder];
+    }
+}
+
+
+
 @end

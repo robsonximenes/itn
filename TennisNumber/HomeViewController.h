@@ -10,5 +10,6 @@
 
 @interface HomeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (assign, nonatomic) IBOutlet UITableView *table;
+@property (assign, nonatomic) IBOutlet UIBarButtonItem *addAssessmentButton;
 
 @end
