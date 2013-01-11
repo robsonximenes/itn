@@ -10,6 +10,7 @@
 #import "HomeCell.h"
 #import "AssessmentBC.h"
 #import "AppDelegate.h"
+#import "ScoreViewController.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -120,6 +121,18 @@
     
     return cell;
     
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    Assessment * selected = [results objectAtIndex:indexPath.row];
+    [[AssessmentBC current] setAssessment:selected];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+
+    ScoreViewController *scoreView = [storyboard instantiateViewControllerWithIdentifier:@"NavigationScoreViewController"];
+    
+    [self presentViewController:scoreView animated:YES completion:nil ];
 }
 
 -(void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{

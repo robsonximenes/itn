@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		392B19A616A0C7F300EA9BB7 /* ScoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392B19A416A0C7F300EA9BB7 /* ScoreDetailViewController.m */; };
+		392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */; };
 		397ACA1A16930D610099FEB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1916930D610099FEB2 /* UIKit.framework */; };
 		397ACA1C16930D610099FEB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1B16930D610099FEB2 /* Foundation.framework */; };
 		397ACA1E16930D610099FEB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1D16930D610099FEB2 /* CoreGraphics.framework */; };
@@ -85,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		392B19A316A0C7F300EA9BB7 /* ScoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreDetailViewController.h; sourceTree = "<group>"; };
+		392B19A416A0C7F300EA9BB7 /* ScoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreDetailViewController.m; sourceTree = "<group>"; };
+		392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreDetailViewController.xib; sourceTree = "<group>"; };
 		397ACA1516930D610099FEB2 /* TennisNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397ACA1916930D610099FEB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		397ACA1B16930D610099FEB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -343,6 +348,9 @@
 				397ACA8316930FC80099FEB2 /* ScoreViewController.m */,
 				397ACA8416930FC80099FEB2 /* ProfileViewController.h */,
 				397ACA8516930FC80099FEB2 /* ProfileViewController.m */,
+				392B19A316A0C7F300EA9BB7 /* ScoreDetailViewController.h */,
+				392B19A416A0C7F300EA9BB7 /* ScoreDetailViewController.m */,
+				392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */,
 			);
 			name = Assessment;
 			sourceTree = "<group>";
@@ -472,6 +480,7 @@
 				39D5104F1693590700DD27B3 /* pixelVerde.png in Resources */,
 				39D5105116935AE800DD27B3 /* scoreTransparente.png in Resources */,
 				39D5105216936CBB00DD27B3 /* Default-568h@2x.png in Resources */,
+				392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +538,7 @@
 				39D510471693156000DD27B3 /* Model.xcdatamodeld in Sources */,
 				39A7430F169DD74C00F991F1 /* Stroke.m in Sources */,
 				39AD0FCA16A02867004003AC /* Assessment.m in Sources */,
+				392B19A616A0C7F300EA9BB7 /* ScoreDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

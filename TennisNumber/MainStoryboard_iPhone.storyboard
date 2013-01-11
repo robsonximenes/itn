@@ -1058,15 +1058,31 @@
             </objects>
             <point key="canvasLocation" x="3697" y="938"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b9d-A8-MNr">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationScoreViewController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nfT-38-DrL" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pxl-Ct-r7V">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9vh-BW-1nN" kind="relationship" relationship="rootViewController" id="mUV-1Q-xtv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CE4-UO-0kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3775" y="241"/>
+        </scene>
         <!--Score View Controller - ITN-->
         <scene sceneID="75h-t5-hhm">
             <objects>
-                <viewController id="9vh-BW-1nN" customClass="ScoreViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ScoreViewController" storyboardIdentifier="ScoreViewController" id="9vh-BW-1nN" customClass="ScoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qgk-Pe-62a">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-1h-YSS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="4zB-1h-YSS">
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="9vh-BW-1nN" id="ScJ-UQ-nnj"/>
@@ -1104,7 +1120,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW7-nP-2vh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4122" y="938"/>
+            <point key="canvasLocation" x="4308" y="908"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="IZj-w1-LdP">
+            <objects>
+                <tableViewController storyboardIdentifier="ScoreDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vNb-dk-HPP" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Zse-wI-HjH">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vNb-dk-HPP" id="Rqe-Xj-5BC"/>
+                            <outlet property="delegate" destination="vNb-dk-HPP" id="KxO-DV-spo"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNX-T7-yDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4748" y="894"/>
         </scene>
     </scenes>
     <resources>
@@ -1206,4 +1241,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mUV-1Q-xtv"/>
+    </inferredMetricsTieBreakers>
 </document>

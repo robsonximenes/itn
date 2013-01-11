@@ -134,7 +134,6 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
     
     //NSLog(@"Criando banco em: %@",storeURL);
-    
     //[[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     
     NSError *error = nil;
@@ -163,6 +162,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
+        
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
@@ -181,7 +181,8 @@
 #pragma mark Habilitação Full Features
 
 + (BOOL) isEnabled{
-    return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
+    return YES;
+//    return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
 }
 
 + (void) enable{
