@@ -1,83 +1,41 @@
 //
 //  Assessment.h
-//  International Tennis Number
+//  TennisNumber
 //
-//  Created by Robson Ximenes on 17/11/12.
-//  Copyright (c) 2012 Robson Ximenes. All rights reserved.
+//  Created by Robson Saraiva Ximenes on 11/01/13.
+//  Copyright (c) 2013 RSX. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Assessment : NSObject
+@class Stroke;
 
-@property NSString *name;
-@property NSDate *birthday;
-@property NSString *sex;
-@property NSString *assessor;
-@property(nonatomic) NSDate *date;
-@property NSString *local;
-@property int itn;
-@property int gsDephPoints;
-@property int gsAccuracyPoints;
-@property int serverPoints;
-@property int volleyDephPoints;
-@property int mobilityPoints;
+@interface Assessment : NSManagedObject
 
+@property (nonatomic, retain) NSString * assessor;
+@property (nonatomic, retain) NSDate * birthday;
+@property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSNumber * gsAccuracyPoints;
+@property (nonatomic, retain) NSNumber * gsDephPoints;
+@property (nonatomic, retain) NSNumber * itn;
+@property (nonatomic, retain) NSNumber * mobility;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * serverPoints;
+@property (nonatomic, retain) NSString * sex;
+@property (nonatomic, retain) NSString * venue;
+@property (nonatomic, retain) NSNumber * volleyDephPoints;
+@property (nonatomic, retain) NSNumber * mobilityTime;
+@property (nonatomic, retain) NSSet *strokes;
+@end
 
+@interface Assessment (CoreDataGeneratedAccessors)
 
-@property NSMutableArray *groundStrokeDeph;
-@property NSMutableArray *volleyDeph;
-@property NSMutableArray *groundStrokePrecision;
-@property NSMutableArray *server;
-@property NSInteger mobilityTime;
+- (void)addStrokesObject:(Stroke *)value;
+- (void)removeStrokesObject:(Stroke *)value;
+- (void)addStrokes:(NSSet *)values;
+- (void)removeStrokes:(NSSet *)values;
 
-@property NSMutableArray * strokesForGSAccuracy;
-@property NSMutableArray * strokesForGSDeph;
-@property NSMutableArray * strokesForVolleyDeph;
-@property NSMutableArray * strokesForServer;
-
-
-- (int) getGroundStrokePoints;
-- (int) getGroundStrokeConssistencyPoints;
-- (int) getGroundStrokeTotalPoints;
-
-- (int) getVolleyDephPoints;
-- (int) getVolleyDephConssistencyPoints;
-- (int) getVolleyDephTotalPoints;
-
-- (int) getGSAccuracyPoints;
-- (int) getGSAccuracyConssistencyPoints;
-- (int) getGSAccuracyTotalPoints;
-
-- (int) getServerPoints;
-- (int) getServerConssistencyPoints;
-- (int) getServerTotalPoints;
-
-
-- (int) getStrokePoints;
-- (int) getMobilityPoints;
-- (int) getTotalPoints;
-
-- (int) calculateITN;
-
--(NSMutableArray *) getStrokesForGSAccuracy;
--(NSMutableArray *) getStrokesForGSDeph;
--(NSMutableArray *) getStrokesForVolleyDeph;
--(NSMutableArray *) getStrokesForServer;
-
-+(NSArray *) getPointsForGSAccuracy;
-+(NSArray *) getPointsForGSDeph;
-+(NSArray *) getPointsForVolleyDeph;
-+(NSArray *) getPointsForServer;
-
-
-+ (void) configureSampleAssessment;
-+ (Assessment *)current;
-+ (void) clearInstance;
-
--(void)save;
--(void)remove;
--(NSManagedObject *)fetch;
--(NSArray *)findAll;
+-(id) initWithContext: (NSManagedObjectContext *) context;
 
 @end

@@ -9,16 +9,16 @@
 #import "ServerViewController.h"
 #import "StrokeCell.h"
 #import "Stroke.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 
 @interface ServerViewController ()
-@property Assessment *assetment;
+@property AssessmentBC *bc;
 @end
 
 @implementation ServerViewController
 
-@synthesize assetment;
-@synthesize total,subtotal,consistency, resultView, table;
+@synthesize bc;
+@synthesize total,subtotal,consistency;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.assetment = [Assessment current];
+    self.bc = [AssessmentBC current];
     [self calculateScore];
 }
 
@@ -44,7 +44,7 @@
 
 # pragma mark TableView Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self.assetment getStrokesForServer] count];
+    return [[self.bc getStrokesForType:STROKE_TYPE_SERVER] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -65,32 +65,25 @@
         }
     }
     
-    Stroke *stroke = [self getStrokeAtIndex:indexPath.row];
-    cell.number.text=stroke.number;
-    cell.strokeName.text=stroke.strokeName;
-    [self setupSegment:cell.score withSelectedValue:stroke.score];
+    Stroke *stroke = [[self.bc getStrokesForType:STROKE_TYPE_SERVER] objectAtIndex:indexPath.row];
+    cell.number.text=[NSString stringWithFormat:@"%@",stroke.order ];
+    cell.strokeName.text=stroke.name;
+    [self setupSegment:cell.score value:[NSString stringWithFormat:@"%@",stroke.score]];
     return cell;
     
 }
 
--(NSMutableArray *) getStrokes{
-    return [self.assetment getStrokesForServer];
-}
-
--(Stroke *) getStrokeAtIndex: (int) index{
-    return [[self getStrokes] objectAtIndex:index];
-}
-
-
--(void) setupSegment: (UISegmentedControl *)segControl withSelectedValue:(NSString *)value{
-    NSArray *values = [Assessment getPointsForServer];
+-(void) setupSegment: (UISegmentedControl *)segControl value:(NSString *)value{
+    NSArray *values = [AssessmentBC getPossiblePointsForType:STROKE_TYPE_GS_DEPH];
     [segControl removeAllSegments];
     for (int i =0; i<[values count]; i++) {
-        [segControl insertSegmentWithTitle:[values objectAtIndex:i] atIndex:i animated:false];
+        NSString *listValue = [NSString stringWithFormat:@"%@",[values objectAtIndex:i]];
+        [segControl insertSegmentWithTitle:listValue atIndex:i animated:false];
     }
     
     for (int i =0; i<[values count]; i++) {
-        if([[values objectAtIndex:i] isEqualToString:value]){
+        NSString *listValue = [NSString stringWithFormat:@"%@",[values objectAtIndex:i]];
+        if([listValue isEqualToString:value]){
             [segControl setSelectedSegmentIndex:i];
             break;
         }
@@ -108,23 +101,19 @@
     
     [self.table setContentOffset:CGPointMake(0, indexPath.row * STROKES_ROW_HEIGHT) animated:YES];
     
-    Stroke *stroke = [self getStrokeAtIndex:row];
-    stroke.score = value;
+    Stroke *stroke = [[self.bc getStrokesForType:STROKE_TYPE_SERVER] objectAtIndex:row];
+    stroke.score = [NSNumber numberWithInt:[value intValue]];
     
-    [[self getStrokes] replaceObjectAtIndex:row withObject:stroke];
+    //    [[self.bc getStrokesForGSAccuracy] replaceObjectAtIndex:row withObject:stroke];
     
     [self calculateScore];
 }
 
 - (void) calculateScore{
-    NSMutableArray *strokes = [self getStrokes];
-    for (int i =0; i<[strokes count]; i++) {
-        Stroke *stroke = [strokes objectAtIndex:i];
-        [assetment.server setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
-    }
-    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getServerPoints]]];
-    [consistency setText:[NSString stringWithFormat:@"%i", [assetment getServerConssistencyPoints]]];
-    [total setText:[NSString stringWithFormat:@"%i", [assetment getServerTotalPoints]]];
+    
+    [subtotal setText:[NSString stringWithFormat:@"%i", [bc getPointsForStrokeType:STROKE_TYPE_SERVER]]];
+    [consistency setText:[NSString stringWithFormat:@"%i", [bc getConssistencyPointsForStrokeType:STROKE_TYPE_SERVER]]];
+    [total setText:[NSString stringWithFormat:@"%i", [bc getTotalPointsForStrokeType:STROKE_TYPE_SERVER]]];
 }
 
 
@@ -140,10 +129,11 @@
 	if (buttonIndex == 0){
 		// Yes, do something
 	}else if (buttonIndex == 1){
+        [[AssessmentBC current] removeAssessment:[bc assessment]];
+
+        
 		for (UIViewController *view in [self.navigationController viewControllers]) {
             [view dismissViewControllerAnimated:false completion:nil];
         }
     }
-}
-
-@end
+}@end

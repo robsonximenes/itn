@@ -7,7 +7,7 @@
 //
 
 #import "ScoreViewController.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 #import "ScoreCell.h"
 #import "AppDelegate.h"
 
@@ -33,8 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.assessment = [Assessment current];
-    [self.assessment save];
+	self.assessment = [[AssessmentBC current] assessment];
+    [[AssessmentBC current] save];
     
 }
 
@@ -51,7 +51,7 @@
 
 - (IBAction)save:(id)sender {
     
-    [[Assessment current]save];
+    [[AssessmentBC current]save];
     
     for (UIViewController *view in [self.navigationController viewControllers]) {
         [view dismissViewControllerAnimated:false completion:nil];
@@ -86,38 +86,52 @@
                 cell = (ScoreCell *)currentObject;
                 break;
             }
+            
         }
     }
+    
+    AssessmentBC *bc = [AssessmentBC current];
     
     
     if(indexPath.section == 1){
         NSString *text = @"Subtotal: %i, Consistency: %i";
     if(indexPath.row == 0){
         [cell.name setText:@"Ground Stroke Deph"];
-        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getGroundStrokePoints],[assessment getGroundStrokeConssistencyPoints]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getGroundStrokeTotalPoints]]];
+        [cell.abstrct setText:[NSString stringWithFormat:text,
+                               [bc getPointsForStrokeType:STROKE_TYPE_GS_DEPH],
+                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
     }else if(indexPath.row == 1){
         [cell.name setText:@"Volley Deph"];
-        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getVolleyDephPoints],[assessment getVolleyDephConssistencyPoints]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getVolleyDephTotalPoints]]];
+        [cell.abstrct setText:[NSString stringWithFormat:text,
+                               [bc getPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH],
+                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
     }else if(indexPath.row == 2){
         [cell.name setText:@"Ground Stroke Accuracy"];
-        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getGSAccuracyPoints],[assessment getGSAccuracyConssistencyPoints]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getGSAccuracyTotalPoints]]];
+        [cell.abstrct setText:[NSString stringWithFormat:text,
+                               [bc getPointsForStrokeType:STROKE_TYPE_GS_ACCURACY],
+                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
     }else if(indexPath.row == 3){
         [cell.name setText:@"Server"];
-        [cell.abstrct setText:[NSString stringWithFormat:text, [assessment getServerPoints],[assessment getServerConssistencyPoints]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getServerTotalPoints]]];
+        [cell.abstrct setText:[NSString stringWithFormat:text,
+                               [bc getPointsForStrokeType:STROKE_TYPE_SERVER],
+                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_SERVER]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_SERVER]]];
     }else if(indexPath.row == 4){
         [cell.name setText:@"Mobility"];
-        [cell.abstrct setText:[NSString stringWithFormat:@"Time :%is", [assessment mobilityTime]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment getMobilityPoints]]];
+        [cell.abstrct setText:[NSString stringWithFormat:@"Time :%@", [assessment mobilityTime]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[[AssessmentBC current] getMobilityPoints]]];
     }
         
     }else{
         [cell.name setText:@"Internationl Tennis Number"];
-        [cell.abstrct setText:[NSString stringWithFormat:@"Strokes:%i Mobility:%i Total:%i", [assessment getStrokePoints],[assessment getMobilityPoints],[assessment getTotalPoints]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[assessment calculateITN]]];
+        [cell.abstrct setText:[NSString stringWithFormat:@"Strokes:%i Mobility:%i Total:%i",
+                               [[AssessmentBC current] getStrokeTotalPoints],
+                               [[AssessmentBC current] getMobilityPoints],
+                               [[AssessmentBC current] getTotalPoints]]];
+        [cell.total setText:[NSString stringWithFormat:@"%d",[[AssessmentBC current] calculateITN]]];
     }
     
     return cell;
@@ -152,16 +166,18 @@
         
         
         NSString *linha2 = [NSString stringWithFormat:
-                            @"<tr><td>Assessor</td><td>%@</td><td>Date</td><td>%@</td><td>Venue</td><td>%@</td></tr>" ,[assessment assessor], date, [assessment local]];
+                            @"<tr><td>Assessor</td><td>%@</td><td>Date</td><td>%@</td><td>Venue</td><td>%@</td></tr>" ,[assessment assessor], date, [assessment venue]];
         
         NSLog(@"%@", date);
         
         NSString *resultado1 = [NSString stringWithFormat:
-                                @"<tr><td>Strokes</td><td>Mobility</td><td>Total</td></tr><tr><td>%d</td><td>%d</td><td>%d</td></tr>" ,[assessment getStrokePoints], [assessment getMobilityPoints], [assessment getTotalPoints]];
+                                @"<tr><td>Strokes</td><td>Mobility</td><td>Total</td></tr><tr><td>%d</td><td>%d</td><td>%d</td></tr>" ,[[AssessmentBC current] getStrokeTotalPoints],
+                                [[AssessmentBC current] getMobilityPoints],
+                                [[AssessmentBC current] getTotalPoints]];
         
         NSString *body = [NSString stringWithFormat:
                           @"<h3>International Tennis Number On Court Assessment</h3> <table>%@ %@</table> <br/> <table> %@ </table> <br/> <h3>ITN %d</h3>" ,
-                          linha1, linha2, resultado1, [assessment calculateITN]];
+                          linha1, linha2, resultado1, [[AssessmentBC current] calculateITN]];
         
         
         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];

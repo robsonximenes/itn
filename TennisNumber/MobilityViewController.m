@@ -7,7 +7,7 @@
 //
 
 #import "MobilityViewController.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
 
@@ -44,7 +44,7 @@
 	
     [self initSound];
     
-    self.assessment = [Assessment current];
+    self.assessment = [[AssessmentBC current] assessment];
     [self calculateScore];
     
     running = false;
@@ -126,9 +126,9 @@
 
 -(void) calculateScore{
     if(time>0){
-        [assessment setMobilityTime:time];
+        [assessment setMobilityTime:[NSNumber numberWithInt:time ]];
     }
-    total.text = [NSString stringWithFormat:@"%d", [assessment getMobilityPoints]];
+    total.text = [NSString stringWithFormat:@"%d", [[AssessmentBC current] getMobilityPoints]];
 }
 
 - (IBAction)stop:(id)sender {
@@ -153,6 +153,9 @@
 	if (buttonIndex == 0){
 		// Yes, do something
 	}else if (buttonIndex == 1){
+        
+        [[AssessmentBC current] removeAssessment:[[AssessmentBC current] assessment]];
+
 		for (UIViewController *view in [self.navigationController viewControllers]) {
             [view dismissViewControllerAnimated:false completion:nil];
         }

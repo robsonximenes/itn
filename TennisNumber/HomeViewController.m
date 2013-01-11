@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeCell.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 #import "AppDelegate.h"
 
 #import <QuartzCore/QuartzCore.h>
@@ -42,12 +42,12 @@
     bool OLD_USER = [defaults boolForKey:DEFAULTS_OLD_USER];
     if(!OLD_USER){
         NSLog(@"First time on app loading sample assessment...");
-        [Assessment configureSampleAssessment];
+        [AssessmentBC configureSampleAssessment];
         [defaults setBool:YES forKey:DEFAULTS_OLD_USER];
         [defaults synchronize];
     }
     
-    [Assessment clearInstance];
+    [AssessmentBC clearInstance];
     
 	
 }
@@ -55,8 +55,8 @@
 -(void) viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    [Assessment clearInstance];
-    results = [[Assessment current]findAll];
+    [AssessmentBC clearInstance];
+    results = [[AssessmentBC current]findAll];
     [table reloadData];
     
 }
@@ -93,12 +93,18 @@
     
     Assessment * a = [results objectAtIndex:indexPath.row];
     
+    AssessmentBC *bc = [AssessmentBC current];
+    
     [cell.name setText:a.name];
     [cell.detailedScore setText:
      [NSString stringWithFormat:@"GS Deph(%d), Volley Deph(%d), GS Accuracy(%i), Server(%i), Mobility(%i)",
-      a.gsDephPoints,a.volleyDephPoints, a.gsAccuracyPoints, a.serverPoints, a.mobilityPoints]];
+      [bc getTotalPointsForStrokeType: STROKE_TYPE_GS_DEPH ],
+      [bc getTotalPointsForStrokeType: STROKE_TYPE_VOLLEY_DEPH ],
+      [bc getTotalPointsForStrokeType: STROKE_TYPE_GS_ACCURACY ],
+      [bc getTotalPointsForStrokeType: STROKE_TYPE_SERVER ],
+      [bc getMobilityPoints]]];
     
-    [cell.venue setText:a.local];
+    [cell.venue setText:[a venue]];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"MM/dd/yyyy HH:mm"];
@@ -109,7 +115,7 @@
                                                       timeStyle:NSDateFormatterShortStyle]
 ];
     
-    [cell.itnNumber setText:[NSString stringWithFormat:@"%d",a.itn]];
+    [cell.itnNumber setText:[NSString stringWithFormat:@"%@",[a itn]]];
 
     
     return cell;
@@ -125,11 +131,9 @@
  
     if (editingStyle == UITableViewCellEditingStyleDelete){
         // delete your data item here
-        
-        Assessment * a = [results objectAtIndex:indexPath.row];
-        [a remove];
-        results = [[Assessment current]findAll];
-        
+        Assessment *a = [results objectAtIndex:indexPath.row];
+        [[AssessmentBC current] removeAssessment:a];
+        results = [[AssessmentBC current]findAll];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }

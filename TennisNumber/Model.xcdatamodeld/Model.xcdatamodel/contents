@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Assessment" syncable="YES">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63b" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Assessment" representedClassName="Assessment" syncable="YES">
         <attribute name="assessor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -8,19 +8,23 @@
         <attribute name="gsDephPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="itn" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mobility" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="mobilityTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="serverPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venue" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="volleyDephPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="strokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stroke" inverseName="assessment" inverseEntity="Stroke" syncable="YES"/>
     </entity>
-    <entity name="Strokes" syncable="YES">
+    <entity name="Stroke" representedClassName="Stroke" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="assessment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Assessment" inverseName="strokes" inverseEntity="Assessment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Assessment" positionX="-1703" positionY="-279" width="128" height="223"/>
-        <element name="Strokes" positionX="-1451" positionY="-252" width="128" height="88"/>
+        <element name="Assessment" positionX="-1703" positionY="-279" width="128" height="255"/>
+        <element name="Stroke" positionX="-1451" positionY="-252" width="128" height="120"/>
     </elements>
 </model>

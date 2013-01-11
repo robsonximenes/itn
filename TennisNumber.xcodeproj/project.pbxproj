@@ -21,8 +21,7 @@
 		397ACA5B16930DE50099FEB2 /* tennisball.wav in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA5916930DE50099FEB2 /* tennisball.wav */; };
 		397ACA6516930EDA0099FEB2 /* icone57.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA6416930EDA0099FEB2 /* icone57.png */; };
 		397ACA6716930F010099FEB2 /* icone114.png in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA6616930F010099FEB2 /* icone114.png */; };
-		397ACA7616930FAC0099FEB2 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7316930FAC0099FEB2 /* Stroke.m */; };
-		397ACA7716930FAC0099FEB2 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* Assessment.m */; };
+		397ACA7716930FAC0099FEB2 /* AssessmentBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* AssessmentBC.m */; };
 		397ACA8616930FC80099FEB2 /* GSDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7916930FC80099FEB2 /* GSDephViewController.m */; };
 		397ACA8716930FC80099FEB2 /* VolleyDephViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7B16930FC80099FEB2 /* VolleyDephViewController.m */; };
 		397ACA8816930FC80099FEB2 /* GSAccuracyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7D16930FC80099FEB2 /* GSAccuracyViewController.m */; };
@@ -44,8 +43,7 @@
 		397ACAAC169310830099FEB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACAAB169310830099FEB2 /* CoreData.framework */; };
 		397ACAAE1693108B0099FEB2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACAAD1693108A0099FEB2 /* AVFoundation.framework */; };
 		397ACAB3169311D60099FEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA7169310510099FEB2 /* AppDelegate.m */; };
-		397ACAB4169311F90099FEB2 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7316930FAC0099FEB2 /* Stroke.m */; };
-		397ACAB5169311F90099FEB2 /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* Assessment.m */; };
+		397ACAB5169311F90099FEB2 /* AssessmentBC.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA7516930FAC0099FEB2 /* AssessmentBC.m */; };
 		397ACAB6169311F90099FEB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA1169310260099FEB2 /* HomeViewController.m */; };
 		397ACAB7169311F90099FEB2 /* StrokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9316930FFE0099FEB2 /* StrokeCell.m */; };
 		397ACAB8169311F90099FEB2 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9516930FFE0099FEB2 /* HomeCell.m */; };
@@ -64,6 +62,8 @@
 		397ACACB1693134A0099FEB2 /* StrokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9116930FFE0099FEB2 /* StrokeCell.xib */; };
 		397ACACC1693134A0099FEB2 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9616930FFE0099FEB2 /* HomeCell.xib */; };
 		397ACACD1693134A0099FEB2 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9716930FFE0099FEB2 /* ScoreCell.xib */; };
+		39A7430F169DD74C00F991F1 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A7430E169DD74C00F991F1 /* Stroke.m */; };
+		39AD0FCA16A02867004003AC /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD0FC916A02866004003AC /* Assessment.m */; };
 		39D510431693150400DD27B3 /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D510421693150400DD27B3 /* score.png */; };
 		39D510471693156000DD27B3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39D510451693156000DD27B3 /* Model.xcdatamodeld */; };
 		39D510491693168700DD27B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D510481693168700DD27B3 /* MessageUI.framework */; };
@@ -103,10 +103,8 @@
 		397ACA5916930DE50099FEB2 /* tennisball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennisball.wav; sourceTree = "<group>"; };
 		397ACA6416930EDA0099FEB2 /* icone57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone57.png; path = ../icone57.png; sourceTree = "<group>"; };
 		397ACA6616930F010099FEB2 /* icone114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icone114.png; path = ../icone114.png; sourceTree = "<group>"; };
-		397ACA7216930FAC0099FEB2 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
-		397ACA7316930FAC0099FEB2 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
-		397ACA7416930FAC0099FEB2 /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
-		397ACA7516930FAC0099FEB2 /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
+		397ACA7416930FAC0099FEB2 /* AssessmentBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssessmentBC.h; sourceTree = "<group>"; };
+		397ACA7516930FAC0099FEB2 /* AssessmentBC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssessmentBC.m; sourceTree = "<group>"; };
 		397ACA7816930FC80099FEB2 /* GSDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDephViewController.h; sourceTree = "<group>"; };
 		397ACA7916930FC80099FEB2 /* GSDephViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDephViewController.m; sourceTree = "<group>"; };
 		397ACA7A16930FC80099FEB2 /* VolleyDephViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolleyDephViewController.h; sourceTree = "<group>"; };
@@ -144,6 +142,10 @@
 		397ACAC2169312540099FEB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		397ACAC4169312660099FEB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		397ACAC61693126D0099FEB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		39A7430D169DD74C00F991F1 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		39A7430E169DD74C00F991F1 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+		39AD0FC816A02866004003AC /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
+		39AD0FC916A02866004003AC /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
 		39D510421693150400DD27B3 /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
 		39D510461693156000DD27B3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		39D510481693168700DD27B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -260,7 +262,7 @@
 				397ACAA7169310510099FEB2 /* AppDelegate.m */,
 				397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */,
 				397ACAA5169310320099FEB2 /* Constants.h */,
-				397ACA6F16930F860099FEB2 /* model */,
+				397ACA6F16930F860099FEB2 /* bc */,
 				397ACA6E16930F720099FEB2 /* view */,
 			);
 			name = classes;
@@ -315,15 +317,13 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		397ACA6F16930F860099FEB2 /* model */ = {
+		397ACA6F16930F860099FEB2 /* bc */ = {
 			isa = PBXGroup;
 			children = (
-				397ACA7216930FAC0099FEB2 /* Stroke.h */,
-				397ACA7316930FAC0099FEB2 /* Stroke.m */,
-				397ACA7416930FAC0099FEB2 /* Assessment.h */,
-				397ACA7516930FAC0099FEB2 /* Assessment.m */,
+				397ACA7416930FAC0099FEB2 /* AssessmentBC.h */,
+				397ACA7516930FAC0099FEB2 /* AssessmentBC.m */,
 			);
-			name = model;
+			name = bc;
 			sourceTree = "<group>";
 		};
 		397ACA7016930F8D0099FEB2 /* Assessment */ = {
@@ -376,6 +376,10 @@
 			isa = PBXGroup;
 			children = (
 				39D510451693156000DD27B3 /* Model.xcdatamodeld */,
+				39A7430D169DD74C00F991F1 /* Stroke.h */,
+				39A7430E169DD74C00F991F1 /* Stroke.m */,
+				39AD0FC816A02866004003AC /* Assessment.h */,
+				39AD0FC916A02866004003AC /* Assessment.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -507,8 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				397ACAB4169311F90099FEB2 /* Stroke.m in Sources */,
-				397ACAB5169311F90099FEB2 /* Assessment.m in Sources */,
+				397ACAB5169311F90099FEB2 /* AssessmentBC.m in Sources */,
 				397ACAB6169311F90099FEB2 /* HomeViewController.m in Sources */,
 				397ACAB7169311F90099FEB2 /* StrokeCell.m in Sources */,
 				397ACAB8169311F90099FEB2 /* HomeCell.m in Sources */,
@@ -524,6 +527,8 @@
 				397ACAB3169311D60099FEB2 /* AppDelegate.m in Sources */,
 				397ACA2616930D610099FEB2 /* main.m in Sources */,
 				39D510471693156000DD27B3 /* Model.xcdatamodeld in Sources */,
+				39A7430F169DD74C00F991F1 /* Stroke.m in Sources */,
+				39AD0FCA16A02867004003AC /* Assessment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,8 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				397ACA4B16930D610099FEB2 /* TennisNumberTests.m in Sources */,
-				397ACA7616930FAC0099FEB2 /* Stroke.m in Sources */,
-				397ACA7716930FAC0099FEB2 /* Assessment.m in Sources */,
+				397ACA7716930FAC0099FEB2 /* AssessmentBC.m in Sources */,
 				397ACA8616930FC80099FEB2 /* GSDephViewController.m in Sources */,
 				397ACA8716930FC80099FEB2 /* VolleyDephViewController.m in Sources */,
 				397ACA8816930FC80099FEB2 /* GSAccuracyViewController.m in Sources */,

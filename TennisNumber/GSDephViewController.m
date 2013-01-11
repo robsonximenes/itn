@@ -9,16 +9,16 @@
 #import "GSDephViewController.h"
 #import "StrokeCell.h"
 #import "Stroke.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 
 @interface GSDephViewController ()
-@property Assessment *assetment;
+@property AssessmentBC *bc;
 @end
 
 @implementation GSDephViewController
 
-@synthesize assetment;
-@synthesize total,subtotal,consistency,table;
+@synthesize bc;
+@synthesize total,subtotal,consistency;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.assetment = [Assessment current];
+    self.bc = [AssessmentBC current];
     [self calculateScore];
 }
 
@@ -44,13 +44,12 @@
 
 # pragma mark TableView Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [[self.assetment getStrokesForGSDeph] count];
+    return [[self.bc getStrokesForType:STROKE_TYPE_GS_DEPH] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return STROKES_ROW_HEIGHT;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -66,32 +65,25 @@
         }
     }
     
-    Stroke *stroke = [self getStrokeAtIndex:indexPath.row];
-    cell.number.text=stroke.number;
-    cell.strokeName.text=stroke.strokeName;
-    [self setupSegment:cell.score withSelectedValue:stroke.score];
+    Stroke *stroke = [[self.bc getStrokesForType:STROKE_TYPE_GS_DEPH] objectAtIndex:indexPath.row];
+    cell.number.text=[NSString stringWithFormat:@"%@",stroke.order ];
+    cell.strokeName.text=stroke.name;
+    [self setupSegment:cell.score value:[NSString stringWithFormat:@"%@",stroke.score]];
     return cell;
     
 }
 
--(NSMutableArray *) getStrokes{
-    return [self.assetment getStrokesForGSDeph];
-}
-
--(Stroke *) getStrokeAtIndex: (int) index{
-    return [[self getStrokes] objectAtIndex:index];
-}
-
-
--(void) setupSegment: (UISegmentedControl *)segControl withSelectedValue:(NSString *)value{
-    NSArray *values = [Assessment getPointsForGSDeph];
+-(void) setupSegment: (UISegmentedControl *)segControl value:(NSString *)value{
+    NSArray *values = [AssessmentBC getPossiblePointsForType:STROKE_TYPE_GS_DEPH];
     [segControl removeAllSegments];
     for (int i =0; i<[values count]; i++) {
-        [segControl insertSegmentWithTitle:[values objectAtIndex:i] atIndex:i animated:false];
+        NSString *listValue = [NSString stringWithFormat:@"%@",[values objectAtIndex:i]];
+        [segControl insertSegmentWithTitle:listValue atIndex:i animated:false];
     }
     
     for (int i =0; i<[values count]; i++) {
-        if([[values objectAtIndex:i] isEqualToString:value]){
+        NSString *listValue = [NSString stringWithFormat:@"%@",[values objectAtIndex:i]];
+        if([listValue isEqualToString:value]){
             [segControl setSelectedSegmentIndex:i];
             break;
         }
@@ -103,28 +95,25 @@
 - (void)segmentSelected:(id)sender {
     UISegmentedControl *segment = (UISegmentedControl *)sender;
     NSIndexPath *indexPath = [self.table indexPathForCell:(StrokeCell *)[[sender superview] superview]];
+    NSUInteger row = indexPath.row;
+    
+    NSString *value = [segment titleForSegmentAtIndex:[segment selectedSegmentIndex]];
     
     [self.table setContentOffset:CGPointMake(0, indexPath.row * STROKES_ROW_HEIGHT) animated:YES];
     
-    NSUInteger row = indexPath.row;
-    NSString *value = [segment titleForSegmentAtIndex:[segment selectedSegmentIndex]];
+    Stroke *stroke = [[self.bc getStrokesForType:STROKE_TYPE_GS_DEPH] objectAtIndex:row];
+    stroke.score = [NSNumber numberWithInt:[value intValue]];
     
-    Stroke *stroke = [self getStrokeAtIndex:row];
-    stroke.score = value;
-    [[self getStrokes] replaceObjectAtIndex:row withObject:stroke];
+    //    [[self.bc getStrokesForGSAccuracy] replaceObjectAtIndex:row withObject:stroke];
+    
     [self calculateScore];
 }
 
 - (void) calculateScore{
-    NSMutableArray *strokes = [self getStrokes];
-    for (int i =0; i<[strokes count]; i++) {
-        Stroke *stroke = [strokes objectAtIndex:i];
-        [assetment.groundStrokeDeph setObject:[NSNumber numberWithInt:[stroke.score intValue]] atIndexedSubscript:i];
-    }
     
-    [subtotal setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokePoints]]];
-    [consistency setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeConssistencyPoints]]];
-    [total setText:[NSString stringWithFormat:@"%i", [assetment getGroundStrokeTotalPoints]]];
+    [subtotal setText:[NSString stringWithFormat:@"%i", [bc getPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
+    [consistency setText:[NSString stringWithFormat:@"%i", [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
+    [total setText:[NSString stringWithFormat:@"%i", [bc getTotalPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
 }
 
 
@@ -140,10 +129,14 @@
 	if (buttonIndex == 0){
 		// Yes, do something
 	}else if (buttonIndex == 1){
+        
+        [[AssessmentBC current] removeAssessment:[bc assessment]];
+        
 		for (UIViewController *view in [self.navigationController viewControllers]) {
             [view dismissViewControllerAnimated:false completion:nil];
         }
     }
 }
+
 @end
 

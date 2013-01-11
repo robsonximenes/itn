@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-#import "Assessment.h"
+#import "AssessmentBC.h"
 
 @interface ProfileViewController ()
 @property UIActionSheet *dateBirthSheet;
@@ -35,10 +35,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    Assessment *a = [Assessment current];
-    [a setDate:[[NSDate alloc] init]];
+    AssessmentBC *a = [AssessmentBC current];
+    Assessment *newAssessment = [a createAssessment];
+    [a setAssessment:newAssessment];
     
-    dateTextField.text = [self stringFormatedForDateTime:[a date]];
+    [[a assessment] setDate:[[NSDate alloc] init]];
+    
+    dateTextField.text = [self stringFormatedForDateTime:[[a assessment] date]];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     assessortextField.text= [defaults valueForKey:@"assessor"];
@@ -49,11 +52,13 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-    Assessment *a = [Assessment current];
+    AssessmentBC *bc = [AssessmentBC current];
+    Assessment *a = [bc assessment];
+    [bc setAssessment:a];
     [a setName:nameTextField.text];
     [a setSex:[sexSegmentField titleForSegmentAtIndex:[sexSegmentField selectedSegmentIndex]]];
     [a setAssessor:assessortextField.text];
-    [a setLocal:venueTextField.text];
+    [a setVenue:venueTextField.text];
     
 }
 
@@ -83,7 +88,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    Assessment * a = [Assessment current];
+    Assessment * a = [[AssessmentBC current] assessment];
     a.name = nameTextField.text;
     if(dateBirthPicker){
         a.birthday = dateBirthPicker.date;
@@ -94,10 +99,10 @@
     if(datePicker){
         a.date = datePicker.date;
     }
-    a.local = venueTextField.text;
+    a.venue = venueTextField.text;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setValue:a.local forKey:@"vennue"];
+    [defaults setValue:a.venue forKey:@"vennue"];
     [defaults setValue:a.assessor forKey:@"assessor"];
     [defaults synchronize];
     
@@ -106,7 +111,7 @@
 -(BOOL) shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
     BOOL isOk = true;
     
-    Assessment *a = [Assessment current];
+    Assessment *a = [[AssessmentBC current] assessment];
     
     NSMutableString *sb = [NSMutableString stringWithString:@""];
     
@@ -203,7 +208,7 @@
 }
 
 -(void) dateSelected{
-    Assessment *assessment = [Assessment current];
+    Assessment *assessment = [[AssessmentBC current] assessment];
     NSArray *listOfview = [dateSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
@@ -215,7 +220,7 @@
 }
 
 -(void) dateBirthSelected{
-    Assessment *assessment = [Assessment current];
+    Assessment *assessment = [[AssessmentBC current] assessment];
     NSArray *listOfview = [dateBirthSheet subviews];
     for (UIView *subview in listOfview) {
         if([subview isKindOfClass:[UIDatePicker class]]){
@@ -237,6 +242,9 @@
 
 
 - (IBAction)exit:(id)sender {
+    
+    [[AssessmentBC current] removeAssessment:[[AssessmentBC current] assessment]];
+    
     for (UIViewController *view in [self.navigationController viewControllers]) {
         [view dismissViewControllerAnimated:false completion:nil];
     }
