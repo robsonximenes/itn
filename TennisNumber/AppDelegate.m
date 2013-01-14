@@ -40,6 +40,8 @@
     [[UINavigationBar appearance] setBackgroundImage:gradientImage
                                        forBarMetrics:UIBarMetricsDefault];
 
+    [[UITabBar appearance] setBackgroundImage:gradientImage];
+    
     
     [[UIToolbar appearance] setBackgroundImage:gradientImage forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     
@@ -144,7 +146,6 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
     
     //NSLog(@"Criando banco em: %@",storeURL);
-    //[[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -172,6 +173,9 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
+        
+        NSLog(@"Limpando o bando devido a erro na base...");
+        [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
         
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
