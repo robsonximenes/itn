@@ -64,7 +64,7 @@
 	
 	NSError *error;
 	player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    [player setVolume:0.5];
+    [player setVolume:0.8];
     
 }
 
@@ -94,7 +94,10 @@
         
     }else{
         //STARTING
-        [player play];
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if([defaults boolForKey:DEFAULTS_SOUND_ENEBLED]){
+            [player play];
+        }
         if(stopWatchTimer){
             [stopWatchTimer invalidate];
             stopWatchTimer = nil;

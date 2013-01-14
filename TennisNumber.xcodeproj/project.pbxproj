@@ -12,6 +12,10 @@
 		39342A2A16A4089E00E890AB /* StrokeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39342A2916A4089E00E890AB /* StrokeDetailCell.m */; };
 		39342A2D16A408B000E890AB /* StrokeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39342A2C16A408B000E890AB /* StrokeDetailCell.xib */; };
 		39342A2F16A412E100E890AB /* pixelVermelho.png in Resources */ = {isa = PBXBuildFile; fileRef = 39342A2E16A412E100E890AB /* pixelVermelho.png */; };
+		39342A3116A4153B00E890AB /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 39342A3016A4153B00E890AB /* preferences.png */; };
+		39342A3516A416EA00E890AB /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39342A3416A416EA00E890AB /* PreferencesViewController.m */; };
+		39342A3916A424E900E890AB /* student.png in Resources */ = {isa = PBXBuildFile; fileRef = 39342A3816A424E800E890AB /* student.png */; };
+		39342A3B16A4262700E890AB /* tennis.png in Resources */ = {isa = PBXBuildFile; fileRef = 39342A3A16A4262600E890AB /* tennis.png */; };
 		397ACA1A16930D610099FEB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1916930D610099FEB2 /* UIKit.framework */; };
 		397ACA1C16930D610099FEB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1B16930D610099FEB2 /* Foundation.framework */; };
 		397ACA1E16930D610099FEB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1D16930D610099FEB2 /* CoreGraphics.framework */; };
@@ -97,6 +101,11 @@
 		39342A2916A4089E00E890AB /* StrokeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeDetailCell.m; sourceTree = "<group>"; };
 		39342A2C16A408B000E890AB /* StrokeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeDetailCell.xib; sourceTree = "<group>"; };
 		39342A2E16A412E100E890AB /* pixelVermelho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelVermelho.png; sourceTree = "<group>"; };
+		39342A3016A4153B00E890AB /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
+		39342A3316A416EA00E890AB /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
+		39342A3416A416EA00E890AB /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
+		39342A3816A424E800E890AB /* student.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = student.png; sourceTree = "<group>"; };
+		39342A3A16A4262600E890AB /* tennis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennis.png; sourceTree = "<group>"; };
 		397ACA1516930D610099FEB2 /* TennisNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397ACA1916930D610099FEB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		397ACA1B16930D610099FEB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -194,6 +203,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39342A3216A416C800E890AB /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				39342A3316A416EA00E890AB /* PreferencesViewController.h */,
+				39342A3416A416EA00E890AB /* PreferencesViewController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
 		397ACA0A16930D610099FEB2 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +301,9 @@
 		397ACA5516930D720099FEB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				39342A3A16A4262600E890AB /* tennis.png */,
+				39342A3816A424E800E890AB /* student.png */,
+				39342A3016A4153B00E890AB /* preferences.png */,
 				39342A2E16A412E100E890AB /* pixelVermelho.png */,
 				39D5105016935AE800DD27B3 /* scoreTransparente.png */,
 				39D5104E1693590700DD27B3 /* pixelVerde.png */,
@@ -320,6 +341,7 @@
 		397ACA6E16930F720099FEB2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				39342A3216A416C800E890AB /* Preferences */,
 				397ACAA0169310260099FEB2 /* HomeViewController.h */,
 				397ACAA1169310260099FEB2 /* HomeViewController.m */,
 				397ACAA2169310260099FEB2 /* AlertView.xib */,
@@ -494,6 +516,9 @@
 				392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */,
 				39342A2D16A408B000E890AB /* StrokeDetailCell.xib in Resources */,
 				39342A2F16A412E100E890AB /* pixelVermelho.png in Resources */,
+				39342A3116A4153B00E890AB /* preferences.png in Resources */,
+				39342A3916A424E900E890AB /* student.png in Resources */,
+				39342A3B16A4262700E890AB /* tennis.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +578,7 @@
 				39AD0FCA16A02867004003AC /* Assessment.m in Sources */,
 				392B19A616A0C7F300EA9BB7 /* ScoreDetailViewController.m in Sources */,
 				39342A2A16A4089E00E890AB /* StrokeDetailCell.m in Sources */,
+				39342A3516A416EA00E890AB /* PreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

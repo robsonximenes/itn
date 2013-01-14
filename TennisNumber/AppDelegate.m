@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AssessmentBC.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults boolForKey:DEFAULTS_OLD_USER]){
+        [defaults setBool:YES forKey:DEFAULTS_OLD_USER];
+        [defaults setBool:YES forKey:DEFAULTS_SOUND_ENEBLED];
+        [defaults synchronize];
+        [AssessmentBC configureSampleAssessment];
+        [AssessmentBC clearInstance];
+    }
+    
     [self customizeAppearance];
     return YES;
 }

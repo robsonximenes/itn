@@ -9,9 +9,9 @@
 #ifndef What_s_your_number__Constants_h
 #define What_s_your_number__Constants_h
 
-
 #define DEFAULTS_OLD_USER @"DEFAULTS_OLD_USER"
-#define DEFAULTS_FULL_FEATURES @"fullFeatures"
+#define DEFAULTS_FULL_FEATURES @"DEFAULTS_FULL_FEATURES"
+#define DEFAULTS_SOUND_ENEBLED @"DEFAULTS_SOUND_ENEBLED"
 
 #define STROKES_ROW_HEIGHT 80
 #define HOME_ROW_HEIGHT 70

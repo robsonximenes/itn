@@ -38,19 +38,8 @@
 {
     [super viewDidLoad];
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    bool OLD_USER = [defaults boolForKey:DEFAULTS_OLD_USER];
-    if(!OLD_USER){
-        NSLog(@"First time on app loading sample assessment...");
-        [AssessmentBC configureSampleAssessment];
-        [defaults setBool:YES forKey:DEFAULTS_OLD_USER];
-        [defaults synchronize];
-    }
-    
     [AssessmentBC clearInstance];
     
-	
 }
 
 -(void) viewWillAppear:(BOOL)animated{

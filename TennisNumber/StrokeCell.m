@@ -48,6 +48,9 @@
 }
 
 - (IBAction)scoreValueChanged:(UISegmentedControl *)sender {
-    [player play];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults boolForKey:DEFAULTS_SOUND_ENEBLED]){
+        [player play];
+    }
 }
 @end
