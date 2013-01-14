@@ -10,6 +10,8 @@
 #import "AssessmentBC.h"
 #import "ScoreCell.h"
 #import "AppDelegate.h"
+#import "ScoreDetailViewController.h"
+#import "Stroke.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -32,6 +34,7 @@
 
 - (void)viewDidLoad
 {
+    [[self.navigationController navigationBar] setHidden:NO];
     [super viewDidLoad];
 	self.assessment = [[AssessmentBC current] assessment];
     [[AssessmentBC current] save];
@@ -56,6 +59,8 @@
     for (UIViewController *view in [self.navigationController viewControllers]) {
         [view dismissViewControllerAnimated:false completion:nil];
     }
+    
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 # pragma mark TableView Methods
@@ -134,7 +139,42 @@
         [cell.total setText:[NSString stringWithFormat:@"%d",[[AssessmentBC current] calculateITN]]];
     }
     
+    if(indexPath.section==1 && indexPath.row<4){
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    }
+    
     return cell;
+    
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(indexPath.section==1 && indexPath.row<4){
+    
+        if(![AppDelegate isEnabled]){
+            [AppDelegate showMessageForEnablingFeatures];
+        }else{
+            ScoreDetailViewController *detail = [[ScoreDetailViewController alloc] initWithNibName:@"ScoreDetailViewController" bundle:nil];
+            
+            int type = -1;
+            
+            if(indexPath.row == 0){
+                type = STROKE_TYPE_GS_DEPH;
+            }else if(indexPath.row == 1){
+                type = STROKE_TYPE_VOLLEY_DEPH;
+            }else if(indexPath.row == 2){
+                type = STROKE_TYPE_GS_ACCURACY;
+            }else if(indexPath.row == 3){
+                type = STROKE_TYPE_SERVER;
+            }
+            
+            ScoreCell *cell = (ScoreCell*)[tableView cellForRowAtIndexPath:indexPath];
+            [detail setStrokeName:cell.name.text];
+            [detail setType:type];
+            
+            [self.navigationController pushViewController:detail animated:YES];
+        }
+    }
     
 }
 
@@ -175,9 +215,45 @@
                                 [[AssessmentBC current] getMobilityPoints],
                                 [[AssessmentBC current] getTotalPoints]];
         
+        NSMutableString *gsStrokesTable = [[NSMutableString alloc] init];
+        [gsStrokesTable appendFormat:@"<h4>%@</h4><table>",@"Ground Stroke Accuracy"];
+        for (Stroke *s in [[AssessmentBC current] getStrokesForType:STROKE_TYPE_GS_ACCURACY]) {
+            [gsStrokesTable appendFormat:@"<tr><td>%@</td><td>%@</td><td>%@</td></tr>",[s order], [s name], [s score]];
+        }
+        [gsStrokesTable appendString:@"</table>"];
+        
+        NSMutableString *gsDephTable = [[NSMutableString alloc] init];
+        [gsDephTable appendFormat:@"<h4>%@</h4><table>",@"Ground Stroke Deph"];
+        for (Stroke *s in [[AssessmentBC current] getStrokesForType:STROKE_TYPE_GS_DEPH]) {
+            [gsDephTable appendFormat:@"<tr><td>%@</td><td>%@</td><td>%@</td></tr>",[s order], [s name], [s score]];
+        }
+        [gsDephTable appendString:@"</table>"];
+        
+        NSMutableString *volleyStrokesTable = [[NSMutableString alloc] init];
+        [volleyStrokesTable appendFormat:@"<h4>%@</h4><table>",@"Ground Stroke Accuracy"];
+        for (Stroke *s in [[AssessmentBC current] getStrokesForType:STROKE_TYPE_VOLLEY_DEPH]) {
+            [volleyStrokesTable appendFormat:@"<tr><td>%@</td><td>%@</td><td>%@</td></tr>",[s order], [s name], [s score]];
+        }
+        [volleyStrokesTable appendString:@"</table>"];
+        
+        NSMutableString *serverStrokesTable = [[NSMutableString alloc] init];
+        [serverStrokesTable appendFormat:@"<h4>%@</h4><table>",@"Ground Stroke Accuracy"];
+        for (Stroke *s in [[AssessmentBC current] getStrokesForType:STROKE_TYPE_SERVER]) {
+            [serverStrokesTable appendFormat:@"<tr><td>%@</td><td>%@</td><td>%@</td></tr>",[s order], [s name], [s score]];
+        }
+        [serverStrokesTable appendString:@"</table>"];
+        
+        
         NSString *body = [NSString stringWithFormat:
-                          @"<h3>International Tennis Number On Court Assessment</h3> <table>%@ %@</table> <br/> <table> %@ </table> <br/> <h3>ITN %d</h3>" ,
-                          linha1, linha2, resultado1, [[AssessmentBC current] calculateITN]];
+                          @"<h1>International Tennis Number On Court Assessment</h1> <table>%@ %@</table> <br/> <table> %@ </table> <br/> <h2>ITN %d</h2> %@ %@ %@ %@" ,
+                          linha1,
+                          linha2,
+                          resultado1,
+                          [[AssessmentBC current] calculateITN],
+                          gsStrokesTable,
+                          gsDephTable,
+                          volleyStrokesTable,
+                          serverStrokesTable];
         
         
         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];

@@ -74,7 +74,7 @@
 }
 
 -(void) setupSegment: (UISegmentedControl *)segControl value:(NSString *)value{
-    NSArray *values = [AssessmentBC getPossiblePointsForType:STROKE_TYPE_GS_DEPH];
+    NSArray *values = [AssessmentBC getPossiblePointsForType:STROKE_TYPE_SERVER];
     [segControl removeAllSegments];
     for (int i =0; i<[values count]; i++) {
         NSString *listValue = [NSString stringWithFormat:@"%@",[values objectAtIndex:i]];

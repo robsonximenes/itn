@@ -4,16 +4,16 @@
         <attribute name="assessor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="gsAccuracyPoints" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="gsDephPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="gsAccuracyPoints" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="gsDephPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="itn" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mobility" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="mobilityTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="serverPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="serverPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="venue" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="volleyDephPoints" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="volleyDephPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="strokes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Stroke" inverseName="assessment" inverseEntity="Stroke" syncable="YES"/>
     </entity>
     <entity name="Stroke" representedClassName="Stroke" syncable="YES">
