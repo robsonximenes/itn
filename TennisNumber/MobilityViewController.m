@@ -51,7 +51,7 @@
     
     startImage = [[UIImage imageNamed:@"pixelVerde"]
                   resizableImageWithCapInsets:UIEdgeInsetsMake(-5, 0, 5, 0)];
-    stopImage = [[UIImage imageNamed:@"pixelMarron"]
+    stopImage = [[UIImage imageNamed:@"pixelVermelho"]
                   resizableImageWithCapInsets:UIEdgeInsetsMake(-5, 0, 5, 0)];
     
     startButton.layer.cornerRadius = 10;

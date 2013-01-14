@@ -11,6 +11,7 @@
 		392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */; };
 		39342A2A16A4089E00E890AB /* StrokeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39342A2916A4089E00E890AB /* StrokeDetailCell.m */; };
 		39342A2D16A408B000E890AB /* StrokeDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39342A2C16A408B000E890AB /* StrokeDetailCell.xib */; };
+		39342A2F16A412E100E890AB /* pixelVermelho.png in Resources */ = {isa = PBXBuildFile; fileRef = 39342A2E16A412E100E890AB /* pixelVermelho.png */; };
 		397ACA1A16930D610099FEB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1916930D610099FEB2 /* UIKit.framework */; };
 		397ACA1C16930D610099FEB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1B16930D610099FEB2 /* Foundation.framework */; };
 		397ACA1E16930D610099FEB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACA1D16930D610099FEB2 /* CoreGraphics.framework */; };
@@ -95,6 +96,7 @@
 		39342A2816A4089E00E890AB /* StrokeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokeDetailCell.h; sourceTree = "<group>"; };
 		39342A2916A4089E00E890AB /* StrokeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokeDetailCell.m; sourceTree = "<group>"; };
 		39342A2C16A408B000E890AB /* StrokeDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrokeDetailCell.xib; sourceTree = "<group>"; };
+		39342A2E16A412E100E890AB /* pixelVermelho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelVermelho.png; sourceTree = "<group>"; };
 		397ACA1516930D610099FEB2 /* TennisNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TennisNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		397ACA1916930D610099FEB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		397ACA1B16930D610099FEB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -281,6 +283,7 @@
 		397ACA5516930D720099FEB2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				39342A2E16A412E100E890AB /* pixelVermelho.png */,
 				39D5105016935AE800DD27B3 /* scoreTransparente.png */,
 				39D5104E1693590700DD27B3 /* pixelVerde.png */,
 				39D5104A1693585400DD27B3 /* textura32.png */,
@@ -490,6 +493,7 @@
 				39D5105216936CBB00DD27B3 /* Default-568h@2x.png in Resources */,
 				392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */,
 				39342A2D16A408B000E890AB /* StrokeDetailCell.xib in Resources */,
+				39342A2F16A412E100E890AB /* pixelVermelho.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
