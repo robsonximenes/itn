@@ -144,7 +144,8 @@
     if([identifier isEqualToString:@"new"]){
         if(![AppDelegate isEnabled]){
             if([results count]>=3){
-                [AppDelegate showMessageForEnablingFeatures];
+                AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                [appDelegate showMessageForEnablingFeatures];
                 return NO;
             }
         }

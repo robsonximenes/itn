@@ -152,7 +152,8 @@
     if(indexPath.section==1 && indexPath.row<4){
     
         if(![AppDelegate isEnabled]){
-            [AppDelegate showMessageForEnablingFeatures];
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate showMessageForEnablingFeatures];
         }else{
             ScoreDetailViewController *detail = [[ScoreDetailViewController alloc] initWithNibName:@"ScoreDetailViewController" bundle:nil];
             
@@ -184,7 +185,8 @@
     if([AppDelegate isEnabled]){
         [self sendEmail];
     }else{
-        [AppDelegate showMessageForEnablingFeatures];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [appDelegate showMessageForEnablingFeatures];
     }
 }
 

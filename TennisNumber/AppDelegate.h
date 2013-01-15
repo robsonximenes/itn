@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <StoreKit/StoreKit.h> 
+#import "TennisNumberIAPHelper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
@@ -20,6 +22,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 + (BOOL) isEnabled;
 + (void) enable;
-+ (void) showMessageForEnablingFeatures;
+- (void) showMessageForEnablingFeatures;
 
 @end

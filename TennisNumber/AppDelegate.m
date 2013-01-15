@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "AssessmentBC.h"
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    SKProduct * inAppPurchaseProduct;
+}
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
@@ -25,6 +27,13 @@
         [AssessmentBC configureSampleAssessment];
         [AssessmentBC clearInstance];
     }
+    
+
+    [[TennisNumberIAPHelper sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *products) {
+        if (success) {
+            inAppPurchaseProduct = [products lastObject];
+        }
+    }];
     
     [self customizeAppearance];
     return YES;
@@ -195,8 +204,7 @@
 #pragma mark Habilitação Full Features
 
 + (BOOL) isEnabled{
-    return YES;
-//    return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
 }
 
 + (void) enable{
@@ -204,17 +212,38 @@
 }
 
 #pragma mark Mensagens full features
-+ (void)showMessageForEnablingFeatures {
-    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable all Features!" message:@"This is the simple version of TennisNumber you can enable the full version and have:\n-unlimited assessments\n-detailed information on each assessment\n-send assessement by e-mail." delegate:(AppDelegate *)[UIApplication sharedApplication] cancelButtonTitle:@"Not now..." otherButtonTitles:@"Ok, lets go!", nil];
+
+- (void)showMessageForEnablingFeatures {
+    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable all features!" message:@"You can enable this features:\nUnlimited assessments\nIndividual strokes scores\nSend assessement by e-mail." delegate:self cancelButtonTitle:@"Not now..." otherButtonTitles:@"Ok, lets go!", nil];
     [action show];
     
 }
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    NSLog(@"Button: %d",buttonIndex);
+    
     if (buttonIndex == 0){
 		// Yes, do something
+        
+        
 	}else if (buttonIndex == 1){
-		[alertView resignFirstResponder];
+		
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
+    
+        
+        NSLog(@"Buying %@...", inAppPurchaseProduct.productIdentifier);
+        [[TennisNumberIAPHelper sharedInstance] buyProduct:inAppPurchaseProduct];
+        
+        
+        [alertView resignFirstResponder];
+    }
+}
+
+- (void)productPurchased:(NSNotification *)notification {
+    NSString * productIdentifier = notification.object;
+    if ([inAppPurchaseProduct.productIdentifier isEqualToString:productIdentifier]) {
+        [AppDelegate enable];
     }
 }
 

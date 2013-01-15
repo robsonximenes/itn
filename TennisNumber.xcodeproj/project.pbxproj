@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390B651816A4D8F80009C92F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390B651716A4D8F80009C92F /* StoreKit.framework */; };
+		390B651B16A4DBBA0009C92F /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 390B651A16A4DBBA0009C92F /* IAPHelper.m */; };
+		390B651E16A4DD930009C92F /* TennisNumberIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 390B651D16A4DD930009C92F /* TennisNumberIAPHelper.m */; };
 		392B19A616A0C7F300EA9BB7 /* ScoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 392B19A416A0C7F300EA9BB7 /* ScoreDetailViewController.m */; };
 		392B19A716A0C7F300EA9BB7 /* ScoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */; };
 		39342A2A16A4089E00E890AB /* StrokeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39342A2916A4089E00E890AB /* StrokeDetailCell.m */; };
@@ -94,6 +97,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		390B651716A4D8F80009C92F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		390B651916A4DBBA0009C92F /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		390B651A16A4DBBA0009C92F /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		390B651C16A4DD930009C92F /* TennisNumberIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TennisNumberIAPHelper.h; sourceTree = "<group>"; };
+		390B651D16A4DD930009C92F /* TennisNumberIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TennisNumberIAPHelper.m; sourceTree = "<group>"; };
 		392B19A316A0C7F300EA9BB7 /* ScoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreDetailViewController.h; sourceTree = "<group>"; };
 		392B19A416A0C7F300EA9BB7 /* ScoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreDetailViewController.m; sourceTree = "<group>"; };
 		392B19A516A0C7F300EA9BB7 /* ScoreDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreDetailViewController.xib; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				390B651816A4D8F80009C92F /* StoreKit.framework in Frameworks */,
 				39D510491693168700DD27B3 /* MessageUI.framework in Frameworks */,
 				397ACAAE1693108B0099FEB2 /* AVFoundation.framework in Frameworks */,
 				397ACAAC169310830099FEB2 /* CoreData.framework in Frameworks */,
@@ -215,6 +224,7 @@
 		397ACA0A16930D610099FEB2 = {
 			isa = PBXGroup;
 			children = (
+				390B651716A4D8F80009C92F /* StoreKit.framework */,
 				397ACA1F16930D610099FEB2 /* TennisNumber */,
 				397ACA4316930D610099FEB2 /* TennisNumberTests */,
 				397ACA1816930D610099FEB2 /* Frameworks */,
@@ -294,6 +304,10 @@
 				397ACAA5169310320099FEB2 /* Constants.h */,
 				397ACA6F16930F860099FEB2 /* bc */,
 				397ACA6E16930F720099FEB2 /* view */,
+				390B651916A4DBBA0009C92F /* IAPHelper.h */,
+				390B651A16A4DBBA0009C92F /* IAPHelper.m */,
+				390B651C16A4DD930009C92F /* TennisNumberIAPHelper.h */,
+				390B651D16A4DD930009C92F /* TennisNumberIAPHelper.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -579,6 +593,8 @@
 				392B19A616A0C7F300EA9BB7 /* ScoreDetailViewController.m in Sources */,
 				39342A2A16A4089E00E890AB /* StrokeDetailCell.m in Sources */,
 				39342A3516A416EA00E890AB /* PreferencesViewController.m in Sources */,
+				390B651B16A4DBBA0009C92F /* IAPHelper.m in Sources */,
+				390B651E16A4DD930009C92F /* TennisNumberIAPHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
