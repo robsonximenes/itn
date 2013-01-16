@@ -224,7 +224,6 @@
 		397ACA0A16930D610099FEB2 = {
 			isa = PBXGroup;
 			children = (
-				390B651716A4D8F80009C92F /* StoreKit.framework */,
 				397ACA1F16930D610099FEB2 /* TennisNumber */,
 				397ACA4316930D610099FEB2 /* TennisNumberTests */,
 				397ACA1816930D610099FEB2 /* Frameworks */,
@@ -244,6 +243,7 @@
 		397ACA1816930D610099FEB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				390B651716A4D8F80009C92F /* StoreKit.framework */,
 				39D510481693168700DD27B3 /* MessageUI.framework */,
 				397ACAAD1693108A0099FEB2 /* AVFoundation.framework */,
 				397ACAAB169310830099FEB2 /* CoreData.framework */,

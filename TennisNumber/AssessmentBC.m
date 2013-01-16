@@ -11,7 +11,7 @@
 #import "Stroke.h"
 #import "AppDelegate.h"
 
-#define MOBILITY_SCORE [NSArray arrayWithObjects: [NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5],[NSNumber numberWithInt:6],[NSNumber numberWithInt:7],[NSNumber numberWithInt:8],[NSNumber numberWithInt:9],[NSNumber numberWithInt:10],[NSNumber numberWithInt:11],[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:14],[NSNumber numberWithInt:15],[NSNumber numberWithInt:16],[NSNumber numberWithInt:18],[NSNumber numberWithInt:19],[NSNumber numberWithInt:21],[NSNumber numberWithInt:26],[NSNumber numberWithInt:32],[NSNumber numberWithInt:39],[NSNumber numberWithInt:45],[NSNumber numberWithInt:52],[NSNumber numberWithInt:61],[NSNumber numberWithInt:75],nil]
+#define MOBILITY_SCORE [NSArray arrayWithObjects: [NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5],[NSNumber numberWithInt:6],[NSNumber numberWithInt:7],[NSNumber numberWithInt:8],[NSNumber numberWithInt:9],[NSNumber numberWithInt:10],[NSNumber numberWithInt:11],[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:14],[NSNumber numberWithInt:15],[NSNumber numberWithInt:16],[NSNumber numberWithInt:18],[NSNumber numberWithInt:19],[NSNumber numberWithInt:21],[NSNumber numberWithInt:26],[NSNumber numberWithInt:32],[NSNumber numberWithInt:39],[NSNumber numberWithInt:45],[NSNumber numberWithInt:52],[NSNumber numberWithInt:61],[NSNumber numberWithInt:76],nil]
 
 #define MALE_ITN_SCORE [NSArray arrayWithObjects: [NSNumber numberWithInt:75],[NSNumber numberWithInt:104],[NSNumber numberWithInt:139],[NSNumber numberWithInt:175],[NSNumber numberWithInt:209],[NSNumber numberWithInt:244],[NSNumber numberWithInt:268],[NSNumber numberWithInt:293],[NSNumber numberWithInt:337],[NSNumber numberWithInt:362],[NSNumber numberWithInt:430],nil]
 
@@ -129,12 +129,12 @@ static AssessmentBC *instance = NULL;
     
     if(!serverArrayOfNames)
         serverArrayOfNames= [NSArray arrayWithObjects:
-                             @"Forehand DL",@"Backhand DL",
-                             @"Forehand DL",@"Backhand DL",
-                             @"Forehand DL",@"Backhand DL",
-                             @"Forehand CC",@"Backhand CC",
-                             @"Forehand CC",@"Backhand CC",
-                             @"Forehand CC",@"Backhand CC", nil];
+                             @"1st Box Wide",@"1st Box Wide",
+                             @"1st Box Wide",@"1st Box Middle",
+                             @"1st Box Middle",@"1st Box Middle",
+                             @"2st Box Middle",@"2st Box Middle",
+                             @"2st Box Middle",@"2st Box Wide",
+                             @"2st Box Wide",@"2st Box Wide", nil];
     
     if([type isEqualToNumber:[NSNumber numberWithInt:STROKE_TYPE_GS_ACCURACY]]){
         strokes = [NSArray arrayWithArray: gsAccuracyArrayOfNames];
@@ -323,37 +323,6 @@ static AssessmentBC *instance = NULL;
     
     NSError *error;
     NSArray *objects = [contexto executeFetchRequest:fetch error:&error];
-    
-//    NSMutableArray *assessments = [NSMutableArray array];
-//    for (NSManagedObject *object in objects) {
-//        AssessmentBC *a = [[AssessmentBC alloc]init];
-//        [a setAssessor:[object valueForKey:@"assessor"]];
-//        [a setBirthday:[object valueForKey:@"birthday"]];
-//        [a setDate:[object valueForKey:@"date"]];
-//        [a setLocal:[object valueForKey:@"venue"]];
-//        [a setName:[object valueForKey:@"name"]];
-//        [a setSex:[object valueForKey:@"sex"]];
-//        
-//        
-//        NSNumber *gsDephP = [object valueForKey:@"gsDephPoints"];
-//        NSNumber *gsAccuracyP = [object valueForKey:@"gsAccuracyPoints"];
-//        NSNumber *volleyDephP = [object valueForKey:@"volleyDephPoints"];
-//        NSNumber *serverP = [object valueForKey:@"serverPoints"];
-//        NSNumber *mobilityP = [object valueForKey:@"mobility"];
-//        NSNumber *itnP = [object valueForKey:@"itn"];
-//        
-//        
-//        
-//        [a setGsDephPoints:[gsDephP integerValue]];
-//        [a setGsAccuracyPoints: [gsAccuracyP integerValue]];
-//        [a setVolleyDephPoints: [volleyDephP integerValue]];
-//        [a setServerPoints:[serverP integerValue]];
-//        [a setMobilityPoints:[mobilityP integerValue]];
-//        [a setItn:[itnP integerValue]];
-//        
-//        
-//        [assessments addObject:a];
-//    }
     
     return objects;
 }
