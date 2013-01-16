@@ -49,7 +49,6 @@
 		397ACA9E16930FFE0099FEB2 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9716930FFE0099FEB2 /* ScoreCell.xib */; };
 		397ACA9F16930FFE0099FEB2 /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACA9916930FFE0099FEB2 /* ScoreCell.m */; };
 		397ACAA3169310260099FEB2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA1169310260099FEB2 /* HomeViewController.m */; };
-		397ACAA4169310260099FEB2 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAA2169310260099FEB2 /* AlertView.xib */; };
 		397ACAA9169310510099FEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 397ACAA7169310510099FEB2 /* AppDelegate.m */; };
 		397ACAAA169310510099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */; };
 		397ACAAC169310830099FEB2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397ACAAB169310830099FEB2 /* CoreData.framework */; };
@@ -161,7 +160,6 @@
 		397ACA9916930FFE0099FEB2 /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
 		397ACAA0169310260099FEB2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		397ACAA1169310260099FEB2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		397ACAA2169310260099FEB2 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		397ACAA5169310320099FEB2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		397ACAA6169310510099FEB2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		397ACAA7169310510099FEB2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -298,16 +296,12 @@
 		397ACA5416930D6B0099FEB2 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				39D16BBF16A6BE720026665D /* InAppPurchase */,
 				397ACAA6169310510099FEB2 /* AppDelegate.h */,
 				397ACAA7169310510099FEB2 /* AppDelegate.m */,
 				397ACAA8169310510099FEB2 /* MainStoryboard_iPhone.storyboard */,
 				397ACAA5169310320099FEB2 /* Constants.h */,
-				397ACA6F16930F860099FEB2 /* bc */,
 				397ACA6E16930F720099FEB2 /* view */,
-				390B651916A4DBBA0009C92F /* IAPHelper.h */,
-				390B651A16A4DBBA0009C92F /* IAPHelper.m */,
-				390B651C16A4DD930009C92F /* TennisNumberIAPHelper.h */,
-				390B651D16A4DD930009C92F /* TennisNumberIAPHelper.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -358,7 +352,6 @@
 				39342A3216A416C800E890AB /* Preferences */,
 				397ACAA0169310260099FEB2 /* HomeViewController.h */,
 				397ACAA1169310260099FEB2 /* HomeViewController.m */,
-				397ACAA2169310260099FEB2 /* AlertView.xib */,
 				397ACA9016930FEC0099FEB2 /* Cell */,
 				397ACA7116930F940099FEB2 /* Guide */,
 				397ACA7016930F8D0099FEB2 /* Assessment */,
@@ -378,6 +371,7 @@
 		397ACA7016930F8D0099FEB2 /* Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				397ACA6F16930F860099FEB2 /* bc */,
 				397ACA7816930FC80099FEB2 /* GSDephViewController.h */,
 				397ACA7916930FC80099FEB2 /* GSDephViewController.m */,
 				397ACA7A16930FC80099FEB2 /* VolleyDephViewController.h */,
@@ -437,6 +431,17 @@
 				39AD0FC916A02866004003AC /* Assessment.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		39D16BBF16A6BE720026665D /* InAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				390B651916A4DBBA0009C92F /* IAPHelper.h */,
+				390B651A16A4DBBA0009C92F /* IAPHelper.m */,
+				390B651C16A4DD930009C92F /* TennisNumberIAPHelper.h */,
+				390B651D16A4DD930009C92F /* TennisNumberIAPHelper.m */,
+			);
+			name = InAppPurchase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,7 +549,6 @@
 				397ACA9A16930FFE0099FEB2 /* StrokeCell.xib in Resources */,
 				397ACA9D16930FFE0099FEB2 /* HomeCell.xib in Resources */,
 				397ACA9E16930FFE0099FEB2 /* ScoreCell.xib in Resources */,
-				397ACAA4169310260099FEB2 /* AlertView.xib in Resources */,
 				397ACAAA169310510099FEB2 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
