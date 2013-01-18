@@ -75,6 +75,10 @@
 		397ACACD1693134A0099FEB2 /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397ACA9716930FFE0099FEB2 /* ScoreCell.xib */; };
 		39A7430F169DD74C00F991F1 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A7430E169DD74C00F991F1 /* Stroke.m */; };
 		39AD0FCA16A02867004003AC /* Assessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AD0FC916A02866004003AC /* Assessment.m */; };
+		39D16BFA16A96FCC0026665D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39D16BFC16A96FCC0026665D /* Localizable.strings */; };
+		39D16C0916A97C030026665D /* UILabelInternationalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D16C0816A97C030026665D /* UILabelInternationalized.m */; };
+		39D16C0C16A9A6150026665D /* UIButtonLocalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D16C0B16A9A6150026665D /* UIButtonLocalized.m */; };
+		39D16C0F16A9A81E0026665D /* UIBarButtonItemLocalized.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D16C0E16A9A81D0026665D /* UIBarButtonItemLocalized.m */; };
 		39D510431693150400DD27B3 /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D510421693150400DD27B3 /* score.png */; };
 		39D510471693156000DD27B3 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39D510451693156000DD27B3 /* Model.xcdatamodeld */; };
 		39D510491693168700DD27B3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D510481693168700DD27B3 /* MessageUI.framework */; };
@@ -173,6 +177,16 @@
 		39A7430E169DD74C00F991F1 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
 		39AD0FC816A02866004003AC /* Assessment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assessment.h; sourceTree = "<group>"; };
 		39AD0FC916A02866004003AC /* Assessment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Assessment.m; sourceTree = "<group>"; };
+		39D16BFB16A96FCC0026665D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39D16C0016A974970026665D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39D16C0116A974970026665D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39D16C0216A974970026665D /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39D16C0716A97C030026665D /* UILabelInternationalized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelInternationalized.h; sourceTree = "<group>"; };
+		39D16C0816A97C030026665D /* UILabelInternationalized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelInternationalized.m; sourceTree = "<group>"; };
+		39D16C0A16A9A6150026665D /* UIButtonLocalized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonLocalized.h; sourceTree = "<group>"; };
+		39D16C0B16A9A6150026665D /* UIButtonLocalized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonLocalized.m; sourceTree = "<group>"; };
+		39D16C0D16A9A81D0026665D /* UIBarButtonItemLocalized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarButtonItemLocalized.h; sourceTree = "<group>"; };
+		39D16C0E16A9A81D0026665D /* UIBarButtonItemLocalized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarButtonItemLocalized.m; sourceTree = "<group>"; };
 		39D510421693150400DD27B3 /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
 		39D510461693156000DD27B3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		39D510481693168700DD27B3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -339,6 +353,7 @@
 		397ACA5716930D800099FEB2 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				39D16BFC16A96FCC0026665D /* Localizable.strings */,
 				397ACAAF169310CA0099FEB2 /* model */,
 				397ACA5616930D790099FEB2 /* sounds */,
 				397ACA5516930D720099FEB2 /* images */,
@@ -349,6 +364,7 @@
 		397ACA6E16930F720099FEB2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				39D16C0316A977260026665D /* component */,
 				39342A3216A416C800E890AB /* Preferences */,
 				397ACAA0169310260099FEB2 /* HomeViewController.h */,
 				397ACAA1169310260099FEB2 /* HomeViewController.m */,
@@ -444,6 +460,19 @@
 			name = InAppPurchase;
 			sourceTree = "<group>";
 		};
+		39D16C0316A977260026665D /* component */ = {
+			isa = PBXGroup;
+			children = (
+				39D16C0716A97C030026665D /* UILabelInternationalized.h */,
+				39D16C0816A97C030026665D /* UILabelInternationalized.m */,
+				39D16C0A16A9A6150026665D /* UIButtonLocalized.h */,
+				39D16C0B16A9A6150026665D /* UIButtonLocalized.m */,
+				39D16C0D16A9A81D0026665D /* UIBarButtonItemLocalized.h */,
+				39D16C0E16A9A81D0026665D /* UIBarButtonItemLocalized.m */,
+			);
+			name = component;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -498,6 +527,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
+				pt,
 			);
 			mainGroup = 397ACA0A16930D610099FEB2;
 			productRefGroup = 397ACA1616930D610099FEB2 /* Products */;
@@ -538,6 +569,7 @@
 				39342A3116A4153B00E890AB /* preferences.png in Resources */,
 				39342A3916A424E900E890AB /* student.png in Resources */,
 				39342A3B16A4262700E890AB /* tennis.png in Resources */,
+				39D16BFA16A96FCC0026665D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +631,9 @@
 				39342A3516A416EA00E890AB /* PreferencesViewController.m in Sources */,
 				390B651B16A4DBBA0009C92F /* IAPHelper.m in Sources */,
 				390B651E16A4DD930009C92F /* TennisNumberIAPHelper.m in Sources */,
+				39D16C0916A97C030026665D /* UILabelInternationalized.m in Sources */,
+				39D16C0C16A9A6150026665D /* UIButtonLocalized.m in Sources */,
+				39D16C0F16A9A81E0026665D /* UIBarButtonItemLocalized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +674,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				397ACA2316930D610099FEB2 /* en */,
+				39D16C0116A974970026665D /* pt */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -647,8 +683,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				397ACA4716930D610099FEB2 /* en */,
+				39D16C0216A974970026665D /* pt */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39D16BFC16A96FCC0026665D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39D16BFB16A96FCC0026665D /* en */,
+				39D16C0016A974970026665D /* pt */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

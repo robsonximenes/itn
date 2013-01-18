@@ -25,6 +25,7 @@
 @synthesize results,table;
 @synthesize addAssessmentButton;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,6 +40,14 @@
     [super viewDidLoad];
     
     [AssessmentBC clearInstance];
+    
+    
+    [[self.tabBarController.viewControllers objectAtIndex:0] setTitle:NSLocalizedString(@"Assessment",@"Assessment label")];
+
+    [[self.tabBarController.viewControllers objectAtIndex:1] setTitle:NSLocalizedString(@"Guide",@"Guide label")];
+
+    [[self.tabBarController.viewControllers objectAtIndex:2] setTitle:NSLocalizedString(@"Preferences",@"Preferences label")];
+    
     
 }
 
@@ -87,7 +96,7 @@
     
     [cell.name setText:a.name];
     [cell.detailedScore setText:
-     [NSString stringWithFormat:@"GS Deph(%d), Volley Deph(%d), GS Accuracy(%i), Server(%i), Mobility(%i)",
+     [NSString stringWithFormat:NSLocalizedString(@"GS Deph(%d), Volley Deph(%d), GS Accuracy(%i), Server(%i), Mobility(%i)",@"Detaild score..."),
       [bc getTotalPointsForStrokeType: STROKE_TYPE_GS_DEPH ],
       [bc getTotalPointsForStrokeType: STROKE_TYPE_VOLLEY_DEPH ],
       [bc getTotalPointsForStrokeType: STROKE_TYPE_GS_ACCURACY ],
@@ -95,16 +104,9 @@
       [bc getMobilityPoints]]];
     
     [cell.venue setText:[a venue]];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"MM/dd/yyyy HH:mm"];
-    
-        
     [cell.date setText:[NSDateFormatter localizedStringFromDate:a.date
                                                       dateStyle:NSDateFormatterMediumStyle
-                                                      timeStyle:NSDateFormatterShortStyle]
-];
-    
+                                                      timeStyle:NSDateFormatterShortStyle]];
     [cell.itnNumber setText:[NSString stringWithFormat:@"%@",[a itn]]];
 
     
@@ -118,9 +120,7 @@
     [[AssessmentBC current] setAssessment:selected];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
-
     ScoreViewController *scoreView = [storyboard instantiateViewControllerWithIdentifier:@"NavigationScoreViewController"];
-    
     [self presentViewController:scoreView animated:YES completion:nil ];
 }
 

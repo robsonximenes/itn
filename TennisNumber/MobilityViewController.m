@@ -29,7 +29,15 @@
 @synthesize startDate,stopWatchTimer,time;
 @synthesize player;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"Mobility",@"");
+    }
+    return self;
+}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -88,7 +96,7 @@
             stopWatchTimer = nil;
         }
         running = false;
-        [button setTitle:@"Start" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Start",@"Label to start the mobility test") forState:UIControlStateNormal];
         [button setBackgroundImage:startImage forState:UIControlStateNormal];
         button.layer.cornerRadius = 10;
         
@@ -106,7 +114,7 @@
         stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/10.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
         
         running = true;
-        [button setTitle:@"Stop" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Stop",@"Label to stop the mobility test") forState:UIControlStateNormal];
         [button setBackgroundImage:stopImage forState:UIControlStateNormal];
     }
     

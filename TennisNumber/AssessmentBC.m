@@ -102,39 +102,60 @@ static AssessmentBC *instance = NULL;
     static NSArray *gsDephArrayOfNames;
     static NSArray *volleyArrayOfNames;
     static NSArray *serverArrayOfNames;
+    
+    static NSString *FORHAND_DL;
+    static NSString *BACKHAND_DL;
+    static NSString *FORHAND_CC;
+    static NSString *BACKHAND_CC;
+    static NSString *FORHAND;
+    static NSString *BACKHAND;
+    static NSString *SERVER_1ST_WIDE;
+    static NSString *SERVER_1ST_MIDDLE;
+    static NSString *SERVER_2ST_WIDE;
+    static NSString *SERVER_2ST_MIDDLE;
+    
+    if(!FORHAND_DL) FORHAND_DL = NSLocalizedString(@"Forehand DL", @"A forehand down the line");
+    if(!BACKHAND_DL) BACKHAND_DL = NSLocalizedString(@"Backhand DL", @"A backhand down the line");
+    if(!FORHAND_CC) FORHAND_CC = NSLocalizedString(@"Forehand CC", @"A forehand crossing court");
+    if(!BACKHAND_CC) BACKHAND_CC = NSLocalizedString(@"Backhand CC", @"A backhand crossing court");
+    if(!FORHAND) FORHAND = NSLocalizedString(@"Forehand", @"A forehand");
+    if(!BACKHAND) BACKHAND = NSLocalizedString(@"Backhand", @"A backhand");
+    if(!SERVER_1ST_WIDE) SERVER_1ST_WIDE = NSLocalizedString(@"1st Box Wide", @"1st service Wide");
+    if(!SERVER_1ST_MIDDLE) SERVER_1ST_MIDDLE = NSLocalizedString(@"1st Box Middle", @"1st service Middle");
+    if(!SERVER_2ST_WIDE) SERVER_2ST_WIDE = NSLocalizedString(@"2st Box Wide", @"2st service Wide");
+    if(!SERVER_2ST_MIDDLE) SERVER_2ST_MIDDLE = NSLocalizedString(@"2st Box Middle", @"2st service middle");
+    
     if(!gsAccuracyArrayOfNames)
         gsAccuracyArrayOfNames= [NSArray arrayWithObjects:
-                           @"Forehand DL",@"Backhand DL",
-                           @"Forehand DL",@"Backhand DL",
-                           @"Forehand DL",@"Backhand DL",
-                           @"Forehand CC",@"Backhand CC",
-                           @"Forehand CC",@"Backhand CC",
-                           @"Forehand CC",@"Backhand CC", nil];
+                           FORHAND_DL,BACKHAND_DL,
+                           FORHAND_DL,BACKHAND_DL,
+                           FORHAND_DL,BACKHAND_DL,
+                           FORHAND_CC,BACKHAND_CC,
+                           FORHAND_CC,BACKHAND_CC,
+                           FORHAND_CC,BACKHAND_CC,nil];
     
     if(!gsDephArrayOfNames)
         gsDephArrayOfNames= [NSArray arrayWithObjects:
-                             @"Forehand",       @"Backhand",
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",nil];
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,nil];
     
     if(!volleyArrayOfNames)
         volleyArrayOfNames= [NSArray arrayWithObjects:
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",
-                             @"Forehand",        @"Backhand",nil];
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,
+                             FORHAND, BACKHAND,nil];
     
     
     if(!serverArrayOfNames)
         serverArrayOfNames= [NSArray arrayWithObjects:
-                             @"1st Box Wide",@"1st Box Wide",
-                             @"1st Box Wide",@"1st Box Middle",
-                             @"1st Box Middle",@"1st Box Middle",
-                             @"2st Box Middle",@"2st Box Middle",
-                             @"2st Box Middle",@"2st Box Wide",
-                             @"2st Box Wide",@"2st Box Wide", nil];
+                             SERVER_1ST_WIDE, SERVER_1ST_WIDE, SERVER_1ST_WIDE,
+                             SERVER_1ST_MIDDLE, SERVER_1ST_MIDDLE, SERVER_1ST_MIDDLE,
+                             SERVER_2ST_WIDE, SERVER_2ST_WIDE, SERVER_2ST_WIDE,
+                             SERVER_2ST_MIDDLE, SERVER_2ST_MIDDLE, SERVER_2ST_MIDDLE, nil];
     
     if([type isEqualToNumber:[NSNumber numberWithInt:STROKE_TYPE_GS_ACCURACY]]){
         strokes = [NSArray arrayWithArray: gsAccuracyArrayOfNames];
@@ -331,12 +352,12 @@ static AssessmentBC *instance = NULL;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *contexto=[appDelegate managedObjectContext];
     Assessment *sample = [[AssessmentBC current] createAssessment];
-    [sample setName:@"Sample Player"];
+    [sample setName:NSLocalizedString(@"Sample Player",@"Sample player name")];
     [sample setBirthday:[[NSDate alloc] init]];
     [sample setSex:@"M"];
-    [sample setAssessor:@"My Coach"];
+    [sample setAssessor:NSLocalizedString(@"My Coach",@"Sample coach name")];
     [sample setDate:[[NSDate alloc] init]];
-    [sample setVenue:@"Sample place"];
+    [sample setVenue:NSLocalizedString(@"Sample venue",@"Sample venue")];
     
     [sample setMobility:[NSNumber numberWithInt:75]];
     

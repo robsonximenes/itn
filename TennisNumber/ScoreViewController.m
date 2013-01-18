@@ -23,6 +23,13 @@
 
 @synthesize assessment;
 
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"Score",@"");
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -99,40 +106,40 @@
     
     
     if(indexPath.section == 1){
-        NSString *text = @"Subtotal: %i, Consistency: %i";
-    if(indexPath.row == 0){
-        [cell.name setText:@"Ground Stroke Deph"];
-        [cell.abstrct setText:[NSString stringWithFormat:text,
-                               [bc getPointsForStrokeType:STROKE_TYPE_GS_DEPH],
-                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
-    }else if(indexPath.row == 1){
-        [cell.name setText:@"Volley Deph"];
-        [cell.abstrct setText:[NSString stringWithFormat:text,
-                               [bc getPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH],
-                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
-    }else if(indexPath.row == 2){
-        [cell.name setText:@"Ground Stroke Accuracy"];
-        [cell.abstrct setText:[NSString stringWithFormat:text,
-                               [bc getPointsForStrokeType:STROKE_TYPE_GS_ACCURACY],
-                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
-    }else if(indexPath.row == 3){
-        [cell.name setText:@"Server"];
-        [cell.abstrct setText:[NSString stringWithFormat:text,
-                               [bc getPointsForStrokeType:STROKE_TYPE_SERVER],
-                               [bc getConssistencyPointsForStrokeType:STROKE_TYPE_SERVER]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_SERVER]]];
-    }else if(indexPath.row == 4){
-        [cell.name setText:@"Mobility"];
-        [cell.abstrct setText:[NSString stringWithFormat:@"Time :%@", [assessment mobilityTime]]];
-        [cell.total setText:[NSString stringWithFormat:@"%d",[[AssessmentBC current] getMobilityPoints]]];
-    }
+        NSString *text = NSLocalizedString(@"Subtotal: %i, Consistency: %i",@"cell detail for stroke in the score view");
+        if(indexPath.row == 0){
+            [cell.name setText:NSLocalizedString(@"Ground Stroke Deph",@"Label for Ground Stroke Deph")];
+            [cell.abstrct setText:[NSString stringWithFormat:text,
+                                   [bc getPointsForStrokeType:STROKE_TYPE_GS_DEPH],
+                                   [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
+            [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_DEPH]]];
+        }else if(indexPath.row == 1){
+            [cell.name setText:NSLocalizedString(@"Volley Deph",@"Label for Volley Deph")];
+            [cell.abstrct setText:[NSString stringWithFormat:text,
+                                   [bc getPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH],
+                                   [bc getConssistencyPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
+            [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_VOLLEY_DEPH]]];
+        }else if(indexPath.row == 2){
+            [cell.name setText:NSLocalizedString(@"Ground Stroke Accuracy",@"Label for Ground Stroke Accuracy")];
+            [cell.abstrct setText:[NSString stringWithFormat:text,
+                                   [bc getPointsForStrokeType:STROKE_TYPE_GS_ACCURACY],
+                                   [bc getConssistencyPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
+            [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_GS_ACCURACY]]];
+        }else if(indexPath.row == 3){
+            [cell.name setText:NSLocalizedString(@"Server",@"Label for Server")];
+            [cell.abstrct setText:[NSString stringWithFormat:text,
+                                   [bc getPointsForStrokeType:STROKE_TYPE_SERVER],
+                                   [bc getConssistencyPointsForStrokeType:STROKE_TYPE_SERVER]]];
+            [cell.total setText:[NSString stringWithFormat:@"%d",[bc getTotalPointsForStrokeType:STROKE_TYPE_SERVER]]];
+        }else if(indexPath.row == 4){
+            [cell.name setText:NSLocalizedString(@"Mobility",@"Label for Mobility")];
+            [cell.abstrct setText:[NSString stringWithFormat:@"Time :%@", [assessment mobilityTime]]];
+            [cell.total setText:[NSString stringWithFormat:@"%d",[[AssessmentBC current] getMobilityPoints]]];
+        }
         
     }else{
-        [cell.name setText:@"Internationl Tennis Number"];
-        [cell.abstrct setText:[NSString stringWithFormat:@"Strokes:%i Mobility:%i Total:%i",
+        [cell.name setText:NSLocalizedString(@"Internationl Tennis Number",@"Label for Internationl Tennis Number")];
+        [cell.abstrct setText:[NSString stringWithFormat:NSLocalizedString(@"Strokes:%i Mobility:%i Total:%i",@"cell detail for final score"),
                                [[AssessmentBC current] getStrokeTotalPoints],
                                [[AssessmentBC current] getMobilityPoints],
                                [[AssessmentBC current] getTotalPoints]]];

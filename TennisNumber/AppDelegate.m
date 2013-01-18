@@ -185,7 +185,6 @@
 #pragma mark Habilitação Full Features
 
 + (BOOL) isEnabled{
-//    return true;
     return [[NSUserDefaults standardUserDefaults] boolForKey:DEFAULTS_FULL_FEATURES];
 }
 
@@ -196,27 +195,19 @@
 #pragma mark Mensagens full features
 
 - (void)showMessageForEnablingFeatures {
-    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable all features!" message:@"You can enable this features:\nUnlimited assessments\nIndividual strokes scores\nSend assessement by e-mail." delegate:self cancelButtonTitle:@"Not now..." otherButtonTitles:@"Ok, lets go!", nil];
+    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable features title" message:@"Enable features message" delegate:self cancelButtonTitle:@"Enable features not now" otherButtonTitles:@"Enable features ok", nil];
     [action show];
     
 }
 
-- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    NSLog(@"Button: %d",buttonIndex);
-    
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{    
     if (buttonIndex == 0){
-		// Yes, do something
-        
-        
+
 	}else if (buttonIndex == 1){
-		
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
-    
         
         NSLog(@"Buying %@...", inAppPurchaseProduct.productIdentifier);
         [[TennisNumberIAPHelper sharedInstance] buyProduct:inAppPurchaseProduct];
-        
         
         [alertView resignFirstResponder];
     }

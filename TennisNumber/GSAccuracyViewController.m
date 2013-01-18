@@ -20,6 +20,13 @@
 @synthesize bc;
 @synthesize total,subtotal,consistency, resultContentView;
 
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"GS Accuracy",@"");
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

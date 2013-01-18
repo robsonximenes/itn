@@ -29,6 +29,13 @@
     return self;
 }
 
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"GS Deph",@"");
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

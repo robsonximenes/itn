@@ -14,6 +14,13 @@
 
 @implementation PreferencesViewController
 
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"Preferences",@"");
+    }
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -58,7 +65,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    [[cell textLabel] setText:@"Sound enabled"];
+    [[cell textLabel] setText:NSLocalizedString(@"Sound enabled", @"Label indicating if the sound is enabled")];
     
     UISwitch *soundSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
     [soundSwitch addTarget:self action:@selector(soundValueChanged:) forControlEvents:UIControlEventValueChanged];

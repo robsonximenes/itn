@@ -20,7 +20,16 @@
 
 @synthesize dateBirthSheet,dateSheet,dateBirthPicker,datePicker;
 
+@synthesize nameLabel;
+
 @synthesize nameTextField,dateBirthTextField,sexSegmentField,assessortextField,dateTextField,venueTextField;
+
+-(id) initWithCoder:(NSCoder *)aDecoder{
+    if(self = [super initWithCoder:aDecoder]){
+        self.title = NSLocalizedString(@"Profile",@"");
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -117,16 +126,18 @@
     
     if(nameTextField.text.length<1){
         isOk = false;
-        [sb appendString:@"The names is required.\n "];
+        [sb appendString:NSLocalizedString(@"The names is required.",@"Validation for name")];
+        [sb appendString:@"\n"];
     }
     
     if(!a.birthday){
         isOk = false;
-        [sb appendString:@"The birthday is required.\n "];
+        [sb appendString:NSLocalizedString(@"The birthday is required.",@"validation for birthday")];
+        [sb appendString:@"\n"];
     }
     
     if(!isOk){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Profile validation" message:sb delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Profile validation",@"Label for profile validation") message:sb delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         
         [alert show];
     }
@@ -152,8 +163,8 @@
     
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonItemStyleBordered target:self action:@selector(dateBirthSelected)];
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Select",@"Select") style:UIBarButtonItemStyleBordered target:self action:@selector(dateBirthSelected)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Cancel",@"Cancel") style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
     
     [toolBar setItems:[NSArray arrayWithObjects:space,selectButton,cancelButton, nil] animated:YES];
     
@@ -180,8 +191,8 @@
     
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:@"Select" style:UIBarButtonItemStyleBordered target:self action:@selector(dateSelected)];
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
+    UIBarButtonItem *selectButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Select",@"Select") style:UIBarButtonItemStyleBordered target:self action:@selector(dateSelected)];
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Cancel",@"Cancel") style:UIBarButtonItemStyleBordered target:self action:@selector(dateCancelled)];
     
     [toolBar setItems:[NSArray arrayWithObjects:space,selectButton,cancelButton, nil] animated:NO];
     

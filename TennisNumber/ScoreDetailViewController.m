@@ -22,6 +22,7 @@
 
 @synthesize type, strokes, strokeName;
 
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -111,7 +112,7 @@
             
             
             AssessmentBC *bc = [AssessmentBC current];
-            static NSString *text = @"Subtotal: %i, Consistency: %i";
+            NSString *text = NSLocalizedString(@"Subtotal: %i, Consistency: %i",@"Cell detail for stroke Score detail");
             [cell2.name setText:strokeName];
             [cell2.abstrct setText:[NSString stringWithFormat:text,
                                    [bc getPointsForStrokeType:type],
