@@ -11,6 +11,7 @@
 
 @implementation AppDelegate{
     SKProduct * inAppPurchaseProduct;
+    UIActivityIndicatorView *activity;
 }
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -206,11 +207,33 @@
 	}else if (buttonIndex == 1){
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(purchaseFailed) name:IAPHelperProductFailNotification object:nil];
+        
+        [self showActivityIndicator];
+        
+        
         NSLog(@"Buying %@...", inAppPurchaseProduct.productIdentifier);
         [[TennisNumberIAPHelper sharedInstance] buyProduct:inAppPurchaseProduct];
         
         [alertView resignFirstResponder];
+        
+        
     }
+}
+
+- (void) showActivityIndicator{
+    activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [activity setCenter:CGPointMake(self.window.frame.size.width/2.0, self.window.frame.size.height/2.0)];
+    
+    
+    UIViewController *currentView = self.window.rootViewController;
+    if( currentView.navigationController){
+        currentView = [currentView.navigationController visibleViewController];
+    }
+    
+    [currentView.view addSubview:activity];
+    
+    [activity startAnimating];
 }
 
 - (void)productPurchased:(NSNotification *)notification {
@@ -218,8 +241,12 @@
     if ([inAppPurchaseProduct.productIdentifier isEqualToString:productIdentifier]) {
         [AppDelegate enable];
     }
+    [activity stopAnimating];
 }
 
+-(void)purchaseFailed{
+    [activity stopAnimating];
+}
 
 
 @end

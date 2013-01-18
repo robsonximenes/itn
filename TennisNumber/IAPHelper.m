@@ -11,14 +11,13 @@
 #import <StoreKit/StoreKit.h>
 
 NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurchasedNotification";
+NSString *const IAPHelperProductFailNotification = @"IAPHelperProductFailNotification";
 
 @interface IAPHelper () <SKProductsRequestDelegate>
 @end
 
 @implementation IAPHelper {
-    // 3
     SKProductsRequest * _productsRequest;
-    // 4
     RequestProductsCompletionHandler _completionHandler;
     NSSet * _productIdentifiers;
     NSMutableSet * _purchasedProductIdentifiers;
@@ -52,9 +51,7 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 }
 
 - (void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler {
-    
     _completionHandler = [completionHandler copy];
-    
     _productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:_productIdentifiers];
     _productsRequest.delegate = self;
     [_productsRequest start];
@@ -64,10 +61,7 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 #pragma mark - SKProductsRequestDelegate
 
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {
-    
-    NSLog(@"Loaded list of products...");
     _productsRequest = nil;
-    
     NSArray * skProducts = response.products;
     for (SKProduct * skProduct in skProducts) {
         NSLog(@"Found product: %@ %@ %0.2f",
@@ -91,9 +85,7 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 }
 
 - (void)buyProduct:(SKProduct *)product {
-    
     NSLog(@"Buying %@...", product.productIdentifier);
-    
     SKPayment * payment = [SKPayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
     
@@ -136,11 +128,10 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 - (void)failedTransaction:(SKPaymentTransaction *)transaction {
     
     NSLog(@"failedTransaction...");
-    if (transaction.error.code != SKErrorPaymentCancelled)
-    {
+    if (transaction.error.code != SKErrorPaymentCancelled){
         NSLog(@"Transaction error: %@", transaction.error.localizedDescription);
     }
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:IAPHelperProductFailNotification object:nil userInfo:nil];
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
 }
 
