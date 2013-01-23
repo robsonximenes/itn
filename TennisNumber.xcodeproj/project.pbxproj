@@ -194,6 +194,8 @@
 		39D5104B1693585400DD27B3 /* textura44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textura44.png; sourceTree = "<group>"; };
 		39D5104E1693590700DD27B3 /* pixelVerde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pixelVerde.png; sourceTree = "<group>"; };
 		39D5105016935AE800DD27B3 /* scoreTransparente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scoreTransparente.png; sourceTree = "<group>"; };
+		39E638F216AF671800E6F1DF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		39E638F416AF6F1400E6F1DF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +531,9 @@
 				en,
 				"pt-BR",
 				pt,
+				es,
+				it,
+				fr,
 			);
 			mainGroup = 397ACA0A16930D610099FEB2;
 			productRefGroup = 397ACA1616930D610099FEB2 /* Products */;
@@ -693,6 +698,8 @@
 			children = (
 				39D16BFB16A96FCC0026665D /* en */,
 				39D16C0016A974970026665D /* pt */,
+				39E638F216AF671800E6F1DF /* es */,
+				39E638F416AF6F1400E6F1DF /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
