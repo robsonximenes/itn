@@ -22,6 +22,6 @@
 - (NSURL *)applicationDocumentsDirectory;
 + (BOOL) isEnabled;
 + (void) enable;
-- (void) showMessageForEnablingFeatures;
+- (void) showMessageForEnablingFeaturesInViewController: (UIViewController *) controler;
 
 @end

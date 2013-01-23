@@ -145,7 +145,7 @@
         if(![AppDelegate isEnabled]){
             if([results count]>=3){
                 AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-                [appDelegate showMessageForEnablingFeatures];
+                [appDelegate showMessageForEnablingFeaturesInViewController:self];
                 return NO;
             }
         }

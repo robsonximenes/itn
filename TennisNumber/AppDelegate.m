@@ -9,9 +9,13 @@
 #import "AppDelegate.h"
 #import "AssessmentBC.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @implementation AppDelegate{
     SKProduct * inAppPurchaseProduct;
     UIActivityIndicatorView *activity;
+    UIViewController *alertViewController;
+    UIView *alertContentView;
 }
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -195,8 +199,12 @@
 
 #pragma mark Mensagens full features
 
-- (void)showMessageForEnablingFeatures {
-    UIAlertView *action = [[UIAlertView alloc] initWithTitle:@"Enable features title" message:@"Enable features message" delegate:self cancelButtonTitle:@"Enable features not now" otherButtonTitles:@"Enable features ok", nil];
+- (void) showMessageForEnablingFeaturesInViewController: (UIViewController *) controler{
+    alertViewController = controler;
+    UIAlertView *action = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Enable features title",nil)                message:NSLocalizedString(@"Enable features message",nil)
+        delegate:self
+        cancelButtonTitle:NSLocalizedString(@"Enable features not now",nil)
+        otherButtonTitles:NSLocalizedString(@"Enable features ok",nil), nil];
     [action show];
     
 }
@@ -205,11 +213,44 @@
     if (buttonIndex == 0){
 
 	}else if (buttonIndex == 1){
+        
+        CGRect rect = self.window.frame;
+        rect.size.width = rect.size.width*0.9;
+        rect.size.height = rect.size.height*0.8;
+        rect.origin = alertViewController.view.center;
+        
+        alertContentView = [[UIView alloc] initWithFrame:rect];
+        [alertContentView setBackgroundColor:[UIColor grayColor]];
+        alertContentView.center = alertViewController.view.center;
+        
+        alertContentView.layer.borderColor = [UIColor greenColor].CGColor;
+        alertContentView.layer.borderWidth = 2;
+        alertContentView.layer.cornerRadius = 10;
+        alertContentView.clipsToBounds = YES;
+        
+        [alertViewController.view addSubview:alertContentView];
+        
+        [alertContentView needsUpdateConstraints];
+        
+        UILabel *waitLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, alertContentView.frame.size.width, 30)];
+        [waitLabel setBackgroundColor:[UIColor clearColor]];
+        waitLabel.textAlignment = NSTextAlignmentCenter;
+        waitLabel.text = NSLocalizedString(@"Wait label", @"Wait for the purchase");
+
+        
+        [alertContentView addSubview:waitLabel];
+        
+        activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        
+        [alertContentView addSubview:activity];
+        
+        [activity setClipsToBounds:YES];
+        [activity setCenter:alertContentView.center];
+        [activity startAnimating];
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(productPurchased:) name:IAPHelperProductPurchasedNotification object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(purchaseFailed) name:IAPHelperProductFailNotification object:nil];
-        
-        [self showActivityIndicator];
         
         
         NSLog(@"Buying %@...", inAppPurchaseProduct.productIdentifier);
@@ -221,20 +262,6 @@
     }
 }
 
-- (void) showActivityIndicator{
-    activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    [activity setCenter:CGPointMake(self.window.frame.size.width/2.0, self.window.frame.size.height/2.0)];
-    
-    
-    UIViewController *currentView = self.window.rootViewController;
-    if( currentView.navigationController){
-        currentView = [currentView.navigationController visibleViewController];
-    }
-    
-    [currentView.view addSubview:activity];
-    
-    [activity startAnimating];
-}
 
 - (void)productPurchased:(NSNotification *)notification {
     NSString * productIdentifier = notification.object;
@@ -242,10 +269,12 @@
         [AppDelegate enable];
     }
     [activity stopAnimating];
+    [alertContentView removeFromSuperview];
 }
 
 -(void)purchaseFailed{
     [activity stopAnimating];
+    [alertContentView removeFromSuperview];
 }
 
 

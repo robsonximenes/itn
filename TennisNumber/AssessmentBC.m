@@ -365,6 +365,11 @@ static AssessmentBC *instance = NULL;
         [s setScore:[NSNumber numberWithInt:2]];
     }
     
+   
+    [[AssessmentBC current] setAssessment:sample];
+    [sample setItn:[NSNumber numberWithInt: [[AssessmentBC current] calculateITN] ]];
+    
+    
     NSError *error;
     [contexto save:&error];
     
